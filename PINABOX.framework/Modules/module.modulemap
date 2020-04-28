@@ -1,0 +1,11 @@
+framework module PINABOX {
+  umbrella header "PINABOX.h"
+
+  export *
+  module * { export * }
+}
+
+module PINABOX.Swift {
+    header "PINABOX-Swift.h"
+    requires objc
+}
