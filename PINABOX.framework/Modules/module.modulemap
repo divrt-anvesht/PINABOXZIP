@@ -1,4 +1,0 @@
-framework module PINABOX {
-    header "PINABOX-Swift.h"
-    requires objc
-}
