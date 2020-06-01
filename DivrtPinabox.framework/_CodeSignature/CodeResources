@@ -4,13 +4,9 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>AppConfiguration.plist</key>
-		<data>
-		c9XYNyI+zS+dAFcZHh9c+qkZfTA=
-		</data>
 		<key>Assets.car</key>
 		<data>
-		/H+gD2jIQgHD2W+UwNMolqan698=
+		ZA1ImKD84oGn/088tAsJhBSW0DM=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/Info.plist</key>
 		<data>
@@ -18,51 +14,43 @@
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-11.0+.nib</key>
 		<data>
-		2RONApLVStYFURGbHahpnvfPu68=
+		Y9XAXkZgxvU62eKzgODX2rElZEU=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-12.3+.nib</key>
 		<data>
-		ePAhlZWKorLAajlevXLeTfaikYQ=
-		</data>
-		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-13.0+.nib</key>
-		<data>
-		6CfmTu32haC4HxM0b8TsMIaf1F4=
+		EHubRaZMBuBrjBDUn5w/Ar5qEKs=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<data>
-		8rXb/z9+OE3bwQ4rUwC9O7DFRGY=
+		hAxEJ+9GpR4Jala5GgHW8uGkC9A=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<data>
-		ckICdkNkrXhL+408ZgqHPrIC43M=
+		YrHGzziCyUfkgqV2XtZlUe/AS24=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-12.3+.nib</key>
 		<data>
-		Fq7plaKhmcqYQI8OXR0Kz/h324A=
-		</data>
-		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-13.0+.nib</key>
-		<data>
-		pPbgdhyEhQunrJQC7Fqg8/9f+og=
+		EmUUXfu7bVkBSN8LMQQo1Uk1NxE=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<data>
-		JrV9qczcfT+NPDzwV/UKeuKFCC4=
+		1P+OMR13EmkfsN5DbT8lNwX/7KI=
 		</data>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<data>
-		l/plG4uTHRjlnYTSSIEoY+sSjiA=
+		8CbGBHzygguwDxG7ZfKqM4NsBWY=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		JPQ/Eq7P1JoxWzKTrrGL1/9AQI8=
+		QSEEo4B9fWUkeMSXzQYUPFvyyjQ=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		uVePb+8utTWqllDLf4lhTVoMSPU=
+		7M3h7gQIwOkBJt38MpBkrSXcTjQ=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		UfRlyQXk68uA0cVzJAlbRZg7MJU=
+		1sZ6lItTCmZeaF4/zq0aEekWjzY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -79,18 +67,11 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>AppConfiguration.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vvpmvqrNibfDgAUGoJG39G7qCNm34YQ3yfysJpcnHAc=
-			</data>
-		</dict>
 		<key>Assets.car</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GeceiBO4VY3wv9OzIOMMxJe97XgljlQanrB5GmHDCe8=
+			S4hqOr0bDAIlqpToLc6PaYPFlloU9zX6TqjL02d5T+A=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/Info.plist</key>
@@ -104,77 +85,63 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/YwN1jCfmVdCeDLJGo0dYO5JI54b/zjf7RT4ulOpqqE=
+			TySTg9ycwbIES4O3OaPLTnc2c5S0L8fayOp/nB7ukxU=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PrXMH9fxtCLD/ocCrpoT3r4KJofqL2UHdysCfL2IpYs=
-			</data>
-		</dict>
-		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			DUOeKa9JwEWXDvd4vRVp8ab/bOJ60pY3FCigslNhLm0=
+			XP4/aIimA/3wf4TnFXg5OfPmudgFzono90GhbFMMd8s=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			SYQDEphcyz1TnSOKtrcpM81SNJR87wHG0THCgm2rcoo=
+			XXd6mK2HA4oP4C+TXsVB+AySkzxsLlJCYtYhmMpfW+A=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			AxP8zM7dQVFVV2h8JyPU+ZNFxhacytcjsYHBc54bCaU=
+			cK8H8gsOl4+0EjliZgJwDCH2FGlThe0pLZlfV86QRfs=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-12.3+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xgRe0866+GcP67C14wtti+JbMj01no5Q8UK8yR8TfGU=
-			</data>
-		</dict>
-		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-13.0+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			QJb4gEeZKtX2NTcebiw4IUwvCV3cCwz5b6fCChXMqL0=
+			RXgVzvcJX3Oq7oP8DnrK1ZZ44fztV2DOd/qKhPYpsWM=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N5+y53n2udau9K5At0cSlQBGzA7MXgHY9ZReYgKHEIM=
+			ogA+nCKdb6WVMi2ypux8zqpdFvzYnn0iRUSpqv5CRGQ=
 			</data>
 		</dict>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			RdOreS/3hGuuPEjcQeOf4V0dopNrDVO3bPSR4YTcTRU=
+			A11+ec3DmIU7XhBfKquCyMH7hQzK/2dKR3uUGupip78=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fVA7CYWdxRcMLX2z5JiR/uOEJJaFU6vQDEwzBYCBj1Y=
+			uBsfT5Zi0QuTBcFc2z2qhSJDsCK5QoEJ6rnI3xa5Aak=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			LmSGGMTXC2hNw9tCVBOEDiPPZyfQh1fl27mh0D65Mqk=
+			ll5jKmZGmZ/Rf66PNk2e+Bwxu8oDX5ndKsTiaM+gofs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
