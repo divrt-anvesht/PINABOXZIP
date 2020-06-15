@@ -253,8 +253,6 @@ SWIFT_CLASS("_TtC12DivrtPinabox11SwiftLoader")
 
 
 
-
-
 @class CBPeripheralManager;
 
 @interface UIViewController (SWIFT_EXTENSION(DivrtPinabox)) <CBPeripheralManagerDelegate>
