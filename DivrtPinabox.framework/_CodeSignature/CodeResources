@@ -10,19 +10,19 @@
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-11.0+.nib</key>
 		<data>
-		A8xk/XsCvMedfzx32jTO4v+SY4g=
+		zlHyadnET+wHWI2SFmUCScWRuSU=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<data>
-		LTPwZEByL7NmEjd6QsjsoLGh6Os=
+		31zSlzt0d2GkfEA4gsAKIyrCh8w=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<data>
-		+7upM3UmzEzEda49YGpnQ3XTFdg=
+		IcJyKqjCK4+l5s5XpBlJCpKlZLI=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<data>
-		7kFn5vPoKOixoVG60X5r6xnVAiQ=
+		lhl95NUkIk7mpK2aDzVRdAqBcLA=
 		</data>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<data>
@@ -30,19 +30,35 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		a944TYEiRFMIWXpgnqN8keX5Klc=
+		/NJGS9txAsviGCQGTtVV9CD1UyE=
+		</data>
+		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<data>
+		cagN1QosU8CPJ2EJEkxQCEJNMn8=
+		</data>
+		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<data>
+		qkgGSPnQZ8c56shXS4AYFfHfKJg=
+		</data>
+		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<data>
+		qXpEbMxyo+/CGQe5HzkI6rGR44g=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftdoc</key>
 		<data>
 		cagN1QosU8CPJ2EJEkxQCEJNMn8=
 		</data>
+		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftinterface</key>
+		<data>
+		qkgGSPnQZ8c56shXS4AYFfHfKJg=
+		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		KKFsBpp+rBkVHyTdoLlHCuIRzAE=
+		qXpEbMxyo+/CGQe5HzkI6rGR44g=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
-		nGVdA+2Gkbt10v8iUS8YYg/Lpmk=
+		6SAHxabS1yJUKz8h5/wUWMYdcG4=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -58,28 +74,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RxaQ6GjY6z9qrhmMGzQDxNfsOEPV8VpHq/EtnwFF8go=
+			6mqP0Yvwg2ZjmjnMVTCxhBdyzRG2Ou7Tl8ShqjUsDhU=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sEBNGOaesPfZUjSzUJQJ9PzADdSPo55BZTfHBRcz3HE=
+			9AqeYPLv42OG4Gv+IMqk5wFCaBWxETDin9oE9+V4Pk8=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			at8wp1+xIDPMnKBleABvcUxnzBpAqz345iE3G3KrwFs=
+			fc51l2nPpIzsizcSCviAY9zG6LO5bH7pQtTfVQo399k=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			w/rRHFpf1sBmFt68niUdfqCMRGt7DoEMkPDlg5v0qXE=
+			H8wjljHHo+RLePGhUKlQn+QQfFLh9gRXm4Ra4RIByHM=
 			</data>
 		</dict>
 		<key>Headers/DivrtPinabox-Swift.h</key>
@@ -89,6 +105,27 @@
 			kwGGC4ny2+iVuYS8s1NJoNRLa+oQCe779b31cjddC3A=
 			</data>
 		</dict>
+		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftdoc</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/UdtgPEVINAkPvInaHbJbeHYe+zyC2LTG/43DU8Yc6s=
+			</data>
+		</dict>
+		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			g9kEHGZxt38nAbJOYEHdNe6vTKyPyX+ftLzCimLBApM=
+			</data>
+		</dict>
+		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftmodule</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			fJuARpWU8rekaDCq4r2tME3draa+fAyxovsMymPoZAg=
+			</data>
+		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
@@ -96,18 +133,25 @@
 			/UdtgPEVINAkPvInaHbJbeHYe+zyC2LTG/43DU8Yc6s=
 			</data>
 		</dict>
+		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftinterface</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			g9kEHGZxt38nAbJOYEHdNe6vTKyPyX+ftLzCimLBApM=
+			</data>
+		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			3oD0hrEk4dlXi3in/CicqQlJiFbpgeigJEWwmPInzno=
+			fJuARpWU8rekaDCq4r2tME3draa+fAyxovsMymPoZAg=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			egq1vuwGj1gSF+Hv6fq5dfNmVpDsGTsW/4EyM4Itg54=
+			QgWyP2fzfhJsgukHWTImRd+h8PehOR2RyYSCjb+w1IY=
 			</data>
 		</dict>
 	</dict>
