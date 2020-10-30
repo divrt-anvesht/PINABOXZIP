@@ -187,10 +187,8 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
 @import CoreBluetooth;
-@import CoreGraphics;
 @import Foundation;
 @import ObjectiveC;
-@import QuartzCore;
 @import UIKit;
 #endif
 
@@ -210,42 +208,21 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 
-
-
-
-
 SWIFT_CLASS("_TtC12DivrtPinabox10PinaConfig")
 @interface PinaConfig : NSObject
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class NSURLSession;
+@class NSURLSessionDownloadTask;
+@class NSURLSessionTask;
 
 SWIFT_CLASS("_TtC12DivrtPinabox7PinaSDK")
-@interface PinaSDK : NSObject
+@interface PinaSDK : NSObject <NSURLSessionDownloadDelegate>
+- (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
+- (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
-
-@class NSCoder;
-
-IB_DESIGNABLE
-SWIFT_CLASS("_TtC12DivrtPinabox11RoundButton")
-@interface RoundButton : UIButton
-- (void)layoutSubviews;
-- (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-SWIFT_CLASS("_TtC12DivrtPinabox11SwiftLoader")
-@interface SwiftLoader : UIView
-@property (nonatomic) CGRect frame;
-- (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-@end
-
-
-
-
 
 
 

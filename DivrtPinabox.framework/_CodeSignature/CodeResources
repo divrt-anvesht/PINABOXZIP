@@ -4,76 +4,49 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Assets.car</key>
-		<data>
-		xlVqRWrLs2sLqSQ2dxMZjSgF6qQ=
-		</data>
 		<key>FrameworkStoryboard.storyboardc/Info.plist</key>
 		<data>
 		8mPyjCEygykfTfA89oZ/vI2fGXs=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-11.0+.nib</key>
 		<data>
-		ftBv5O7ICzaSYpWOA26jKJ/Gplw=
-		</data>
-		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-12.3+.nib</key>
-		<data>
-		T+/4iS4hf1gStziZseVjewAYQyc=
+		A8xk/XsCvMedfzx32jTO4v+SY4g=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<data>
-		3C6M/Kw9ogdYDsA0KIxr6sHsVfw=
+		LTPwZEByL7NmEjd6QsjsoLGh6Os=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<data>
-		CXwj/Y0pWIesdKBpYN8Ynx7bTvg=
-		</data>
-		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-12.3+.nib</key>
-		<data>
-		uv8VHTzrVqob5iWLNAmNQuxWQIE=
+		+7upM3UmzEzEda49YGpnQ3XTFdg=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<data>
-		ij7+SIjjo29ZhWl6LguYeSxIwnE=
+		7kFn5vPoKOixoVG60X5r6xnVAiQ=
 		</data>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<data>
-		66zB+RoqFTfj3eyNlZuKowpyGcs=
+		lyY93wmYSiSd1DyoZdAEu2MRMfA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		6zlveKInkzkKWCyQykLFzxwt7ZA=
+		a944TYEiRFMIWXpgnqN8keX5Klc=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftdoc</key>
 		<data>
-		sev3Qn0jWQFsuPG0DD20pphv3ok=
+		cagN1QosU8CPJ2EJEkxQCEJNMn8=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		eYYNHdJ09ndFBmf6u4vWFF5aeeU=
+		KKFsBpp+rBkVHyTdoLlHCuIRzAE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		nGVdA+2Gkbt10v8iUS8YYg/Lpmk=
 		</data>
-		<key>Roboto-Bold.ttf</key>
-		<data>
-		DON87Zxfysm9xFKkMsEliHC6Rnc=
-		</data>
-		<key>Roboto-Regular.ttf</key>
-		<data>
-		3RsdsT/x9yE4wTTGLzj++DdJ82o=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Assets.car</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			1ETyfd3dLKPz8FrJ++o06R8swmR4UwgcitsHUkNVu94=
-			</data>
-		</dict>
 		<key>FrameworkStoryboard.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -85,63 +58,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			VH4D/KM/omEh/Q4dV668Pk5cN0DBT/7FsKht9GsiGJI=
-			</data>
-		</dict>
-		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-12.3+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4366KBC+CaVyRK198RqLw4r+nJLoAOvvlJuTxy4o5Qw=
+			RxaQ6GjY6z9qrhmMGzQDxNfsOEPV8VpHq/EtnwFF8go=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			8fEgWCbg87IN77CFF+ewmC0tfqJyw891mO+GgR8/tmg=
+			sEBNGOaesPfZUjSzUJQJ9PzADdSPo55BZTfHBRcz3HE=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			oWlXZtsMevPGxZ9Wtrd+Y56lJVhxA33z6dOD/EHQpys=
-			</data>
-		</dict>
-		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-12.3+.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			jr+QB7OwhJXrBjJNjFvKdbEBt2IiAwdJYiP8BIDKBBc=
+			at8wp1+xIDPMnKBleABvcUxnzBpAqz345iE3G3KrwFs=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			G/bT5anytEvpKq+4pGIOXDuomjzkyEMvnC2rS5/n5GA=
+			w/rRHFpf1sBmFt68niUdfqCMRGt7DoEMkPDlg5v0qXE=
 			</data>
 		</dict>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			V2LkBnjfTCpDscwCa+xU0xfwqTeOdJqslBCrWXg0XDw=
+			kwGGC4ny2+iVuYS8s1NJoNRLa+oQCe779b31cjddC3A=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Gv85HxH02dgbDka4dNokS0vLShQm0RH2Mm5KyhrGFqs=
+			/UdtgPEVINAkPvInaHbJbeHYe+zyC2LTG/43DU8Yc6s=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			sXdUgLktPoAKgD+eehb6w4qjduhSPAmsS/K84uZHEEc=
+			3oD0hrEk4dlXi3in/CicqQlJiFbpgeigJEWwmPInzno=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -149,20 +108,6 @@
 			<key>hash2</key>
 			<data>
 			egq1vuwGj1gSF+Hv6fq5dfNmVpDsGTsW/4EyM4Itg54=
-			</data>
-		</dict>
-		<key>Roboto-Bold.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			fQuZHuPgvnrwGtfqjNK+6mwAol5nmgImtnN/B5qv/4Y=
-			</data>
-		</dict>
-		<key>Roboto-Regular.ttf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			eehRQEZX2sIQaz0irSVtR4JKmldlRY7bcskQKkWBbZU=
 			</data>
 		</dict>
 	</dict>
