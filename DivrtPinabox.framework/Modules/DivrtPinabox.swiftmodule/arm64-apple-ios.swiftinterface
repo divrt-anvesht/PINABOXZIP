@@ -25,7 +25,7 @@ extension UIViewController {
   public var onSuccess: ((Foundation.NSDictionary, DivrtPinabox.GateType) -> Swift.Void)?
   public var onFailure: ((Foundation.NSDictionary, DivrtPinabox.GateType) -> Swift.Void)?
   public var sdkVersion: Swift.String
-  public func initializeSDK()
+  public func initializeSDK(_ environment: DivrtPinabox.Environment = .Sandbox)
   public func configureSDK(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
   public func pinaInterface(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
   @objc public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
