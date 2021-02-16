@@ -188,6 +188,7 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
+@import CocoaAsyncSocket;
 @import CoreBluetooth;
 @import Foundation;
 @import ObjectiveC;
@@ -218,11 +219,15 @@ SWIFT_CLASS("_TtC12DivrtPinabox10PinaConfig")
 @class NSURLSession;
 @class NSURLSessionDownloadTask;
 @class NSURLSessionTask;
+@class GCDAsyncUdpSocket;
 
 SWIFT_CLASS("_TtC12DivrtPinabox7PinaSDK")
-@interface PinaSDK : NSObject <NSURLSessionDownloadDelegate>
+@interface PinaSDK : NSObject <GCDAsyncUdpSocketDelegate, NSURLSessionDownloadDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
+- (void)udpSocket:(GCDAsyncUdpSocket * _Nonnull)sock didReceiveData:(NSData * _Nonnull)data fromAddress:(NSData * _Nonnull)address withFilterContext:(id _Nullable)filterContext;
+- (void)udpSocket:(GCDAsyncUdpSocket * _Nonnull)sock didNotConnect:(NSError * _Nullable)error;
+- (void)udpSocketDidClose:(GCDAsyncUdpSocket * _Nonnull)sock withError:(NSError * _Nullable)error;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
