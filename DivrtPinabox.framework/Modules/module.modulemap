@@ -1,4 +1,0 @@
-framework module DivrtPinabox {
-    header "DivrtPinabox-Swift.h"
-    requires objc
-}

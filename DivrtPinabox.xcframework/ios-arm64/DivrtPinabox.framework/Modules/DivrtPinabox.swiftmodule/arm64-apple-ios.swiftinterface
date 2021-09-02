@@ -1,0 +1,432 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 effective-4.2 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name DivrtPinabox
+import AVFoundation
+import CocoaAsyncSocket
+import CocoaMQTT
+import CoreBluetooth
+import CoreLocation
+import CoreNFC
+import EstimoteBluetoothScanning
+import EstimoteProximitySDK
+import Foundation
+import SSZipArchive
+import Swift
+import UIKit
+import WebKit
+extension UIViewController : CoreBluetooth.CBPeripheralManagerDelegate {
+  @objc dynamic public func peripheralManagerDidUpdateState(_ peripheral: CoreBluetooth.CBPeripheralManager)
+}
+extension UIViewController {
+  public func checkTheLocationServicesStatus()
+}
+@objc @_inheritsConvenienceInitializers public class PinaSDK : ObjectiveC.NSObject, Foundation.URLSessionDownloadDelegate, CocoaAsyncSocket.GCDAsyncUdpSocketDelegate {
+  public static let shared: DivrtPinabox.PinaSDK
+  public var alertControllerTintColor: UIKit.UIColor?
+  public var onSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onFailure: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onInfo: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onValSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onValFailure: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var debugEmail: Swift.String
+  public var debugUID: Swift.Int
+  public var garageListExists: Swift.Bool
+  public var garageRadius: Swift.Int? {
+    get
+  }
+  public func initializeSDK(_ environment: DivrtPinabox.Environment = .Sandbox)
+  public func configureSDK(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
+  public func pinaInterface(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
+  public func pinaValInterface(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
+  public func getActiveOrder(pinaOrderParams: [Swift.String : Any], completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
+  @objc public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
+  @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  public func sendSessionLogs(completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  public func debugLog(_ message: Swift.String)
+  @objc public func udpSocket(_ sock: CocoaAsyncSocket.GCDAsyncUdpSocket, didReceive data: Foundation.Data, fromAddress address: Foundation.Data, withFilterContext filterContext: Any?)
+  @objc public func udpSocket(_ sock: CocoaAsyncSocket.GCDAsyncUdpSocket, didNotConnect error: Swift.Error?)
+  @objc public func udpSocketDidClose(_ sock: CocoaAsyncSocket.GCDAsyncUdpSocket, withError error: Swift.Error?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum Device {
+  case iPodTouch5
+  case iPodTouch6
+  case iPodTouch7
+  case iPhone4
+  case iPhone4s
+  case iPhone5
+  case iPhone5c
+  case iPhone5s
+  case iPhone6
+  case iPhone6Plus
+  case iPhone6s
+  case iPhone6sPlus
+  case iPhone7
+  case iPhone7Plus
+  case iPhoneSE
+  case iPhone8
+  case iPhone8Plus
+  case iPhoneX
+  case iPhoneXS
+  case iPhoneXSMax
+  case iPhoneXR
+  case iPhone11
+  case iPhone11Pro
+  case iPhone11ProMax
+  case iPhoneSE2
+  case iPad2
+  case iPad3
+  case iPad4
+  case iPadAir
+  case iPadAir2
+  case iPad5
+  case iPad6
+  case iPadAir3
+  case iPad7
+  case iPadMini
+  case iPadMini2
+  case iPadMini3
+  case iPadMini4
+  case iPadMini5
+  case iPadPro9Inch
+  case iPadPro12Inch
+  case iPadPro12Inch2
+  case iPadPro10Inch
+  case iPadPro11Inch
+  case iPadPro12Inch3
+  case iPadPro11Inch2
+  case iPadPro12Inch4
+  case homePod
+  indirect case simulator(DivrtPinabox.Device)
+  case unknown(Swift.String)
+  public static var modelName: DivrtPinabox.Device {
+    get
+  }
+  public static var identifier: Swift.String
+  public static func mapToDevice(identifier: Swift.String) -> DivrtPinabox.Device
+  public static func realDevice(from device: DivrtPinabox.Device) -> DivrtPinabox.Device
+  public var diagonal: Swift.Double {
+    get
+  }
+  public var screenRatio: (width: Swift.Double, height: Swift.Double) {
+    get
+  }
+  public static var allPods: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allPhones: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allPads: [DivrtPinabox.Device] {
+    get
+  }
+  @available(*, deprecated, renamed: "allDevicesWithSensorHousing")
+  public static var allXSeriesDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allPlusSizedDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allProDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allMiniDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allSimulatorPods: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allSimulatorPhones: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allSimulatorPads: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allSimulatorMiniDevices: [DivrtPinabox.Device] {
+    get
+  }
+  @available(*, deprecated, renamed: "allSimulatorDevicesWithSensorHousing")
+  public static var allSimulatorXSeriesDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allSimulatorPlusSizedDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allSimulatorProDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public var isPod: Swift.Bool {
+    get
+  }
+  public var isPhone: Swift.Bool {
+    get
+  }
+  public var isPad: Swift.Bool {
+    get
+  }
+  public var isSimulator: Swift.Bool {
+    get
+  }
+  public var realDevice: DivrtPinabox.Device {
+    get
+  }
+  public var isZoomed: Swift.Bool? {
+    get
+  }
+  public static var allTouchIDCapableDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allFaceIDCapableDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allBiometricAuthenticationCapableDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public var isTouchIDCapable: Swift.Bool {
+    get
+  }
+  public var isFaceIDCapable: Swift.Bool {
+    get
+  }
+  public var hasBiometricSensor: Swift.Bool {
+    get
+  }
+  public static var allDevicesWithSensorHousing: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allSimulatorDevicesWithSensorHousing: [DivrtPinabox.Device] {
+    get
+  }
+  public var hasSensorHousing: Swift.Bool {
+    get
+  }
+  public static var allDevicesWithRoundedDisplayCorners: [DivrtPinabox.Device] {
+    get
+  }
+  public var hasRoundedDisplayCorners: Swift.Bool {
+    get
+  }
+  public static var allDevicesWith3dTouchSupport: [DivrtPinabox.Device] {
+    get
+  }
+  public var has3dTouchSupport: Swift.Bool {
+    get
+  }
+  public static var allDevicesWithWirelessChargingSupport: [DivrtPinabox.Device] {
+    get
+  }
+  public var supportsWirelessCharging: Swift.Bool {
+    get
+  }
+  public static var allDevicesWithALidarSensor: [DivrtPinabox.Device] {
+    get
+  }
+  public var hasLidarSensor: Swift.Bool {
+    get
+  }
+  public static var allRealDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allSimulators: [DivrtPinabox.Device] {
+    get
+  }
+  public func isOneOf(_ devices: [DivrtPinabox.Device]) -> Swift.Bool
+  public var name: Swift.String? {
+    get
+  }
+  public var systemName: Swift.String? {
+    get
+  }
+  public var systemVersion: Swift.String? {
+    get
+  }
+  public var model: Swift.String? {
+    get
+  }
+  public var localizedModel: Swift.String? {
+    get
+  }
+  public var ppi: Swift.Int? {
+    get
+  }
+  public var isGuidedAccessSessionActive: Swift.Bool {
+    get
+  }
+  public var screenBrightness: Swift.Int {
+    get
+  }
+}
+extension Device : Swift.CustomStringConvertible {
+  public var description: Swift.String {
+    get
+  }
+  public var safeDescription: Swift.String {
+    get
+  }
+}
+extension Device : Swift.Equatable {
+  public static func == (lhs: DivrtPinabox.Device, rhs: DivrtPinabox.Device) -> Swift.Bool
+}
+@available(iOS 8.0, watchOS 4.0, *)
+extension Device {
+  public enum BatteryState : Swift.CustomStringConvertible, Swift.Equatable {
+    case full
+    case charging(Swift.Int)
+    case unplugged(Swift.Int)
+    public var lowPowerMode: Swift.Bool {
+      get
+    }
+    public var description: Swift.String {
+      get
+    }
+  }
+  public var batteryState: DivrtPinabox.Device.BatteryState? {
+    get
+  }
+  public var batteryLevel: Swift.Int? {
+    get
+  }
+}
+@available(iOS 8.0, watchOS 4.0, *)
+extension Device.BatteryState : Swift.Comparable {
+  public static func == (lhs: DivrtPinabox.Device.BatteryState, rhs: DivrtPinabox.Device.BatteryState) -> Swift.Bool
+  public static func < (lhs: DivrtPinabox.Device.BatteryState, rhs: DivrtPinabox.Device.BatteryState) -> Swift.Bool
+}
+extension Device {
+  public enum Orientation {
+    case landscape
+    case portrait
+    public static func == (a: DivrtPinabox.Device.Orientation, b: DivrtPinabox.Device.Orientation) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var orientation: DivrtPinabox.Device.Orientation {
+    get
+  }
+}
+extension Device {
+  public static var volumeTotalCapacity: Swift.Int? {
+    get
+  }
+  public static var volumeAvailableCapacity: Swift.Int? {
+    get
+  }
+  @available(iOS 11.0, *)
+  public static var volumeAvailableCapacityForImportantUsage: Swift.Int64? {
+    get
+  }
+  @available(iOS 11.0, *)
+  public static var volumeAvailableCapacityForOpportunisticUsage: Swift.Int64? {
+    get
+  }
+  @available(iOS 11.0, *)
+  public static var volumes: [Foundation.URLResourceKey : Swift.Int64]? {
+    get
+  }
+}
+extension Device {
+  public struct ApplePencilSupport : Swift.OptionSet {
+    public var rawValue: Swift.UInt
+    public init(rawValue: Swift.UInt)
+    public static let firstGeneration: DivrtPinabox.Device.ApplePencilSupport
+    public static let secondGeneration: DivrtPinabox.Device.ApplePencilSupport
+    public typealias ArrayLiteralElement = DivrtPinabox.Device.ApplePencilSupport
+    public typealias Element = DivrtPinabox.Device.ApplePencilSupport
+    public typealias RawValue = Swift.UInt
+  }
+  public static var allApplePencilCapableDevices: [DivrtPinabox.Device] {
+    get
+  }
+  public var applePencilSupport: DivrtPinabox.Device.ApplePencilSupport {
+    get
+  }
+}
+extension Device {
+  public enum CameraType {
+    @available(*, deprecated, renamed: "wide")
+    case normal
+    case wide
+    case telephoto
+    case ultraWide
+    public static func == (a: DivrtPinabox.Device.CameraType, b: DivrtPinabox.Device.CameraType) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public var cameras: [DivrtPinabox.Device.CameraType] {
+    get
+  }
+  public static var allDevicesWithCamera: [DivrtPinabox.Device] {
+    get
+  }
+  @available(*, deprecated, renamed: "allDevicesWithWideCamera")
+  public static var allDevicesWithNormalCamera: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allDevicesWithWideCamera: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allDevicesWithTelephotoCamera: [DivrtPinabox.Device] {
+    get
+  }
+  public static var allDevicesWithUltraWideCamera: [DivrtPinabox.Device] {
+    get
+  }
+  public var hasCamera: Swift.Bool {
+    get
+  }
+  @available(*, deprecated, renamed: "hasWideCamera")
+  public var hasNormalCamera: Swift.Bool {
+    get
+  }
+  public var hasWideCamera: Swift.Bool {
+    get
+  }
+  public var hasTelephotoCamera: Swift.Bool {
+    get
+  }
+  public var hasUltraWideCamera: Swift.Bool {
+    get
+  }
+}
+public enum GateType : Swift.String {
+  case IN
+  case OUT
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum Environment : Swift.String {
+  case Sandbox
+  case Production
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers public class PinaConfig : ObjectiveC.NSObject {
+  public var pinaConfigParams: [Swift.String : Any]
+  public var pinaClientParams: [Swift.String : Any]
+  public var pinaSdkParams: [Swift.String : Any]
+  public var pinaJSParams: [Swift.String : Any]
+  public var validationParams: [Swift.String : Any]
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension DivrtPinabox.Device.Orientation : Swift.Equatable {}
+extension DivrtPinabox.Device.Orientation : Swift.Hashable {}
+extension DivrtPinabox.Device.CameraType : Swift.Equatable {}
+extension DivrtPinabox.Device.CameraType : Swift.Hashable {}
+extension DivrtPinabox.GateType : Swift.Equatable {}
+extension DivrtPinabox.GateType : Swift.Hashable {}
+extension DivrtPinabox.GateType : Swift.RawRepresentable {}
+extension DivrtPinabox.Environment : Swift.Equatable {}
+extension DivrtPinabox.Environment : Swift.Hashable {}
+extension DivrtPinabox.Environment : Swift.RawRepresentable {}
