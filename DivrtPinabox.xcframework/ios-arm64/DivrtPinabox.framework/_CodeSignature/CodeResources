@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		i1960PcdoQU+rZRtc/kCut0Jjmw=
+		wJdniBbX0nYLr6Dho3oBVOR8yzg=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -54,11 +54,39 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		i1960PcdoQU+rZRtc/kCut0Jjmw=
+		wJdniBbX0nYLr6Dho3oBVOR8yzg=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		6SAHxabS1yJUKz8h5/wUWMYdcG4=
+		</data>
+		<key>divrtsdk/AndroidSpecific.js</key>
+		<data>
+		6hKjzS9HVpENXOkKcLgYARsBd2k=
+		</data>
+		<key>divrtsdk/JSInteractionWrapper.js</key>
+		<data>
+		GgaB+bUUDYoRmLb1W6jSZoaq6E8=
+		</data>
+		<key>divrtsdk/iOSSpecific.js</key>
+		<data>
+		2kbZ1fv6JoDSqXPDtZ58KA5O/qM=
+		</data>
+		<key>divrtsdk/index.html</key>
+		<data>
+		SOZym3Mo4+RZMQnM9ca5VmXyfi4=
+		</data>
+		<key>divrtsdk/index.js</key>
+		<data>
+		CwmbjLOSPHgNOW+W6gQnK2vT70U=
+		</data>
+		<key>divrtsdk/validation/validation.html</key>
+		<data>
+		c702bNc1XslOUg2A7lWNZjnQqj0=
+		</data>
+		<key>divrtsdk/validation/validation.js</key>
+		<data>
+		FJ/D4DB3MIN2l0/nLdD8oO/jZTk=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -123,7 +151,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			25I02s/irXLbVgwNTd/bcY5iO7AHEq00cSODzn9bwAY=
+			muQ1ArUZ/JzZvLuIMdXTA5cvB+m3FFzi9S7s0uasOQM=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64.swiftdoc</key>
@@ -144,7 +172,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			25I02s/irXLbVgwNTd/bcY5iO7AHEq00cSODzn9bwAY=
+			muQ1ArUZ/JzZvLuIMdXTA5cvB+m3FFzi9S7s0uasOQM=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -152,6 +180,55 @@
 			<key>hash2</key>
 			<data>
 			QgWyP2fzfhJsgukHWTImRd+h8PehOR2RyYSCjb+w1IY=
+			</data>
+		</dict>
+		<key>divrtsdk/AndroidSpecific.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			m8/EF2SJQoI5wTjWMgJu1ILC7EeuszTuRF8YfVs0G9M=
+			</data>
+		</dict>
+		<key>divrtsdk/JSInteractionWrapper.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			lf4x59W3ShInEn5C/F7AGSwcHWqX5gkXJcvmMHX/3Yo=
+			</data>
+		</dict>
+		<key>divrtsdk/iOSSpecific.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			MBCo9WIO5C9o96POxPtlFzsPodTaWzp0ZWNC6VS7QE8=
+			</data>
+		</dict>
+		<key>divrtsdk/index.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CL5ZauoE2eDEFA0w214eiCH10gAxvd+AH/fPRAVEfYU=
+			</data>
+		</dict>
+		<key>divrtsdk/index.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			zl41poudCcZGGFKgBWk2DSLRPnOltF2e/WQSOsR2OM4=
+			</data>
+		</dict>
+		<key>divrtsdk/validation/validation.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cgRVkJHiutK6sH+3Eom6031r2olakIhUJYkZO8PfWSU=
+			</data>
+		</dict>
+		<key>divrtsdk/validation/validation.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			NM4CaxG/4gdtupE9BAPZxGToi2fiepd52PwUmwQBQ7k=
 			</data>
 		</dict>
 	</dict>
