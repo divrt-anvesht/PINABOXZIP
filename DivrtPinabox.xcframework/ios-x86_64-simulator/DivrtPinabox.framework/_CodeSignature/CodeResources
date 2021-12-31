@@ -4,6 +4,10 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>AndroidSpecific.js</key>
+		<data>
+		kTD6gQTkNxywCYVfflQShzA8Ri8=
+		</data>
 		<key>FrameworkStoryboard.storyboardc/Info.plist</key>
 		<data>
 		8mPyjCEygykfTfA89oZ/vI2fGXs=
@@ -32,6 +36,10 @@
 		<data>
 		dqX9pLst4x9F5Qibd9VF/PenKUg=
 		</data>
+		<key>JSInteractionWrapper.js</key>
+		<data>
+		bUfKMOUVRX1RVvKTDaj1estySQo=
+		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
 		L7G+eJwml62oCdFLZNKYkGlRt70=
@@ -42,7 +50,7 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		pNGNZGHt1wwpotPaFAO+UcZNxlI=
+		nkfA2WCqR83SltzBvr8z7k1aer8=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -54,15 +62,42 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		pNGNZGHt1wwpotPaFAO+UcZNxlI=
+		nkfA2WCqR83SltzBvr8z7k1aer8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		6SAHxabS1yJUKz8h5/wUWMYdcG4=
 		</data>
+		<key>iOSSpecific.js</key>
+		<data>
+		atsACpSujNhDJDZCen/4IOzCyCM=
+		</data>
+		<key>index.html</key>
+		<data>
+		SOZym3Mo4+RZMQnM9ca5VmXyfi4=
+		</data>
+		<key>index.js</key>
+		<data>
+		RLgdm7Nz0GmZZUbhQfrS+QfIaEo=
+		</data>
+		<key>validation.html</key>
+		<data>
+		c702bNc1XslOUg2A7lWNZjnQqj0=
+		</data>
+		<key>validation.js</key>
+		<data>
+		2T9xj88X6AZ/Db1XdFeoFQsSu8Q=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>AndroidSpecific.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			3r1c6/+JGpBH7yFscezRIhjwXTuF/GWPdSLdA9B89WM=
+			</data>
+		</dict>
 		<key>FrameworkStoryboard.storyboardc/Info.plist</key>
 		<dict>
 			<key>hash2</key>
@@ -105,6 +140,13 @@
 			PNjBv0Ql7l/LISoiR6IQ6aurAWkM8NXpfpDkYWYpW30=
 			</data>
 		</dict>
+		<key>JSInteractionWrapper.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			/TXqwSqa0tzc6ecMt9KacQ2/v7+CSUJbxrU06ISW+Sw=
+			</data>
+		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
@@ -123,7 +165,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t0sN/KzyaZitnhO8QfI5IjQRqtENGHd5iOZvZWFzrUo=
+			b+/fzM8pWiR62NPWuf36oVTg7X7qtMZxd2g5WqtooPw=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftdoc</key>
@@ -144,7 +186,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			t0sN/KzyaZitnhO8QfI5IjQRqtENGHd5iOZvZWFzrUo=
+			b+/fzM8pWiR62NPWuf36oVTg7X7qtMZxd2g5WqtooPw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -152,6 +194,41 @@
 			<key>hash2</key>
 			<data>
 			QgWyP2fzfhJsgukHWTImRd+h8PehOR2RyYSCjb+w1IY=
+			</data>
+		</dict>
+		<key>iOSSpecific.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			KRBFTfatNjixfdY76d9QLcWAnjH6O5llXpwPk4IlPQU=
+			</data>
+		</dict>
+		<key>index.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			CL5ZauoE2eDEFA0w214eiCH10gAxvd+AH/fPRAVEfYU=
+			</data>
+		</dict>
+		<key>index.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uBvEQIEFCcMDuxvAHvclrtEjQJ7oPTl+GWVguOo8K+8=
+			</data>
+		</dict>
+		<key>validation.html</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			cgRVkJHiutK6sH+3Eom6031r2olakIhUJYkZO8PfWSU=
+			</data>
+		</dict>
+		<key>validation.js</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			inlPGZekkkwJS/oPeE/S3JkuiIeQLISK0nfaamMpmm0=
 			</data>
 		</dict>
 	</dict>
