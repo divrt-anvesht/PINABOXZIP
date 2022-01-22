@@ -14,27 +14,27 @@
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-11.0+.nib</key>
 		<data>
-		dRjwy30tr+CCptNSF+xhlqjg6VE=
+		ww5quCcYogPI6XtAFsFIdIt0UzQ=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<data>
-		eZslPAco2/BRyFdQih/Gd1R/SU0=
+		ww5quCcYogPI6XtAFsFIdIt0UzQ=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<data>
-		MC1Bw9z43cHFLLLvB9DdzvJmYio=
+		WB32qQ+9yc0TlkJbE7CnTCc6Ap0=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<data>
-		3orRXoqBwh9l0HiFe/TIyrLDw8c=
+		4SUdyJ4tvOwd8AIYae9bKqaUJd0=
 		</data>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<data>
-		Fu+/fE09l7BvDtLH1ExewPnvTcM=
+		eTR6QqLwGKQzIeYnOojaoZoCbWI=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		yLq7n9wfUEFPBQHJVQOnPrGd7zc=
+		dqX9pLst4x9F5Qibd9VF/PenKUg=
 		</data>
 		<key>JSInteractionWrapper.js</key>
 		<data>
@@ -42,27 +42,27 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		aS1XT8ELjhX43hS8EyBgVmHcqw4=
+		L7G+eJwml62oCdFLZNKYkGlRt70=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		iJTIN5uzExJ71+XxEojHrN0U0Qw=
+		SH0TwgRoUHeJA5HZK+DJJPciryE=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		NBLEQ/6nTwJu8sEsCfdkNJgXvxM=
+		nkfA2WCqR83SltzBvr8z7k1aer8=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftdoc</key>
 		<data>
-		aS1XT8ELjhX43hS8EyBgVmHcqw4=
+		L7G+eJwml62oCdFLZNKYkGlRt70=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftinterface</key>
 		<data>
-		iJTIN5uzExJ71+XxEojHrN0U0Qw=
+		SH0TwgRoUHeJA5HZK+DJJPciryE=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		NBLEQ/6nTwJu8sEsCfdkNJgXvxM=
+		nkfA2WCqR83SltzBvr8z7k1aer8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -109,35 +109,35 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			82ODS1GVQO2RmPRSYon5qBgG6+cZ9aTPUmK82F0N5qE=
+			w+AgMLc51iN9BluGQW3OBAiH6HRACo29E+GU6MJNKu0=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9KFeK9LayxN384CUJa2sMkguIhYteW79/h9/3xyKcW8=
+			w+AgMLc51iN9BluGQW3OBAiH6HRACo29E+GU6MJNKu0=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			IBiqKugUnkFh97HUVlTPtMWN4SHIDCO47f7r/4cCfiw=
+			smAm+c3mu9kMFzpiuDYRTjBubLXHBC195UKXvXIlkpo=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ajI72m3TqrBu2fmRCIbHHycpk6n05w/Ts7vR9vLk3Kw=
+			GAWRi8g7wC3P8HEcE7LhaH5fyU7feOsDZ3V/5L6xVbI=
 			</data>
 		</dict>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1dYjklYN0+dWT8ressErFt8Zk2hT9KDaAJVrdzm8ItQ=
+			PNjBv0Ql7l/LISoiR6IQ6aurAWkM8NXpfpDkYWYpW30=
 			</data>
 		</dict>
 		<key>JSInteractionWrapper.js</key>
@@ -151,42 +151,42 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			yFd4kL3m1I9By82bIfXgd1CV+6L+dyAsoKFi2D4Rvxc=
+			UBh67FgsPHkKagAeZQEIvahfQxxGch0FBDUcNDARQ8U=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GN5Fkwws+cBsQX74xY3ysapRmq1uBj2sgK1oorHx0gY=
+			r+etKj+fHyeRsSQchQrPxEyQkmzrZaRWRo57LZousY0=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OLlWchZpMmPCDRFPP6wLIiBd0jplL1T3to/qQk2gv8w=
+			b+/fzM8pWiR62NPWuf36oVTg7X7qtMZxd2g5WqtooPw=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yFd4kL3m1I9By82bIfXgd1CV+6L+dyAsoKFi2D4Rvxc=
+			UBh67FgsPHkKagAeZQEIvahfQxxGch0FBDUcNDARQ8U=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			GN5Fkwws+cBsQX74xY3ysapRmq1uBj2sgK1oorHx0gY=
+			r+etKj+fHyeRsSQchQrPxEyQkmzrZaRWRo57LZousY0=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			OLlWchZpMmPCDRFPP6wLIiBd0jplL1T3to/qQk2gv8w=
+			b+/fzM8pWiR62NPWuf36oVTg7X7qtMZxd2g5WqtooPw=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
