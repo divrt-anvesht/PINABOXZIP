@@ -26,21 +26,21 @@ extension UIViewController {
   public var onSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
   public var onFailure: ((Foundation.NSDictionary) -> Swift.Void)?
   public var onInfo: ((Foundation.NSDictionary) -> Swift.Void)?
-  public var onValSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
-  public var onValFailure: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onValidationSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onValidationFailure: ((Foundation.NSDictionary) -> Swift.Void)?
   public var debugEmail: Swift.String
   public var debugUID: Swift.Int
   public var garageListExists: Swift.Bool
   public var garageRadius: Swift.Int? {
     get
   }
-  public func initializeSDK(_ environment: DivrtPinabox.Environment = .Sandbox)
-  public func configureSDK(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
+  public func pinaInitialiser(_ environment: DivrtPinabox.Environment = .Sandbox)
+  public func pinaGateHandler(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
   public func pinaInterface(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
-  public func pinaValInterface(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
+  public func pinaInterfaceValidation(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
   public func getActiveOrder(pinaOrderParams: [Swift.String : Any], completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
-  public func validateQR(qrcode: Swift.String, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
-  public func opengate(qrcode: Swift.String, specificationType: Swift.String = "", pinaConfig: DivrtPinabox.PinaConfig, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
+  public func pinavalidateQR(qrcode: Swift.String, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
+  public func pinaVendGate(qrcode: Swift.String, specificationType: Swift.String = "", pinaConfig: DivrtPinabox.PinaConfig, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
   @objc public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
   @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
   public func sendSessionLogs(completionHandler: @escaping (Swift.Bool) -> Swift.Void)
