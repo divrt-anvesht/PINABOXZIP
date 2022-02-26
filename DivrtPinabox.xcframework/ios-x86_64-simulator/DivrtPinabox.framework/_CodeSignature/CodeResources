@@ -14,19 +14,19 @@
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/objects-11.0+.nib</key>
 		<data>
-		ZrGHUeu7B34C6yBwxV8EM+Z0cZE=
+		zb6CNZiQTtZVDQHWDfWta7+ha/A=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<data>
-		IELPlufjrnWCuy2bUWDtWAjC2Wg=
+		pAqAB91eKSk6SNUYGt1/SRWNqUk=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<data>
-		8vM9VsONvXLbXClvY1Mosh+SuPU=
+		AWI4+lfu5tzIML9DJ3ouUpOOHOg=
 		</data>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<data>
-		Lz4lp/tmOSCO6D7CEnzIhu3uF/8=
+		Sbx3XfGKPqMsf25U1+7e25qjDCw=
 		</data>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<data>
@@ -38,7 +38,7 @@
 		</data>
 		<key>JSInteractionWrapper.js</key>
 		<data>
-		bUfKMOUVRX1RVvKTDaj1estySQo=
+		mssoNEoeTLVD0gH3OjFeCp0q2Vk=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EEHRayXZE1n5PvfGnModOZvrvkk=
+		LjaLOK+nKhEJw+NfzlvCybirZPs=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftdoc</key>
 		<data>
@@ -62,7 +62,7 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftmodule</key>
 		<data>
-		EEHRayXZE1n5PvfGnModOZvrvkk=
+		LjaLOK+nKhEJw+NfzlvCybirZPs=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -78,7 +78,7 @@
 		</data>
 		<key>index.js</key>
 		<data>
-		oG6VIoZhc2i3GQEBfA+NSnLOurM=
+		hXpOjVkW5khZ43ozNXDFCCRQp1k=
 		</data>
 		<key>validation.html</key>
 		<data>
@@ -109,28 +109,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			YAm4Fe3UBlelu7a+L5unohVWKNVrfOU0rvVmjSnOxws=
+			mZG4dhfH0bj6fIE84fLPbtwvIGR636Shr2YaCjJOVqs=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/PinaboxViewController.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			N9ee46jrryeHimTskbhv4IB/FPwUuDrzkA23f3tNB2Q=
+			hL12WQ7f//+gTw4MDCLkprjThwmeI5iGpl5LcQn9Yxk=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/objects-11.0+.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			B0sbzXf55JQhQ4QrinerEAVGjUCloyzzbCwGDwYFvOc=
+			qDzqhWpoBn1R6h05q51RE8i/3hcnuIrY4j/GRzFkWOg=
 			</data>
 		</dict>
 		<key>FrameworkStoryboard.storyboardc/abO-gc-iY9-view-wwx-4L-HwA.nib/runtime.nib</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			bVef0M0NxKKRURzXpiplpT+RSx9oayBZb87olchK0PU=
+			MhzF7qKo9jW9i9HoCCgZHErho1GHC7ImssrGvaKCzGM=
 			</data>
 		</dict>
 		<key>Headers/DivrtPinabox-Swift.h</key>
@@ -144,7 +144,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			/TXqwSqa0tzc6ecMt9KacQ2/v7+CSUJbxrU06ISW+Sw=
+			4YjhAEYtIv62pqO0igSy9KNX7y22Ay058D8xOFV0A8c=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -165,7 +165,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1aKUB9kEdwp1lD7XW4M1qeXvYoi5jbNOXrLo+7zH038=
+			7RiENxZEtxO2w8ay6noGytoo9D2ykJoGQTCqJT+sd50=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64.swiftdoc</key>
@@ -186,7 +186,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1aKUB9kEdwp1lD7XW4M1qeXvYoi5jbNOXrLo+7zH038=
+			7RiENxZEtxO2w8ay6noGytoo9D2ykJoGQTCqJT+sd50=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -214,7 +214,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			50dpby1/VVCm1UU+z8OLohNymfQc9Y07G+YGKG4vsIE=
+			INjq5EEfFcAIlyUuQPH6JegrYQcwthpNwvv21ytJ9EQ=
 			</data>
 		</dict>
 		<key>validation.html</key>
