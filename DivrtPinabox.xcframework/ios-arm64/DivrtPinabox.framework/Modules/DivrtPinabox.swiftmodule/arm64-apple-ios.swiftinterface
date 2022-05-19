@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.4 effective-4.2 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-compiler-version: Apple Swift version 5.6 effective-4.2 (swiftlang-5.6.0.323.62 clang-1316.0.20.8)
 // swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name DivrtPinabox
 import AVFoundation
 import CocoaAsyncSocket
@@ -14,11 +14,12 @@ import SSZipArchive
 import Swift
 import UIKit
 import WebKit
-extension UIViewController : CoreBluetooth.CBPeripheralManagerDelegate {
-  @objc dynamic public func peripheralManagerDidUpdateState(_ peripheral: CoreBluetooth.CBPeripheralManager)
+import _Concurrency
+extension UIKit.UIViewController : CoreBluetooth.CBPeripheralManagerDelegate {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func peripheralManagerDidUpdateState(_ peripheral: CoreBluetooth.CBPeripheralManager)
 }
-extension UIViewController {
-  public func checkTheLocationServicesStatus()
+extension UIKit.UIViewController {
+  @_Concurrency.MainActor(unsafe) public func checkTheLocationServicesStatus()
 }
 @objc @_inheritsConvenienceInitializers public class PinaSDK : ObjectiveC.NSObject, Foundation.URLSessionDownloadDelegate, CocoaAsyncSocket.GCDAsyncUdpSocketDelegate {
   public static let shared: DivrtPinabox.PinaSDK
@@ -43,7 +44,7 @@ extension UIViewController {
   public func pinaVendGate(qrcode: Swift.String, specificationType: Swift.String = "", pinaConfig: DivrtPinabox.PinaConfig, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
   @objc public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
   @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
-  public func sendSessionLogs(completionHandler: @escaping (Swift.Bool) -> Swift.Void)
+  public func sendSessionLogs(completionHandler: @escaping (_ added: Swift.Bool) -> Swift.Void)
   public func debugLog(_ message: Swift.String)
   @objc public func udpSocket(_ sock: CocoaAsyncSocket.GCDAsyncUdpSocket, didReceive data: Foundation.Data, fromAddress address: Foundation.Data, withFilterContext filterContext: Any?)
   @objc public func udpSocket(_ sock: CocoaAsyncSocket.GCDAsyncUdpSocket, didNotConnect error: Swift.Error?)
@@ -273,7 +274,7 @@ public enum Device {
     get
   }
 }
-extension Device : Swift.CustomStringConvertible {
+extension DivrtPinabox.Device : Swift.CustomStringConvertible {
   public var description: Swift.String {
     get
   }
@@ -281,11 +282,11 @@ extension Device : Swift.CustomStringConvertible {
     get
   }
 }
-extension Device : Swift.Equatable {
+extension DivrtPinabox.Device : Swift.Equatable {
   public static func == (lhs: DivrtPinabox.Device, rhs: DivrtPinabox.Device) -> Swift.Bool
 }
 @available(iOS 8.0, watchOS 4.0, *)
-extension Device {
+extension DivrtPinabox.Device {
   public enum BatteryState : Swift.CustomStringConvertible, Swift.Equatable {
     case full
     case charging(Swift.Int)
@@ -305,11 +306,11 @@ extension Device {
   }
 }
 @available(iOS 8.0, watchOS 4.0, *)
-extension Device.BatteryState : Swift.Comparable {
+extension DivrtPinabox.Device.BatteryState : Swift.Comparable {
   public static func == (lhs: DivrtPinabox.Device.BatteryState, rhs: DivrtPinabox.Device.BatteryState) -> Swift.Bool
   public static func < (lhs: DivrtPinabox.Device.BatteryState, rhs: DivrtPinabox.Device.BatteryState) -> Swift.Bool
 }
-extension Device {
+extension DivrtPinabox.Device {
   public enum Orientation {
     case landscape
     case portrait
@@ -323,7 +324,7 @@ extension Device {
     get
   }
 }
-extension Device {
+extension DivrtPinabox.Device {
   public static var volumeTotalCapacity: Swift.Int? {
     get
   }
@@ -343,7 +344,7 @@ extension Device {
     get
   }
 }
-extension Device {
+extension DivrtPinabox.Device {
   public struct ApplePencilSupport : Swift.OptionSet {
     public var rawValue: Swift.UInt
     public init(rawValue: Swift.UInt)
@@ -360,7 +361,7 @@ extension Device {
     get
   }
 }
-extension Device {
+extension DivrtPinabox.Device {
   public enum CameraType {
     @available(*, deprecated, renamed: "wide")
     case normal
