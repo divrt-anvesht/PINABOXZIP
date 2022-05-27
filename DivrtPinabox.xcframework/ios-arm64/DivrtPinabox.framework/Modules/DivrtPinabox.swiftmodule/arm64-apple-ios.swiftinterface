@@ -14,12 +14,22 @@ import SSZipArchive
 import Swift
 import UIKit
 import WebKit
+#if compiler(>=5.5.2) && canImport(_Concurrency)
 import _Concurrency
+#endif
 extension UIKit.UIViewController : CoreBluetooth.CBPeripheralManagerDelegate {
+  #if compiler(>=5.5.2) && canImport(_Concurrency)
   @_Concurrency.MainActor(unsafe) @objc dynamic public func peripheralManagerDidUpdateState(_ peripheral: CoreBluetooth.CBPeripheralManager)
+  #else
+  @objc dynamic public func peripheralManagerDidUpdateState(_ peripheral: CoreBluetooth.CBPeripheralManager)
+  #endif
 }
 extension UIKit.UIViewController {
+  #if compiler(>=5.5.2) && canImport(_Concurrency)
   @_Concurrency.MainActor(unsafe) public func checkTheLocationServicesStatus()
+  #else
+  public func checkTheLocationServicesStatus()
+  #endif
 }
 @objc @_inheritsConvenienceInitializers public class PinaSDK : ObjectiveC.NSObject, Foundation.URLSessionDownloadDelegate, CocoaAsyncSocket.GCDAsyncUdpSocketDelegate {
   public static let shared: DivrtPinabox.PinaSDK
