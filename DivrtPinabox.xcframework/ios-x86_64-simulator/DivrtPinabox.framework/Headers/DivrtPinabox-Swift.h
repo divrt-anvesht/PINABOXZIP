@@ -195,9 +195,9 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_warning("-Watimport-in-framework-header")
 #pragma clang diagnostic ignored "-Watimport-in-framework-header"
 #endif
-@import CocoaAsyncSocket;
 @import CoreBluetooth;
 @import Foundation;
+@import MqttCocoaAsyncSocket;
 @import ObjectiveC;
 @import UIKit;
 #endif
@@ -231,7 +231,7 @@ SWIFT_CLASS("_TtC12DivrtPinabox10PinaConfig")
 @class NSData;
 
 SWIFT_CLASS("_TtC12DivrtPinabox7PinaSDK")
-@interface PinaSDK : NSObject <GCDAsyncUdpSocketDelegate, NSURLSessionDownloadDelegate>
+@interface PinaSDK : NSObject <NSURLSessionDownloadDelegate, GCDAsyncUdpSocketDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
 - (void)udpSocket:(GCDAsyncUdpSocket * _Nonnull)sock didReceiveData:(NSData * _Nonnull)data fromAddress:(NSData * _Nonnull)address withFilterContext:(id _Nullable)filterContext;

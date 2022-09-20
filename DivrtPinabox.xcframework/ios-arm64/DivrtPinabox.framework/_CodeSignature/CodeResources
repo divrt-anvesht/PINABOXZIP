@@ -30,11 +30,11 @@
 		</data>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<data>
-		M4KOR8LHjvrOuEPAnmfRClMHPN8=
+		tArMLEI3keXeTRxB9W7LG1Bt21g=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		DaMtXCUbVl2kXoRZ8krBBVqP674=
+		S8RMwAh2iV63PLZeTSRiTLVZdJA=
 		</data>
 		<key>JSInteractionWrapper.js</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		na51LTexFluvL5NcoXj4YwBY/QY=
+		urmgzTr2/Jw2qwUpgvWEHFksO7A=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		kagpMRFn3icD4HMcekNmBBZ2ctY=
+		DKCE7BdKbs0ukllaMyYFW17tTQA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -125,7 +125,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			auENYJYWOIvHWpHWfqyL8dpxpvLlv7VBaRqeieQlWeA=
+			4eYTAde8r1E5RfTL3jtmYOyIvLxmUnZCLEG+15V7OZM=
 			</data>
 		</dict>
 		<key>JSInteractionWrapper.js</key>
@@ -146,14 +146,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nC4DJaCmbfyJN+mEUQMzzEDttYygQUo8k94MGd0aylg=
+			1dcDq1N9WFU1JuDLbjVvUp0jrC3NX6FefPmHKfKdaW4=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KlFr52tgvVIYc2pYs4qOVb0dOHHKpkbB4Nh7+dTwpOY=
+			ALW0VAx8/G45ciUuXuNKFLffjAV4jOd+TirJYUcF9JE=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
