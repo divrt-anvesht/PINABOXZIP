@@ -5045,8 +5045,8 @@
           },
           {
             "kind": "Var",
-            "name": "current",
-            "printedName": "current",
+            "name": "modelName",
+            "printedName": "modelName",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -5056,8 +5056,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:12DivrtPinabox6DeviceO7currentACvpZ",
-            "mangledName": "$s12DivrtPinabox6DeviceO7currentACvpZ",
+            "usr": "s:12DivrtPinabox6DeviceO9modelNameACvpZ",
+            "mangledName": "$s12DivrtPinabox6DeviceO9modelNameACvpZ",
             "moduleName": "DivrtPinabox",
             "static": true,
             "declAttributes": [
@@ -5078,8 +5078,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:12DivrtPinabox6DeviceO7currentACvgZ",
-                "mangledName": "$s12DivrtPinabox6DeviceO7currentACvgZ",
+                "usr": "s:12DivrtPinabox6DeviceO9modelNameACvgZ",
+                "mangledName": "$s12DivrtPinabox6DeviceO9modelNameACvgZ",
                 "moduleName": "DivrtPinabox",
                 "static": true,
                 "accessorKind": "get"
@@ -13332,28 +13332,28 @@
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/UIDevice+Extension.swift",
       "kind": "StringLiteral",
-      "offset": 23811,
+      "offset": 23813,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/UIDevice+Extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 23897,
+      "offset": 23899,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/UIDevice+Extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 83031,
+      "offset": 83035,
       "length": 4,
       "value": "0x01"
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/UIDevice+Extension.swift",
       "kind": "IntegerLiteral",
-      "offset": 83107,
+      "offset": 83111,
       "length": 4,
       "value": "0x02"
     },
@@ -13956,13 +13956,13 @@
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaConfig.swift",
       "kind": "StringLiteral",
       "offset": 514,
-      "length": 20,
+      "length": 22,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaConfig.swift",
       "kind": "StringLiteral",
-      "offset": 533,
+      "offset": 535,
       "length": 1,
       "value": "\"\""
     }

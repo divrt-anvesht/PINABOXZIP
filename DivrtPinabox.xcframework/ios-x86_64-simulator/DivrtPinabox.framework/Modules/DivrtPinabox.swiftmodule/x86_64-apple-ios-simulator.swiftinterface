@@ -128,7 +128,7 @@ public enum Device {
   case homePod
   indirect case simulator(DivrtPinabox.Device)
   case unknown(Swift.String)
-  public static var current: DivrtPinabox.Device {
+  public static var modelName: DivrtPinabox.Device {
     get
   }
   public static var identifier: Swift.String
