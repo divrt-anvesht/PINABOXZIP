@@ -42,7 +42,7 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		AaKIH8mirRPvluTT+LjBeG8nbOk=
+		8lAKVuYNsH17BXteO8jvYkr8Dig=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		WnhOMG94ZTfVp7H66veaB2u5qvM=
+		oeeKLHLABttw8ID1pTJRViV7I6U=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -147,7 +147,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jhney6VTJo6dq4s/o9r68QMDr1a1I4EDbS3+mD2EiXM=
+			HMuzq7ugnQJEKp3QMCZ9GlPexChAIvWO2OB4tpALmfw=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
@@ -175,7 +175,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			T4HJxv2V5I0E8Y8J8HDPM9MUSGyPQq+/cmNIdQGPuvs=
+			bQgudew7hzVDsaNFz8GRCFKYeL4IHjXtCrcDVbCU1LU=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
