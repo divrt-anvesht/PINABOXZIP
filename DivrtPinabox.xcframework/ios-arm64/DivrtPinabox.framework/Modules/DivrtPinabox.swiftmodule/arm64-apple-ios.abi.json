@@ -1856,9 +1856,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "GCDAsyncUdpSocket",
-                "printedName": "MqttCocoaAsyncSocket.GCDAsyncUdpSocket",
-                "usr": "c:objc(cs)GCDAsyncUdpSocket"
+                "name": "MGCDAsyncUdpSocket",
+                "printedName": "MqttCocoaAsyncSocket.MGCDAsyncUdpSocket",
+                "usr": "c:objc(cs)MGCDAsyncUdpSocket"
               },
               {
                 "kind": "TypeNominal",
@@ -1888,7 +1888,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@DivrtPinabox@objc(cs)PinaSDK(im)udpSocket:didReceiveData:fromAddress:withFilterContext:",
-            "mangledName": "$s12DivrtPinabox7PinaSDKC9udpSocket_10didReceive11fromAddress17withFilterContextySo011GCDAsyncUdpF0C_10Foundation4DataVALypSgtF",
+            "mangledName": "$s12DivrtPinabox7PinaSDKC9udpSocket_10didReceive11fromAddress17withFilterContextySo012MGCDAsyncUdpF0C_10Foundation4DataVALypSgtF",
             "moduleName": "DivrtPinabox",
             "objc_name": "udpSocket:didReceiveData:fromAddress:withFilterContext:",
             "declAttributes": [
@@ -1910,9 +1910,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "GCDAsyncUdpSocket",
-                "printedName": "MqttCocoaAsyncSocket.GCDAsyncUdpSocket",
-                "usr": "c:objc(cs)GCDAsyncUdpSocket"
+                "name": "MGCDAsyncUdpSocket",
+                "printedName": "MqttCocoaAsyncSocket.MGCDAsyncUdpSocket",
+                "usr": "c:objc(cs)MGCDAsyncUdpSocket"
               },
               {
                 "kind": "TypeNominal",
@@ -1931,7 +1931,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@DivrtPinabox@objc(cs)PinaSDK(im)udpSocket:didNotConnect:",
-            "mangledName": "$s12DivrtPinabox7PinaSDKC9udpSocket_13didNotConnectySo011GCDAsyncUdpF0C_s5Error_pSgtF",
+            "mangledName": "$s12DivrtPinabox7PinaSDKC9udpSocket_13didNotConnectySo012MGCDAsyncUdpF0C_s5Error_pSgtF",
             "moduleName": "DivrtPinabox",
             "objc_name": "udpSocket:didNotConnect:",
             "declAttributes": [
@@ -1952,9 +1952,9 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "GCDAsyncUdpSocket",
-                "printedName": "MqttCocoaAsyncSocket.GCDAsyncUdpSocket",
-                "usr": "c:objc(cs)GCDAsyncUdpSocket"
+                "name": "MGCDAsyncUdpSocket",
+                "printedName": "MqttCocoaAsyncSocket.MGCDAsyncUdpSocket",
+                "usr": "c:objc(cs)MGCDAsyncUdpSocket"
               },
               {
                 "kind": "TypeNominal",
@@ -1973,7 +1973,7 @@
             ],
             "declKind": "Func",
             "usr": "c:@M@DivrtPinabox@objc(cs)PinaSDK(im)udpSocketDidClose:withError:",
-            "mangledName": "$s12DivrtPinabox7PinaSDKC17udpSocketDidClose_9withErrorySo011GCDAsyncUdpF0C_s0J0_pSgtF",
+            "mangledName": "$s12DivrtPinabox7PinaSDKC17udpSocketDidClose_9withErrorySo012MGCDAsyncUdpF0C_s0J0_pSgtF",
             "moduleName": "DivrtPinabox",
             "objc_name": "udpSocketDidClose:withError:",
             "declAttributes": [
@@ -13269,63 +13269,63 @@
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 622,
+      "offset": 623,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaSDK.swift",
       "kind": "StringLiteral",
-      "offset": 1056,
+      "offset": 1057,
       "length": 7,
       "value": "\"0.0.0\""
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaSDK.swift",
       "kind": "StringLiteral",
-      "offset": 1188,
+      "offset": 1189,
       "length": 4,
       "value": "\"-1\""
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaSDK.swift",
       "kind": "IntegerLiteral",
-      "offset": 1219,
+      "offset": 1220,
       "length": 2,
       "value": "1"
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 1256,
+      "offset": 1257,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaSDK.swift",
       "kind": "StringLiteral",
-      "offset": 1316,
+      "offset": 1318,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaSDK.swift",
       "kind": "StringLiteral",
-      "offset": 1344,
+      "offset": 1346,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaSDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 1475,
+      "offset": 1477,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/PinaSDK.swift",
       "kind": "StringLiteral",
-      "offset": 7461,
+      "offset": 7464,
       "length": 2,
       "value": "\"\""
     },
@@ -13677,7 +13677,7 @@
       "kind": "StringLiteral",
       "offset": 392,
       "length": 9,
-      "value": "\"18.0.14\""
+      "value": "\"18.0.15\""
     },
     {
       "filePath": "\/Users\/anvesh\/Desktop\/Git\/DivrtPinaboxSDKWEBCOMMON\/DivrtPinabox\/Constants.swift",

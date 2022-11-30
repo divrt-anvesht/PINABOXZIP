@@ -265,16 +265,16 @@ SWIFT_CLASS("_TtC12DivrtPinabox10PinaConfig")
 @class NSURLSessionDownloadTask;
 @class NSURL;
 @class NSURLSessionTask;
-@class GCDAsyncUdpSocket;
+@class MGCDAsyncUdpSocket;
 @class NSData;
 
 SWIFT_CLASS("_TtC12DivrtPinabox7PinaSDK")
-@interface PinaSDK : NSObject <NSURLSessionDownloadDelegate, GCDAsyncUdpSocketDelegate>
+@interface PinaSDK : NSObject <NSURLSessionDownloadDelegate, MGCDAsyncUdpSocketDelegate>
 - (void)URLSession:(NSURLSession * _Nonnull)session downloadTask:(NSURLSessionDownloadTask * _Nonnull)downloadTask didFinishDownloadingToURL:(NSURL * _Nonnull)location;
 - (void)URLSession:(NSURLSession * _Nonnull)session task:(NSURLSessionTask * _Nonnull)task didCompleteWithError:(NSError * _Nullable)error;
-- (void)udpSocket:(GCDAsyncUdpSocket * _Nonnull)sock didReceiveData:(NSData * _Nonnull)data fromAddress:(NSData * _Nonnull)address withFilterContext:(id _Nullable)filterContext;
-- (void)udpSocket:(GCDAsyncUdpSocket * _Nonnull)sock didNotConnect:(NSError * _Nullable)error;
-- (void)udpSocketDidClose:(GCDAsyncUdpSocket * _Nonnull)sock withError:(NSError * _Nullable)error;
+- (void)udpSocket:(MGCDAsyncUdpSocket * _Nonnull)sock didReceiveData:(NSData * _Nonnull)data fromAddress:(NSData * _Nonnull)address withFilterContext:(id _Nullable)filterContext;
+- (void)udpSocket:(MGCDAsyncUdpSocket * _Nonnull)sock didNotConnect:(NSError * _Nullable)error;
+- (void)udpSocketDidClose:(MGCDAsyncUdpSocket * _Nonnull)sock withError:(NSError * _Nullable)error;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 

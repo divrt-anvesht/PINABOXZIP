@@ -30,7 +30,7 @@
 		</data>
 		<key>Headers/DivrtPinabox-Swift.h</key>
 		<data>
-		rZHMf+xRAKMCxOnlU/TMkKDevak=
+		lvsLmk3YMn9JMIBvgu2D5AzfFi8=
 		</data>
 		<key>Info.plist</key>
 		<data>
@@ -42,11 +42,11 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		8lAKVuYNsH17BXteO8jvYkr8Dig=
+		ywr3/v9G7xarvz7jiNV7mo6KU2c=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		B/ApgXcdahMiukTaFPO4qeSYjl4=
+		F9WpSgjiBymyqrOqEq7NjJABIhU=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		B/ApgXcdahMiukTaFPO4qeSYjl4=
+		F9WpSgjiBymyqrOqEq7NjJABIhU=
 		</data>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		w7/ziZVViW0V1l5pkZapreKSCHo=
+		7Au8iYNOGGoA1RGTKVLx3DXBmE8=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -133,7 +133,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			CfongivtwKcHpXATB8VrTwp5C7R6IJIaMpW8kyxL10E=
+			kQ37vzulDMYIse5HqiO3V8oecpjWj5/9I8irtX+I+fI=
 			</data>
 		</dict>
 		<key>JSInteractionWrapper.js</key>
@@ -147,14 +147,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			HMuzq7ugnQJEKp3QMCZ9GlPexChAIvWO2OB4tpALmfw=
+			ePDQ8dAn7P0tUq4Yf8aGIker6QNzPPYxGaqRWA5ISBI=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			1NRAriUu1WlN+HidVw+2ib3s9ycfUrhrfsS8HU5FEmA=
+			Oq1cRfFhXMbAG1pDeWl/Gx00b0u6+7yZ7FqA3qFf4Hs=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -168,14 +168,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			1NRAriUu1WlN+HidVw+2ib3s9ycfUrhrfsS8HU5FEmA=
+			Oq1cRfFhXMbAG1pDeWl/Gx00b0u6+7yZ7FqA3qFf4Hs=
 			</data>
 		</dict>
 		<key>Modules/DivrtPinabox.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Dt3b8dY6KanF9+p0hLpF7I9rXbAFoln58MIlZVmh78o=
+			ZCzfzxYQ5Tp5QA6q2rvFygXzNxo06CNY73+5g7rG5GI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

@@ -23,7 +23,7 @@ extension UIKit.UIViewController : CoreBluetooth.CBPeripheralManagerDelegate {
 extension UIKit.UIViewController {
   @_Concurrency.MainActor(unsafe) public func checkTheLocationServicesStatus()
 }
-@objc @_inheritsConvenienceInitializers public class PinaSDK : ObjectiveC.NSObject, Foundation.URLSessionDownloadDelegate, MqttCocoaAsyncSocket.GCDAsyncUdpSocketDelegate {
+@objc @_inheritsConvenienceInitializers public class PinaSDK : ObjectiveC.NSObject, Foundation.URLSessionDownloadDelegate, MqttCocoaAsyncSocket.MGCDAsyncUdpSocketDelegate {
   public static let shared: DivrtPinabox.PinaSDK
   public var alertControllerTintColor: UIKit.UIColor?
   public var onSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
@@ -48,9 +48,9 @@ extension UIKit.UIViewController {
   @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
   public func sendSessionLogs(completionHandler: @escaping (_ added: Swift.Bool) -> Swift.Void)
   public func debugLog(_ message: Swift.String)
-  @objc public func udpSocket(_ sock: MqttCocoaAsyncSocket.GCDAsyncUdpSocket, didReceive data: Foundation.Data, fromAddress address: Foundation.Data, withFilterContext filterContext: Any?)
-  @objc public func udpSocket(_ sock: MqttCocoaAsyncSocket.GCDAsyncUdpSocket, didNotConnect error: Swift.Error?)
-  @objc public func udpSocketDidClose(_ sock: MqttCocoaAsyncSocket.GCDAsyncUdpSocket, withError error: Swift.Error?)
+  @objc public func udpSocket(_ sock: MqttCocoaAsyncSocket.MGCDAsyncUdpSocket, didReceive data: Foundation.Data, fromAddress address: Foundation.Data, withFilterContext filterContext: Any?)
+  @objc public func udpSocket(_ sock: MqttCocoaAsyncSocket.MGCDAsyncUdpSocket, didNotConnect error: Swift.Error?)
+  @objc public func udpSocketDidClose(_ sock: MqttCocoaAsyncSocket.MGCDAsyncUdpSocket, withError error: Swift.Error?)
   @objc override dynamic public init()
   @objc deinit
 }
