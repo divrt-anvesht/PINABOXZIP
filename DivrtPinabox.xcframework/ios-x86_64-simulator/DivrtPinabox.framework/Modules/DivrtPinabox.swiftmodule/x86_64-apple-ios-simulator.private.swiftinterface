@@ -495,6 +495,7 @@ public enum Environment : Swift.String {
   case Sandbox
   case Production
   case Test
+  case uat
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
@@ -507,6 +508,19 @@ public enum Environment : Swift.String {
   public var pinaSdkParams: [Swift.String : Any]
   public var pinaJSParams: [Swift.String : Any]
   public var validationParams: [Swift.String : Any]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc @_inheritsConvenienceInitializers public class PinaOD : ObjectiveC.NSObject {
+  public static let shared: DivrtPinabox.PinaOD
+  public var onSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onFailure: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onInfo: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onExtendSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
+  public var onExtendFailure: ((Foundation.NSDictionary) -> Swift.Void)?
+  public func launchODHandler(viewController: UIKit.UIViewController, zcode: Swift.String)
+  public func extendODHandler(viewController: UIKit.UIViewController, zcode: Swift.String, bookingID: Swift.String = "")
+  public func pinaInterfaceOD(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
   @objc override dynamic public init()
   @objc deinit
 }

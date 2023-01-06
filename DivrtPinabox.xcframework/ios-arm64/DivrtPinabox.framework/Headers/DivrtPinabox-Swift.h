@@ -261,6 +261,12 @@ SWIFT_CLASS("_TtC12DivrtPinabox10PinaConfig")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+
+SWIFT_CLASS("_TtC12DivrtPinabox6PinaOD")
+@interface PinaOD : NSObject
+- (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
+@end
+
 @class NSURLSession;
 @class NSURLSessionDownloadTask;
 @class NSURL;
