@@ -518,8 +518,8 @@ public enum Environment : Swift.String {
   public var onInfo: ((Foundation.NSDictionary) -> Swift.Void)?
   public var onExtendSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
   public var onExtendFailure: ((Foundation.NSDictionary) -> Swift.Void)?
-  public func launchODHandler(viewController: UIKit.UIViewController, zcode: Swift.String)
-  public func extendODHandler(viewController: UIKit.UIViewController, zcode: Swift.String, bookingID: Swift.String = "")
+  public func launchODHandler(viewController: UIKit.UIViewController, zcode: Swift.String, jwt: Swift.String = "")
+  public func extendODHandler(viewController: UIKit.UIViewController, zcode: Swift.String, bookingID: Swift.String = "", jwt: Swift.String = "")
   public func pinaInterfaceOD(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
   @objc override dynamic public init()
   @objc deinit
