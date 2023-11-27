@@ -1,1 +1,186 @@
-var _0x43289e=_0x2783;function _0x2783(_0x23b4ac,_0x12b588){var _0x19f45c=_0x19f4();return _0x2783=function(_0x278327,_0x287ead){_0x278327=_0x278327-0x1d7;var _0x2b6b9e=_0x19f45c[_0x278327];return _0x2b6b9e;},_0x2783(_0x23b4ac,_0x12b588);}(function(_0x36b1db,_0x4764dc){var _0x22e451=_0x2783,_0x35eb48=_0x36b1db();while(!![]){try{var _0x4bf409=-parseInt(_0x22e451(0x1ef))/0x1*(parseInt(_0x22e451(0x1df))/0x2)+parseInt(_0x22e451(0x1db))/0x3*(-parseInt(_0x22e451(0x206))/0x4)+parseInt(_0x22e451(0x20b))/0x5+-parseInt(_0x22e451(0x209))/0x6+parseInt(_0x22e451(0x216))/0x7+parseInt(_0x22e451(0x1f6))/0x8*(parseInt(_0x22e451(0x1e4))/0x9)+-parseInt(_0x22e451(0x1f8))/0xa;if(_0x4bf409===_0x4764dc)break;else _0x35eb48['push'](_0x35eb48['shift']());}catch(_0x402a76){_0x35eb48['push'](_0x35eb48['shift']());}}}(_0x19f4,0xe817b),window[_0x43289e(0x204)]=function AndroidClass(){});function include(_0x303606){var _0xb55ee7=_0x43289e,_0x2a4b13=document['createElement'](_0xb55ee7(0x1f9));_0x2a4b13[_0xb55ee7(0x1ea)]=_0x303606,_0x2a4b13['type']='text/javascript',_0x2a4b13[_0xb55ee7(0x1f1)]=!![],document[_0xb55ee7(0x208)](_0xb55ee7(0x207))['item'](0x0)[_0xb55ee7(0x215)](_0x2a4b13);}include(_0x43289e(0x1e1));const url_validate=_0x43289e(0x212);let url_base={get 'getURL'(){var _0x4893a0=_0x43289e;if(pinaConfig[_0x4893a0(0x1eb)]==_0x4893a0(0x1ed))return _0x4893a0(0x211);else{if(pinaConfig[_0x4893a0(0x1eb)]=='TEST')return'https://meghak2.divrt.co/';else return pinaConfig[_0x4893a0(0x1eb)]=='UAT'?_0x4893a0(0x1f0):_0x4893a0(0x210);}}},pinaConfig,pinaSdkParams,validationParams,prevQRMessage='';function flushData(){var _0x4e01cd=_0x43289e;try{pinaConfig={},pinaSdkParams={},prevQRMessage='';}catch(_0x5ae1d9){pushException(_0x4e01cd(0x20f)+_0x5ae1d9[_0x4e01cd(0x1d9)]);}}function validateConfig(_0x555094){var _0x53f891=_0x43289e;try{flushData(),pinaConfig=JSON[_0x53f891(0x20a)](_0x555094);isiOS()?(pinaSdkParams=pinaConfig[_0x53f891(0x1fd)],validationParams=pinaConfig[_0x53f891(0x1f3)]):(pinaSdkParams=pinaConfig[_0x53f891(0x1fd)][_0x53f891(0x1fa)],validationParams=pinaConfig[_0x53f891(0x1f3)]['nameValuePairs']);document['getElementById']('welcome_text')[_0x53f891(0x1f4)]=pinaSdkParams['locationName'],showProgress(![]);if(pinaSdkParams['gateButtonBgColor']!=undefined){var _0x3b34fa=document[_0x53f891(0x20e)]('proceed_btn'),_0xb86da7=document[_0x53f891(0x20e)](_0x53f891(0x20c)),_0x41068e=document[_0x53f891(0x20e)]('submit-btn'),_0x17bf8a=document[_0x53f891(0x20e)](_0x53f891(0x1dc));for(var _0x3720b7=0x0;_0x3720b7<_0x3b34fa[_0x53f891(0x1de)];_0x3720b7++){_0x3b34fa[_0x3720b7][_0x53f891(0x1da)]['background']=pinaSdkParams[_0x53f891(0x200)];}for(var _0x3720b7=0x0;_0x3720b7<_0xb86da7[_0x53f891(0x1de)];_0x3720b7++){_0xb86da7[_0x3720b7][_0x53f891(0x1da)]['background']=pinaSdkParams[_0x53f891(0x200)];}for(var _0x3720b7=0x0;_0x3720b7<_0x41068e[_0x53f891(0x1de)];_0x3720b7++){_0x41068e[_0x3720b7][_0x53f891(0x1da)][_0x53f891(0x1f7)]=pinaSdkParams[_0x53f891(0x200)];}for(var _0x3720b7=0x0;_0x3720b7<_0x17bf8a[_0x53f891(0x1de)];_0x3720b7++){_0xb86da7[_0x3720b7][_0x53f891(0x1da)][_0x53f891(0x1f7)]=pinaSdkParams[_0x53f891(0x200)];}}pinaSdkParams[_0x53f891(0x1f5)]!=undefined?document['getElementById'](_0x53f891(0x1ee))[_0x53f891(0x1ea)]=pinaSdkParams['appIconImage']:document['getElementById'](_0x53f891(0x1ee))[_0x53f891(0x1ea)]=_0x53f891(0x1e9);}catch(_0x6d17b7){pushException('validatePinaConfig\x20'+_0x6d17b7[_0x53f891(0x1d9)]);}}function _0x19f4(){var _0x37336c=['hide','androidObj','showProgress\x20','1116yCmscJ','head','getElementsByTagName','396990oidIyV','parse','3239480wZIlBF','back_btn','then','getElementsByClassName','flushData\x20','https://pinaboxapi-dev.divrt.co/','https://pinaboxapi.divrt.co/','api/v1/validate/coupon/','Validation\x20failure','value','appendChild','2557310aMFKJT','status','container_main','message','style','4203XwMnNh','loader','onClickBackGateIssues\x20','length','4joQQwZ','Please\x20try\x20again','JSInteractionWrapper.js','secret_key','remove','13698CCWnnn','container_gate_issues','POST','getElementById','application/json','https://static-dev.divrt.co/images/spplogo.png','src','environment','localeCompare','PROD','logo','21379tPrjKu','https://pinaboxapi-uat.divrt.co/','defer','add','validationParams','innerHTML','appIconImage','5920bceQSc','background','6890530sTWcEA','script','nameValuePairs','getURL','classList','pinaSdkParams','orderId','stringify','gateButtonBgColor','onClickGateIssues\x20','json'];_0x19f4=function(){return _0x37336c;};return _0x19f4();}function onClickBackGateIssues(){var _0xca4d37=_0x43289e;try{document[_0xca4d37(0x1e7)](_0xca4d37(0x1d8))[_0xca4d37(0x1fc)][_0xca4d37(0x1e3)](_0xca4d37(0x203)),document['getElementById'](_0xca4d37(0x1e5))[_0xca4d37(0x1fc)][_0xca4d37(0x1f2)](_0xca4d37(0x203));}catch(_0x1cfb9a){pushException(_0xca4d37(0x1dd)+_0x1cfb9a['message']);}}function onClickGateIssues(){var _0x201555=_0x43289e;try{document[_0x201555(0x1e7)]('container_main')[_0x201555(0x1fc)][_0x201555(0x1f2)](_0x201555(0x203)),document['getElementById']('container_gate_issues')[_0x201555(0x1fc)][_0x201555(0x1e3)](_0x201555(0x203));}catch(_0x166876){pushException(_0x201555(0x201)+_0x166876[_0x201555(0x1d9)]);}}function showProgress(_0x5927cd){var _0xd27095=_0x43289e;try{var _0xbf7be6=document[_0xd27095(0x1e7)](_0xd27095(0x1dc));_0x5927cd?_0xbf7be6[_0xd27095(0x1fc)]['remove'](_0xd27095(0x203)):_0xbf7be6['classList'][_0xd27095(0x1f2)](_0xd27095(0x203));}catch(_0x2e5cde){pushException(_0xd27095(0x205)+_0x2e5cde[_0xd27095(0x1d9)]);}}function validateQR(_0x2eaa2c){var _0x5cb2d9=_0x43289e;try{if(prevQRMessage[_0x5cb2d9(0x1ec)](_0x2eaa2c)===0x0){}else prevQRMessage=_0x2eaa2c,validate(prevQRMessage);}catch(_0x226c2b){J2N_val_postOnFailure(_0x5cb2d9(0x1e0));}}function onClickScanButton(){J2N_val_startQRScan();}function onClickSubmitButton(){var _0x58f4a9=_0x43289e;validate(document[_0x58f4a9(0x1e7)]('validation_code')[_0x58f4a9(0x214)]);}function validate(_0x4808a0){var _0x4318e4=_0x43289e;try{J2N_val_suspendClick();const _0x49b33a=url_base[_0x4318e4(0x1fb)]+url_validate+validationParams[_0x4318e4(0x1fe)];showProgress(!![]),fetch(_0x49b33a,{'method':_0x4318e4(0x1e6),'body':JSON[_0x4318e4(0x1ff)]({'coupon':_0x4808a0,'zid':validationParams['zid'],'secret_key':validationParams[_0x4318e4(0x1e2)]}),'headers':{'Accept':_0x4318e4(0x1e8),'Content-Type':_0x4318e4(0x1e8)}})[_0x4318e4(0x20d)](_0x3fb0a6=>{var _0x3f7d52=_0x4318e4;showProgress(![]),_0x3fb0a6[_0x3f7d52(0x202)]()[_0x3f7d52(0x20d)](_0x31c632=>{var _0x1e1a47=_0x3f7d52;try{_0x31c632[_0x1e1a47(0x1d7)]?J2N_val_postOnSuccess(JSON[_0x1e1a47(0x1ff)](_0x31c632)):J2N_val_postOnFailure(JSON[_0x1e1a47(0x1ff)](_0x31c632));}catch(_0xe57964){J2N_val_postOnFailure(_0x1e1a47(0x213));}});})['catch'](_0x40e55f=>{});}catch(_0x17bd43){}}
+window.androidObj = function AndroidClass() {
+};
+
+function include(file) {
+    
+    var script = document.createElement('script');
+    script.src = file;
+    script.type = 'text/javascript';
+    script.defer = true;
+    
+    document.getElementsByTagName('head').item(0).appendChild(script);
+    
+}
+
+include('JSInteractionWrapper.js');
+
+/*
+ * Variable Declarations
+ * */
+const url_validate = 'api/v1/validate/coupon/';
+
+let url_base = {
+    get getURL() {
+        // getter, the code executed on getting obj.propName
+        if (pinaConfig.environment == "PROD") {
+            return "https://pinaboxapi.divrt.co/";
+        } else if (pinaConfig.environment == "TEST") {
+            return  "https://meghak2.divrt.co/"
+        } else if (pinaConfig.environment == "UAT") {
+            return "https://pinaboxapi-uat2.parking.dev/"
+        } else {
+            return "https://pinaboxapi-dev.divrt.co/"
+        }
+    }
+};
+
+let pinaConfig, pinaSdkParams, validationParams, prevQRMessage = '';
+
+function flushData() {
+    try {
+        pinaConfig = {};
+        pinaSdkParams = {}
+        prevQRMessage = ''
+    } catch (e) {
+        pushException("flushData " + e.message)
+    }
+}
+
+function validateConfig(pinaConfigJson) {
+    try {
+        flushData()
+        
+        pinaConfig = JSON.parse(pinaConfigJson)
+        if (isiOS()) {
+            pinaSdkParams = pinaConfig.pinaSdkParams
+            validationParams = pinaConfig.validationParams
+        } else {
+            pinaSdkParams = pinaConfig.pinaSdkParams.nameValuePairs;
+            validationParams = pinaConfig.validationParams.nameValuePairs
+        }
+        
+        document.getElementById("welcome_text").innerHTML = pinaSdkParams.locationName;
+        showProgress(false);
+        if (pinaSdkParams.gateButtonBgColor != undefined) {
+            var elements = document.getElementsByClassName("proceed_btn")
+            var back_btn = document.getElementsByClassName("back_btn")
+            var submit_btn = document.getElementsByClassName("submit-btn")
+            var loader = document.getElementsByClassName("loader")
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.background = pinaSdkParams.gateButtonBgColor;
+            }
+            for (var i = 0; i < back_btn.length; i++) {
+                back_btn[i].style.background = pinaSdkParams.gateButtonBgColor;
+            }
+            for (var i = 0; i < submit_btn.length; i++) {
+                submit_btn[i].style.background = pinaSdkParams.gateButtonBgColor;
+            }
+            for (var i = 0; i < loader.length; i++) {
+                back_btn[i].style.background = pinaSdkParams.gateButtonBgColor;
+            }
+        }
+        
+        if (pinaSdkParams.appIconImage != undefined) {
+            document.getElementById("logo").src = pinaSdkParams.appIconImage;
+        } else {
+            document.getElementById("logo").src = "https://static-dev.divrt.co/images/spplogo.png";
+        }
+        
+    } catch (e) {
+        pushException("validatePinaConfig " + e.message)
+    }
+}
+
+function onClickBackGateIssues() {
+    try {
+        document.getElementById("container_main").classList.remove('hide');
+        document.getElementById("container_gate_issues").classList.add('hide');
+    } catch (e) {
+        pushException("onClickBackGateIssues " + e.message)
+    }
+}
+
+function onClickGateIssues() {
+    try {
+        document.getElementById("container_main").classList.add('hide');
+        document.getElementById("container_gate_issues").classList.remove('hide');
+    } catch (e) {
+        pushException("onClickGateIssues " + e.message)
+    }
+}
+
+/*
+ * API Calls
+ * */
+
+function showProgress(flag) {
+    try {
+        var element = document.getElementById('loader')
+        if (flag) {
+            element.classList.remove('hide')
+        } else {
+            element.classList.add('hide')
+        }
+    } catch (e) {
+        pushException("showProgress " + e.message)
+    }
+}
+
+function validateQR(message) {
+    try {
+        if (prevQRMessage.localeCompare(message) === 0) {
+            
+        } else {
+            prevQRMessage = message;
+            validate(prevQRMessage)
+        }
+    } catch (e) {
+        J2N_val_postOnFailure("Please try again")
+    }
+}
+
+function onClickScanButton(){
+    J2N_val_startQRScan()
+}
+
+function onClickSubmitButton(){
+    validate(document.getElementById("validation_code").value)
+}
+
+function validate(validationCode) {
+    try {
+        J2N_val_suspendClick();
+        const url = url_base.getURL + url_validate + validationParams.orderId;
+        showProgress(true);
+        fetch(url, {
+        method: "POST",
+        body: JSON.stringify({
+            "coupon": validationCode,
+            "zid": validationParams.zid,
+            "secret_key": validationParams.secret_key
+        }), headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        }
+        }).then(response => {
+            showProgress(false);
+            response.json().then(obj => {
+                try {
+                    if (obj.status) {
+                        
+                        J2N_val_postOnSuccess(JSON.stringify(obj))
+                    } else {
+                        
+                        J2N_val_postOnFailure(JSON.stringify(obj))
+                    }
+                } catch (e) {
+                    J2N_val_postOnFailure("Validation failure");
+                }
+                
+            })
+            
+        }).catch(e => {
+        });
+    } catch (e) {
+    }
+}

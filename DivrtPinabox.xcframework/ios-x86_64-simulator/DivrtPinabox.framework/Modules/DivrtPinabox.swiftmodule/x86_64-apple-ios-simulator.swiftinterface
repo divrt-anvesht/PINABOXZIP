@@ -1,5 +1,5 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 effective-4.2 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.9 effective-4.2 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
 // swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name DivrtPinabox
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
@@ -17,6 +17,7 @@ import UIKit
 import WebKit
 import _Concurrency
 import _StringProcessing
+import _SwiftConcurrencyShims
 extension UIKit.UIViewController : CoreBluetooth.CBPeripheralManagerDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func peripheralManagerDidUpdateState(_ peripheral: CoreBluetooth.CBPeripheralManager)
 }
@@ -41,16 +42,16 @@ extension UIKit.UIViewController {
   public func pinaGateHandler(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
   public func pinaInterface(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
   public func pinaInterfaceValidation(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
-  public func getActiveOrder(pinaOrderParams: [Swift.String : Any], completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
-  public func pinavalidateQR(qrcode: Swift.String, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
-  public func pinaVendGate(qrcode: Swift.String, specificationType: Swift.String = "", pinaConfig: DivrtPinabox.PinaConfig, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, Swift.Error?) -> Swift.Void)
+  public func getActiveOrder(pinaOrderParams: [Swift.String : Any], completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  public func pinavalidateQR(qrcode: Swift.String, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
+  public func pinaVendGate(qrcode: Swift.String, specificationType: Swift.String = "", pinaConfig: DivrtPinabox.PinaConfig, completionHandler: @escaping (Foundation.Data?, Foundation.URLResponse?, (any Swift.Error)?) -> Swift.Void)
   @objc public func urlSession(_ session: Foundation.URLSession, downloadTask: Foundation.URLSessionDownloadTask, didFinishDownloadingTo location: Foundation.URL)
-  @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: Swift.Error?)
+  @objc public func urlSession(_ session: Foundation.URLSession, task: Foundation.URLSessionTask, didCompleteWithError error: (any Swift.Error)?)
   public func sendSessionLogs(completionHandler: @escaping (_ added: Swift.Bool) -> Swift.Void)
   public func debugLog(_ message: Swift.String)
   @objc public func udpSocket(_ sock: MqttCocoaAsyncSocket.MGCDAsyncUdpSocket, didReceive data: Foundation.Data, fromAddress address: Foundation.Data, withFilterContext filterContext: Any?)
-  @objc public func udpSocket(_ sock: MqttCocoaAsyncSocket.MGCDAsyncUdpSocket, didNotConnect error: Swift.Error?)
-  @objc public func udpSocketDidClose(_ sock: MqttCocoaAsyncSocket.MGCDAsyncUdpSocket, withError error: Swift.Error?)
+  @objc public func udpSocket(_ sock: MqttCocoaAsyncSocket.MGCDAsyncUdpSocket, didNotConnect error: (any Swift.Error)?)
+  @objc public func udpSocketDidClose(_ sock: MqttCocoaAsyncSocket.MGCDAsyncUdpSocket, withError error: (any Swift.Error)?)
   @objc override dynamic public init()
   @objc deinit
 }
@@ -93,6 +94,10 @@ public enum Device {
   case iPhone14Plus
   case iPhone14Pro
   case iPhone14ProMax
+  case iPhone15
+  case iPhone15Plus
+  case iPhone15Pro
+  case iPhone15ProMax
   case iPad2
   case iPad3
   case iPad4
@@ -463,6 +468,7 @@ extension DivrtPinabox.Device {
     case a14Bionic
     case a15Bionic
     case a16Bionic
+    case a17Pro
     case m1
     case m2
     case unknown
@@ -518,8 +524,8 @@ public enum Environment : Swift.String {
   public var onInfo: ((Foundation.NSDictionary) -> Swift.Void)?
   public var onExtendSuccess: ((Foundation.NSDictionary) -> Swift.Void)?
   public var onExtendFailure: ((Foundation.NSDictionary) -> Swift.Void)?
-  public func launchODHandler(viewController: UIKit.UIViewController, zcode: Swift.String, jwt: Swift.String = "")
-  public func extendODHandler(viewController: UIKit.UIViewController, zcode: Swift.String, bookingID: Swift.String = "", jwt: Swift.String = "")
+  public func launchODHandler(viewController: UIKit.UIViewController, zcode: Swift.String, jwt: Swift.String = "", paymentDetails: [Swift.String : Any]? = nil)
+  public func extendODHandler(viewController: UIKit.UIViewController, zcode: Swift.String, bookingID: Swift.String = "", jwt: Swift.String = "", paymentDetails: [Swift.String : Any]? = nil)
   public func pinaInterfaceOD(viewController: UIKit.UIViewController, pinaConfig: DivrtPinabox.PinaConfig)
   @objc override dynamic public init()
   @objc deinit

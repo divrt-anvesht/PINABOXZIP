@@ -1,1 +1,158 @@
- (function(_0x271033,_0x3783fd){const _0x1c2ce1=_0x156f,_0x5ad215=_0x271033();while(!![]){try{const _0x4c84fe=-parseInt(_0x1c2ce1(0x15e))/0x1*(-parseInt(_0x1c2ce1(0x153))/0x2)+parseInt(_0x1c2ce1(0x14f))/0x3+parseInt(_0x1c2ce1(0x157))/0x4+parseInt(_0x1c2ce1(0x154))/0x5+-parseInt(_0x1c2ce1(0x166))/0x6+-parseInt(_0x1c2ce1(0x15d))/0x7*(-parseInt(_0x1c2ce1(0x14e))/0x8)+-parseInt(_0x1c2ce1(0x167))/0x9*(-parseInt(_0x1c2ce1(0x169))/0xa);if(_0x4c84fe===_0x3783fd)break;else _0x5ad215['push'](_0x5ad215['shift']());}catch(_0x2efbbb){_0x5ad215['push'](_0x5ad215['shift']());}}}(_0x46c2,0xe886e));let handler;function isiOS(){const _0x17b17b=_0x156f;let _0x3e2bef=[_0x17b17b(0x170),'iPhone\x20Simulator',_0x17b17b(0x15f),_0x17b17b(0x16b),'iPhone',_0x17b17b(0x174)][_0x17b17b(0x173)](navigator['platform'])||navigator[_0x17b17b(0x159)]['includes'](_0x17b17b(0x158))&&_0x17b17b(0x16d)in document;return _0x3e2bef==!![]?handler=window[_0x17b17b(0x16a)][_0x17b17b(0x156)]:handler=Android,_0x3e2bef;}function J2N_startQRScan(){const _0x16e81c=_0x156f;console[_0x16e81c(0x155)]('BB'),isiOS()?handler[_0x16e81c(0x168)][_0x16e81c(0x16c)](''):handler['J2N_startQRScan']();}function J2N_startNFCScan(){const _0x12a609=_0x156f;isiOS()?handler[_0x12a609(0x160)][_0x12a609(0x16c)](''):handler['J2N_startNFCScan']();}function J2N_startBeaconScan(_0x20ba99){const _0x436093=_0x156f;isiOS()&&handler[_0x436093(0x151)][_0x436093(0x16c)](_0x20ba99);}function J2N_startLoopScan(_0x53c039){const _0x224fd5=_0x156f;isiOS()?handler[_0x224fd5(0x15b)][_0x224fd5(0x16c)](_0x53c039):handler[_0x224fd5(0x15b)](_0x53c039);}function J2N_postOnSuccess(_0x507aee){const _0x581441=_0x156f;isiOS()?handler['J2N_postOnSuccess'][_0x581441(0x16c)](_0x507aee):handler['J2N_postOnSuccess'](_0x507aee);}function J2N_postOnFailure(_0x3a4bb6){const _0x2d1496=_0x156f;isiOS()?handler[_0x2d1496(0x15c)][_0x2d1496(0x16c)](_0x3a4bb6):handler[_0x2d1496(0x15c)](_0x3a4bb6);}function J2N_postOnInfo(_0xb44c43){const _0x259703=_0x156f;isiOS()?handler['J2N_postOnInfo']['postMessage'](_0xb44c43):handler[_0x259703(0x165)](_0xb44c43);}function J2N_suspendClick(){const _0x5b9d42=_0x156f;isiOS()?handler[_0x5b9d42(0x163)][_0x5b9d42(0x16c)](''):handler[_0x5b9d42(0x163)]();}function J2N_printLog(_0xbfe8b7){const _0x8b21fe=_0x156f;isiOS()?handler['J2N_printLog'][_0x8b21fe(0x16c)](_0xbfe8b7):handler[_0x8b21fe(0x164)](_0xbfe8b7);}function J2N_forceJSupdate(_0x1c82cc){const _0x553901=_0x156f;isiOS()?handler['J2N_forceJSupdate'][_0x553901(0x16c)](_0x1c82cc):handler[_0x553901(0x152)](_0x1c82cc);}function J2NpostLogs(){const _0x1c4578=_0x156f;debugLog(_0x1c4578(0x15a));let _0x5c74ac=baseParametersProximity(),_0x28a8bf=JSON[_0x1c4578(0x150)](_0x5c74ac);isiOS()?handler['J2NpostLogs'][_0x1c4578(0x16c)](_0x28a8bf):handler[_0x1c4578(0x16f)](_0x28a8bf);}function N2J_postQRData(_0x16f1ee){validateQR(_0x16f1ee);}function N2J_postNFCData(_0x2a68b1){validateNFC(_0x2a68b1);}function _0x46c2(){const _0x48f438=['webkit','iPad','postMessage','ontouchend','J2N_postOnSuccess','J2NpostLogs','iPad\x20Simulator','J2N_fetchRequest','J2N_val_postOnFailure','includes','iPod','23944mETjrL','3830622CNRoEL','stringify','J2N_startBeaconScan','J2N_forceJSupdate','2zlWVBT','3127880DaqqeX','log','messageHandlers','675836IDoplx','Mac','userAgent','popupdism','J2N_startLoopScan','J2N_postOnFailure','7bkxWjr','310237TOXSEo','iPod\x20Simulator','J2N_startNFCScan','J2N_val_suspendClick','J2N_val_startQRScan','J2N_suspendClick','J2N_printLog','J2N_postOnInfo','10424838mmoTAs','144LdbsEm','J2N_startQRScan','190790FvKutk'];_0x46c2=function(){return _0x48f438;};return _0x46c2();}function N2J_postBeaconData(_0x3f18a3){isiOS()?validateBeaconDataiOS(_0x3f18a3):validateBeaconDataAndroid(_0x3f18a3);}function N2J_postLoopData(_0x526193){validateLoopData(_0x526193);}function N2J_postLocationData(_0x3052b8){validateLatLong(_0x3052b8);}function _0x156f(_0x2b0c8b,_0x5130fd){const _0x46c29d=_0x46c2();return _0x156f=function(_0x156f49,_0x33541e){_0x156f49=_0x156f49-0x14e;let _0x14f955=_0x46c29d[_0x156f49];return _0x14f955;},_0x156f(_0x2b0c8b,_0x5130fd);}function N2J_init(_0x4b2238,_0xf317b9){isiOS()?prefetchHardwareConfiguration(_0x4b2238,_0xf317b9):validateHardwareConfig(_0xf317b9);}function N2J_launch(_0x4ccd43,_0x576bca){isiOS()?displayWebViewAndStartSDK(_0x4ccd43,_0x576bca):validatePinaConfig(_0x4ccd43);}function N2J_pushLogs(){J2NpostLogs();}function N2J_debugLog(_0x2d4cda){debugLog(_0x2d4cda);}function N2J_val_launch(_0x4bb13f){validateConfig(_0x4bb13f);}function J2N_val_postOnSuccess(_0x3f5aad){const _0x594653=_0x156f;isiOS()?handler['J2N_val_postOnSuccess'][_0x594653(0x16c)](_0x3f5aad):handler[_0x594653(0x16e)](_0x3f5aad);}function J2N_val_postOnFailure(_0x3d4131){const _0x44fbd8=_0x156f;isiOS()?handler[_0x44fbd8(0x172)][_0x44fbd8(0x16c)](_0x3d4131):handler['J2N_postOnFailure'](_0x3d4131);}function J2N_val_startQRScan(){const _0x5de020=_0x156f;console[_0x5de020(0x155)]('BB'),isiOS()?handler[_0x5de020(0x162)][_0x5de020(0x16c)](''):handler[_0x5de020(0x168)]();}function J2N_val_suspendClick(){const _0x516701=_0x156f;isiOS()?handler[_0x516701(0x161)][_0x516701(0x16c)](''):handler['J2N_suspendClick']();}function J2N_fetchRequest(_0xb4d8e8){const _0x1e3350=_0x156f;isiOS()?handler['J2N_fetchRequest']['postMessage'](_0xb4d8e8):handler[_0x1e3350(0x171)](_0xb4d8e8);}function N2J_onfetchSuccess(_0x3f07d1,_0x1ba037){isiOS()?validateFetchSuccessResponse(_0x3f07d1,_0x1ba037):validateFetchSuccessResponse(_0x3f07d1,_0x1ba037);}function N2J_onfetchFailure(_0x122c74,_0x44d3e3){isiOS()?validateFetchFailureResponse(_0x122c74,_0x44d3e3):validateFetchFailureResponse(_0x122c74,_0x44d3e3);}
+let handler;
+
+function isiOS() {
+
+    let iOS = [
+            'iPad Simulator',
+            'iPhone Simulator',
+            'iPod Simulator',
+            'iPad',
+            'iPhone',
+            'iPod'
+        ].includes(navigator.platform)
+        // iPad on iOS 13 detection
+        || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+
+    if (iOS == true) {
+        handler = window.webkit.messageHandlers
+    } else {
+        handler = Android;
+    }
+    return iOS
+}
+
+function J2N_startQRScan(){
+    console.log("BB")
+    isiOS() ?  handler.J2N_startQRScan.postMessage("") : handler.J2N_startQRScan()
+}
+
+function J2N_startNFCScan(){
+    isiOS() ?  handler.J2N_startNFCScan.postMessage("") : handler.J2N_startNFCScan()
+}
+
+function J2N_startBeaconScan(data){
+    if(isiOS()) {
+        handler.J2N_startBeaconScan.postMessage(data);
+    }
+
+}
+
+function J2N_startLoopScan(data){
+    isiOS() ?  handler.J2N_startLoopScan.postMessage(data) : handler.J2N_startLoopScan(data)
+}
+
+function J2N_postOnSuccess(data){
+    isiOS() ? handler.J2N_postOnSuccess.postMessage(data) : handler.J2N_postOnSuccess(data)
+}
+
+function J2N_postOnFailure(data){
+    isiOS() ? handler.J2N_postOnFailure.postMessage(data) : handler.J2N_postOnFailure(data)
+}
+
+function J2N_postOnInfo(data){
+    isiOS() ? handler.J2N_postOnInfo.postMessage(data) : handler.J2N_postOnInfo(data)
+}
+
+function J2N_suspendClick(){
+    isiOS() ? handler.J2N_suspendClick.postMessage("") : handler.J2N_suspendClick()
+}
+
+function J2N_printLog(data){
+    isiOS() ? handler.J2N_printLog.postMessage(data) : handler.J2N_printLog(data)
+}
+
+function J2N_forceJSupdate(data){
+    isiOS() ? handler.J2N_forceJSupdate.postMessage(data) : handler.J2N_forceJSupdate(data)
+}
+
+
+function J2NpostLogs(){
+    debugLog("popupdism")
+    let proxyJsonDict = baseParametersProximity()
+    let data = JSON.stringify(proxyJsonDict)
+    isiOS() ? handler.J2NpostLogs.postMessage(data) : handler.J2NpostLogs(data)
+}
+
+
+function N2J_postQRData(data){
+    validateQR(data)
+}
+
+function N2J_postNFCData(data){
+    validateNFC(data)
+}
+
+function N2J_postBeaconData(data){
+    isiOS() ? validateBeaconDataiOS(data) : validateBeaconDataAndroid(data);
+}
+
+function N2J_postLoopData(data){
+    validateLoopData(data)
+}
+
+function N2J_postLocationData(data){
+    validateLatLong(data)
+}
+
+function N2J_init(pinaConfig, hardwareConfig){
+    isiOS() ? prefetchHardwareConfiguration(pinaConfig, hardwareConfig) : validateHardwareConfig(hardwareConfig)
+}
+
+/*
+* First method called when Webview is visible
+* */
+function N2J_launch(pinaConfig, hardwareConfig){
+    isiOS() ? displayWebViewAndStartSDK(pinaConfig, hardwareConfig) : validatePinaConfig(pinaConfig)
+    
+}
+
+function N2J_pushLogs(){
+    J2NpostLogs()
+}
+
+function N2J_debugLog(message){
+    debugLog(message)
+}
+
+
+/*
+* Validations
+* */
+
+function N2J_val_launch(pinaConfig){
+    validateConfig(pinaConfig)
+}
+
+
+function J2N_val_postOnSuccess(data){
+    isiOS() ? handler.J2N_val_postOnSuccess.postMessage(data) : handler.J2N_postOnSuccess(data)
+}
+
+function J2N_val_postOnFailure(data){
+    isiOS() ? handler.J2N_val_postOnFailure.postMessage(data) : handler.J2N_postOnFailure(data)
+}
+
+function J2N_val_startQRScan(){
+    console.log("BB")
+    isiOS() ?  handler.J2N_val_startQRScan.postMessage("") : handler.J2N_startQRScan()
+}
+
+function J2N_val_suspendClick(){
+    isiOS() ? handler.J2N_val_suspendClick.postMessage("") : handler.J2N_suspendClick()
+}
+
+/*
+ API REQUESTS
+*/
+
+function J2N_fetchRequest(data){
+    isiOS() ? handler.J2N_fetchRequest.postMessage(data) : handler.J2N_fetchRequest(data)
+}
+
+function N2J_onfetchSuccess(data, jsIntent){
+    isiOS() ? validateFetchSuccessResponse(data, jsIntent) : validateFetchSuccessResponse(data, jsIntent)
+}
+
+function N2J_onfetchFailure(data, jsIntent){
+    isiOS() ? validateFetchFailureResponse(data, jsIntent) : validateFetchFailureResponse(data, jsIntent)
+}

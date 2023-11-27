@@ -1,1 +1,1542 @@
-const _0x25ab77=_0x36d8;(function(_0x5bbba2,_0x24301b){const _0x5c9885=_0x36d8,_0x278887=_0x5bbba2();while(!![]){try{const _0x47cbd4=-parseInt(_0x5c9885(0x15a))/0x1*(-parseInt(_0x5c9885(0x169))/0x2)+-parseInt(_0x5c9885(0x116))/0x3*(-parseInt(_0x5c9885(0x10d))/0x4)+-parseInt(_0x5c9885(0x1a2))/0x5+-parseInt(_0x5c9885(0xe3))/0x6+parseInt(_0x5c9885(0x111))/0x7*(-parseInt(_0x5c9885(0x162))/0x8)+-parseInt(_0x5c9885(0xe2))/0x9*(parseInt(_0x5c9885(0x13e))/0xa)+-parseInt(_0x5c9885(0x128))/0xb*(-parseInt(_0x5c9885(0x144))/0xc);if(_0x47cbd4===_0x24301b)break;else _0x278887['push'](_0x278887['shift']());}catch(_0x2ec97f){_0x278887['push'](_0x278887['shift']());}}}(_0x41ff,0x4d447),window['androidObj']=function AndroidClass(){});function include(_0x5dfd5e){const _0x540ac4=_0x36d8;var _0x295b32=document[_0x540ac4(0x12e)]('script');_0x295b32[_0x540ac4(0x16c)]=_0x5dfd5e,_0x295b32[_0x540ac4(0x1b9)]='text/javascript',_0x295b32[_0x540ac4(0x117)]=!![],document['getElementsByTagName']('head')[_0x540ac4(0xe4)](0x0)['appendChild'](_0x295b32);}include(_0x25ab77(0x17f)),include(_0x25ab77(0x142)),include(_0x25ab77(0x175));const url_hardwareConfig=_0x25ab77(0x132),url_openGate=_0x25ab77(0x19c),url_decisionInfo='api/v2/decisionInfo';let url_base={get 'getURL'(){const _0x40ddc0=_0x25ab77;if(pinaConfig[_0x40ddc0(0xd8)]==_0x40ddc0(0x1c1))return _0x40ddc0(0x160);else{if(pinaConfig['environment']=='TEST')return _0x40ddc0(0x151);else return pinaConfig[_0x40ddc0(0xd8)]==_0x40ddc0(0xec)?_0x40ddc0(0x190):_0x40ddc0(0x17a);}}},loggerURL={get 'getURL'(){const _0x3bcbd6=_0x25ab77;if(pinaConfig[_0x3bcbd6(0xd8)]=='PROD')return _0x3bcbd6(0x138);else return pinaConfig[_0x3bcbd6(0xd8)]==_0x3bcbd6(0xec)?'https://logger-uat.divrt.co/log':_0x3bcbd6(0x1c5);}},pinaConfig,pinaConfigParams,pinaSdkParams,pinaClientParams,pinaMiscParams,getBeaconListResponse,beaconData,nfcData,qrCode,autoSelectMode,garageLocation={},loopData={},loopDetectorMqttTopic,loopDetected=![],bleDetected=![],collectDecisionData=!![],beaconHits=0x0,beaconDistanceGreaterThanRequired=!![],gateDecisionDeltaSec,cancelled=![],gate,scanToButtonGreenDeltaSec,atleastOneBeaconLessThanOneMtr=![],thresholdTimerExecuted=![],gateSelected=![],loopDetectors=[],minGateData=new Map(),maxGateData=new Map(),gateloopData=new Map(),maxDistance,beaconsMap=new Map(),altBeaconsMap=new Map(),beaconId,delta,differentiationDelta,loopDetectorSimulation=0x0,commandId,scanToButtonClickDeltaSec,outcome='',gateForBeacon=new Map(),decisionData={},buttonMode,presentButtonMode='-1',minorId=new Map(),minorIdDebug=new Map(),minDistance=new Map(),lastDistance=new Map(),rangeWeightData=new Map(),rangeData=new Map(),deciTime=new Map(),deciDistance=new Map(),firstDistance=new Map(),firstTime=new Map(),loopValues=[],loopList=[],oneBeacon='X',otherBeacon='X',myLaneLoop='X',otherLaneLoop='X',lane=-0x1,currentLocation={},prevQRMessage='',batteryDataDictionaryArray=[],screenAppearanceTime,proximityDataArray=[],weightDataDict={},logArray=[],debugCount=0x0,logStartTime=0x0,beaconIdPedestrian,loopEnabledTime,bleEnabledTime,firstBleHitTime,techType=_0x25ab77(0x121),bookingID,uid,gateDatainitialised=![],entrance='',specificationType='',refId,reloadHwAndDisplay=![];function onClickGateIssues(){const _0xd7ddc1=_0x25ab77;try{document['getElementById'](_0xd7ddc1(0x1b7))[_0xd7ddc1(0x170)][_0xd7ddc1(0x1bf)](_0xd7ddc1(0x131)),document[_0xd7ddc1(0x107)]('container_gate_issues')[_0xd7ddc1(0x170)]['remove'](_0xd7ddc1(0x131));}catch(_0x533302){pushException(_0xd7ddc1(0xdc)+_0x533302[_0xd7ddc1(0x1cd)]);}}function onClickBackGateIssues(){const _0x1de0cd=_0x25ab77;try{document['getElementById'](_0x1de0cd(0x1b7))[_0x1de0cd(0x170)]['remove'](_0x1de0cd(0x131)),document['getElementById'](_0x1de0cd(0xe6))[_0x1de0cd(0x170)]['add'](_0x1de0cd(0x131));}catch(_0x544a78){pushException('onClickBackGateIssues\x20'+_0x544a78[_0x1de0cd(0x1cd)]);}}function onClickPedestrian(){const _0x3b8ac4=_0x25ab77;try{document[_0x3b8ac4(0x107)](_0x3b8ac4(0x191))['classList'][_0x3b8ac4(0x1bf)]('hide'),document['getElementById'](_0x3b8ac4(0xef))['classList'][_0x3b8ac4(0xed)](_0x3b8ac4(0x131));if(beaconData!=null&&beaconData[_0x3b8ac4(0x174)]!=null&&beaconData[_0x3b8ac4(0x174)][_0x3b8ac4(0x143)]>0x0)for(let _0x161f82=0x0;_0x161f82<beaconData[_0x3b8ac4(0x174)][_0x3b8ac4(0x143)];_0x161f82++){beaconData[_0x3b8ac4(0x174)][_0x161f82][_0x3b8ac4(0x1c9)]!=null&&beaconData[_0x3b8ac4(0x174)][_0x161f82][_0x3b8ac4(0x1c9)][_0x3b8ac4(0x17b)]('1')===0x0&&(storeBeaconIdPedestrian(beaconData[_0x3b8ac4(0x174)][_0x161f82][_0x3b8ac4(0xdb)]),showOpenButtonPedestrian(),hideAwaitingPedestrian());}}catch(_0x39e1d7){pushException(_0x3b8ac4(0x1bb)+_0x39e1d7[_0x3b8ac4(0x1cd)]);}}function onClickBackPedestrian(){const _0x5e77c2=_0x25ab77;try{document['getElementById'](_0x5e77c2(0x191))[_0x5e77c2(0x170)][_0x5e77c2(0xed)](_0x5e77c2(0x131)),document[_0x5e77c2(0x107)](_0x5e77c2(0xef))['classList']['add']('hide');}catch(_0x18188a){pushException(_0x5e77c2(0xfb)+_0x18188a[_0x5e77c2(0x1cd)]);}}function showOpenButtonPedestrian(){const _0x526949=_0x25ab77;try{document[_0x526949(0x107)](_0x526949(0x14a))[_0x526949(0x146)][_0x526949(0x196)]=_0x526949(0x199),document[_0x526949(0x107)](_0x526949(0x100))[_0x526949(0x170)][_0x526949(0xed)]('hide');}catch(_0x483e28){pushException('showOpenButtonPedestrian\x20'+_0x483e28[_0x526949(0x1cd)]);}}function hideAwaitingPedestrian(){const _0x19f71=_0x25ab77;try{document['getElementById']('button_ble_pedestrian')[_0x19f71(0x170)]['add']('hide');}catch(_0x210bea){pushException(_0x19f71(0x120)+_0x210bea['message']);}}function hideOpenButtonPedestrian(){const _0x283420=_0x25ab77;try{document[_0x283420(0x107)](_0x283420(0x100))['classList'][_0x283420(0x1bf)]('hide');}catch(_0x5f4ee3){pushException(_0x283420(0x101)+_0x5f4ee3[_0x283420(0x1cd)]);}}function showAwaitingPedestrian(){const _0x29ef9e=_0x25ab77;try{document[_0x29ef9e(0x107)]('button_ble_pedestrian')[_0x29ef9e(0x170)][_0x29ef9e(0xed)](_0x29ef9e(0x131));}catch(_0x141504){pushException(_0x29ef9e(0x120)+_0x141504[_0x29ef9e(0x1cd)]);}}function storeBeaconIdPedestrian(_0x395e47){beaconIdPedestrian=_0x395e47;}function onClickBLEButtonPedestrian(){const _0x33771b=_0x25ab77;try{openGatePedestrian();}catch(_0x4876f3){pushException(_0x33771b(0x1d6)+_0x4876f3[_0x33771b(0x1cd)]);}}function openGatePedestrian(){const _0x5d1667=_0x25ab77;if(window['navigator'][_0x5d1667(0x1d8)]==![]){alert(_0x5d1667(0x12f));return;}try{J2N_suspendClick();const _0x19f94f=url_base[_0x5d1667(0x166)]+url_openGate;showProgress(!![]),debugLog(_0x5d1667(0x129));let _0x2885f0=JSON[_0x5d1667(0x115)]({'url':_0x19f94f,'data':{'beaconId':beaconIdPedestrian,'specification_type':specificationType,'pinaConfigParams':pinaConfigParams,'pinaClientParams':pinaClientParams,'pinaJSParams':pinaConfig['pinaJSParams']},'jsIntent':_0x5d1667(0x192)});J2N_fetchRequest(_0x2885f0);}catch(_0x52008e){showProgress(![]),debugLog('openGatePedExcep\x20'+_0x52008e['message']),J2N_postOnFailure(_0x5d1667(0x1ca)),pushException(_0x5d1667(0x178)+_0x52008e['message']);}}function onClickBLEButton(){const _0x131467=_0x25ab77;try{scanToButtonClickDeltaSec=(Date[_0x131467(0xf6)]()-scanToButtonClickDelta)/0x3e8;if(gate[_0x131467(0x17b)](beaconData[_0x131467(0x10f)][_0x131467(0xf2)][_0x131467(0x164)][0x0][_0x131467(0x154)])===0x0)takeAction(0x1,gateForBeacon[_0x131467(0x108)](gate),gate);else{if(beaconData['beaconConfig'][_0x131467(0xf2)]['lanesToBeaconList'][_0x131467(0x143)]>=0x2&&gate[_0x131467(0x17b)](beaconData[_0x131467(0x10f)][_0x131467(0xf2)]['lanesToBeaconList'][0x1][_0x131467(0x154)])===0x0)takeAction(0x2,gateForBeacon[_0x131467(0x108)](gate),gate);else beaconData[_0x131467(0x10f)][_0x131467(0xf2)]['lanesToBeaconList'][_0x131467(0x143)]>=0x3&&gate[_0x131467(0x17b)](beaconData[_0x131467(0x10f)][_0x131467(0xf2)][_0x131467(0x164)][0x2]['gateID'])===0x0&&takeAction(0x3,gateForBeacon[_0x131467(0x108)](gate),gate);}}catch(_0x24f75c){pushException(_0x131467(0x1d6)+_0x24f75c[_0x131467(0x1cd)]);}}function onClickGate1(){const _0x5c2848=_0x25ab77;try{takeAction(0x1,gateForBeacon['get'](beaconData['beaconConfig']['lanesBeaconsMap'][_0x5c2848(0x164)][0x0][_0x5c2848(0x154)]),beaconData[_0x5c2848(0x10f)][_0x5c2848(0xf2)][_0x5c2848(0x164)][0x0]['gateID']),scanToButtonClickDeltaSec=(Date[_0x5c2848(0xf6)]()-scanToButtonClickDelta)/0x3e8;}catch(_0x12290c){pushException(_0x5c2848(0x17c)+_0x12290c[_0x5c2848(0x1cd)]);}}function onClickGate2(){const _0x19e316=_0x25ab77;try{takeAction(0x2,gateForBeacon[_0x19e316(0x108)](beaconData[_0x19e316(0x10f)]['lanesBeaconsMap'][_0x19e316(0x164)][0x1]['gateID']),beaconData[_0x19e316(0x10f)]['lanesBeaconsMap']['lanesToBeaconList'][0x0]['gateID']),scanToButtonClickDeltaSec=(Date[_0x19e316(0xf6)]()-scanToButtonClickDelta)/0x3e8;}catch(_0x26580d){pushException(_0x19e316(0x133)+_0x26580d[_0x19e316(0x1cd)]);}}function onClickGate3(){const _0x3f1dc2=_0x25ab77;try{takeAction(0x3,gateForBeacon[_0x3f1dc2(0x108)](beaconData[_0x3f1dc2(0x10f)][_0x3f1dc2(0xf2)]['lanesToBeaconList'][0x2][_0x3f1dc2(0x154)]),beaconData[_0x3f1dc2(0x10f)][_0x3f1dc2(0xf2)][_0x3f1dc2(0x164)][0x0]['gateID']),scanToButtonClickDeltaSec=(Date[_0x3f1dc2(0xf6)]()-scanToButtonClickDelta)/0x3e8;}catch(_0xd90444){pushException('onClickGate3\x20'+_0xd90444[_0x3f1dc2(0x1cd)]);}}function onClickMoveForward(){const _0x115cf3=_0x25ab77;try{document[_0x115cf3(0x107)](_0x115cf3(0x191))[_0x115cf3(0x170)][_0x115cf3(0xed)](_0x115cf3(0x131)),document[_0x115cf3(0x107)](_0x115cf3(0xeb))[_0x115cf3(0x170)][_0x115cf3(0x1bf)](_0x115cf3(0x131));}catch(_0x439700){pushException(_0x115cf3(0x189)+_0x439700['message']);}}function onClickNFCButton(){J2N_startNFCScan();}function onClickStart(){}function onClickSimulate(){}function onClickQRButton(){const _0x35db14=_0x25ab77;try{J2N_startQRScan();}catch(_0x1e6632){pushException(_0x35db14(0x177)+_0x1e6632[_0x35db14(0x1cd)]);}}function showGateLayout(){const _0x44a3b9=_0x25ab77;try{document[_0x44a3b9(0x107)]('move_closer_text')['style'][_0x44a3b9(0x196)]=_0x44a3b9(0x199),document[_0x44a3b9(0x107)](_0x44a3b9(0x1ce))[_0x44a3b9(0x170)][_0x44a3b9(0xed)]('hide'),document[_0x44a3b9(0x107)]('left_btn')[_0x44a3b9(0x170)][_0x44a3b9(0xed)](_0x44a3b9(0x131)),document[_0x44a3b9(0x107)](_0x44a3b9(0x187))[_0x44a3b9(0x170)][_0x44a3b9(0xed)](_0x44a3b9(0x131)),beaconData['beaconConfig'][_0x44a3b9(0xf2)][_0x44a3b9(0x164)][_0x44a3b9(0x143)]>0x2?document['getElementById'](_0x44a3b9(0x194))[_0x44a3b9(0x170)][_0x44a3b9(0xed)](_0x44a3b9(0x131)):document[_0x44a3b9(0x107)](_0x44a3b9(0x194))[_0x44a3b9(0x170)][_0x44a3b9(0x1bf)]('hide'),getBeaconListResponse[_0x44a3b9(0x1a0)][_0x44a3b9(0x1c9)]!=null&&getBeaconListResponse[_0x44a3b9(0x1a0)][_0x44a3b9(0x1c9)][_0x44a3b9(0x17b)]('1')===0x0&&document[_0x44a3b9(0x107)](_0x44a3b9(0xe8))['classList']['add'](_0x44a3b9(0x131));}catch(_0x4eaf76){pushException(_0x44a3b9(0x123)+_0x4eaf76[_0x44a3b9(0x1cd)]);}}function hideOpenButton(){const _0x219d19=_0x25ab77;try{document[_0x219d19(0x107)](_0x219d19(0xff))['classList'][_0x219d19(0x1bf)](_0x219d19(0x131));}catch(_0x327b97){pushException(_0x219d19(0x1d1)+_0x327b97[_0x219d19(0x1cd)]);}}function hideGateLayout(){const _0x38c434=_0x25ab77;try{document[_0x38c434(0x107)](_0x38c434(0x1ce))['classList'][_0x38c434(0x1bf)](_0x38c434(0x131)),document['getElementById'](_0x38c434(0xe8))[_0x38c434(0x170)][_0x38c434(0xe7)]='',document[_0x38c434(0x107)](_0x38c434(0x194))['classList']['innerHTML']='',document['getElementById'](_0x38c434(0x187))[_0x38c434(0x170)][_0x38c434(0xe7)]='';}catch(_0x10f8ee){pushException('hideGateLayout\x20'+_0x10f8ee[_0x38c434(0x1cd)]);}}function showOpenButton(){const _0x345d2c=_0x25ab77;try{document[_0x345d2c(0x107)](_0x345d2c(0xf4))['style']['color']=_0x345d2c(0x199),document[_0x345d2c(0x107)](_0x345d2c(0xff))['classList']['remove']('hide');}catch(_0x13a155){pushException(_0x345d2c(0x105)+_0x13a155[_0x345d2c(0x1cd)]);}}function hideAwaiting(){const _0xc30675=_0x25ab77;try{scanToButtonGreenDeltaSec===0x0&&(debugLog(_0xc30675(0x17e)),scanToButtonGreenDeltaSec=(Date['now']()-screenAppearanceTime)/0x3e8),document[_0xc30675(0x107)](_0xc30675(0x1aa))['classList']['add'](_0xc30675(0x131));}catch(_0x39eaa1){pushException(_0xc30675(0x139)+_0x39eaa1['message']);}}function showAwaiting(){const _0x2c96b2=_0x25ab77;try{document[_0x2c96b2(0x107)](_0x2c96b2(0x1aa))[_0x2c96b2(0x170)]['remove'](_0x2c96b2(0x131));}catch(_0x25ae90){pushException(_0x2c96b2(0x13b)+_0x25ae90[_0x2c96b2(0x1cd)]);}}function showSimulation(){const _0x49b11a=_0x25ab77;pinaConfigParams['simulationMode']!=undefined&&pinaConfigParams[_0x49b11a(0x188)]?document['getElementById']('simulation')[_0x49b11a(0x170)][_0x49b11a(0xed)](_0x49b11a(0x131)):document['getElementById'](_0x49b11a(0x161))[_0x49b11a(0x170)][_0x49b11a(0x1bf)](_0x49b11a(0x131));}function showDevMode(){const _0x2f5905=_0x25ab77;pinaConfig['environment']!=undefined&&pinaConfig[_0x2f5905(0xd8)][_0x2f5905(0x17b)](_0x2f5905(0x1c1))?document[_0x2f5905(0x107)](_0x2f5905(0x137))[_0x2f5905(0x170)][_0x2f5905(0xed)]('hide'):document['getElementById'](_0x2f5905(0x137))[_0x2f5905(0x170)][_0x2f5905(0x1bf)](_0x2f5905(0x131));}function showGateIssues(){const _0x605c36=_0x25ab77;nfcData[_0x605c36(0x1d4)]==0x0&&qrCode[_0x605c36(0x1d4)]==0x0&&document['getElementById']('gate_issues')[_0x605c36(0x170)][_0x605c36(0x1bf)]('hide'),nfcData['status']==0x0&&document[_0x605c36(0x107)](_0x605c36(0x10e))[_0x605c36(0x170)]['add'](_0x605c36(0x131)),qrCode[_0x605c36(0x1d4)]==0x0&&document[_0x605c36(0x107)]('button_qr')[_0x605c36(0x170)][_0x605c36(0x1bf)](_0x605c36(0x131)),document['getElementById'](_0x605c36(0x182))[_0x605c36(0x170)][_0x605c36(0x1bf)]('hide'),document[_0x605c36(0x107)](_0x605c36(0x15b))[_0x605c36(0x170)][_0x605c36(0xed)](_0x605c36(0x131)),document[_0x605c36(0x107)]('main_container')[_0x605c36(0x170)]['remove'](_0x605c36(0x131)),document['getElementById']('container_pedestrian')[_0x605c36(0x170)][_0x605c36(0x1bf)](_0x605c36(0x131)),document['getElementById'](_0x605c36(0x1b7))[_0x605c36(0x170)][_0x605c36(0xed)](_0x605c36(0x131)),document[_0x605c36(0x107)](_0x605c36(0xe6))['classList'][_0x605c36(0x1bf)]('hide');}function _0x36d8(_0x2fe8a9,_0x4c2076){const _0x41ffc6=_0x41ff();return _0x36d8=function(_0x36d856,_0x3adb69){_0x36d856=_0x36d856-0xd8;let _0x5ef355=_0x41ffc6[_0x36d856];return _0x5ef355;},_0x36d8(_0x2fe8a9,_0x4c2076);}function flushData(){const _0x40270a=_0x25ab77;try{garageLocation={},loopData={},loopDetected=![],bleDetected=![],presentButtonMode='-1',collectDecisionData=!![],beaconHits=0x0,beaconDistanceGreaterThanRequired=!![],cancelled=![],gate='',atleastOneBeaconLessThanOneMtr=![],thresholdTimerExecuted=![],gateSelected=![],loopDetectors=[],minGateData=new Map(),maxGateData=new Map(),gateDatainitialised=![],gateloopData=new Map(),beaconsMap=new Map(),altBeaconsMap=new Map(),loopDetectorSimulation=0x0,outcome='',gateForBeacon=new Map(),decisionData={},minorId=new Map(),minDistance=new Map(),lastDistance=new Map(),prevQRMessage='',specificationType='',scanToButtonGreenDelta=Date[_0x40270a(0xf6)](),scanToButtonClickDelta=Date['now'](),gateDecisionDelta=Date['now'](),screenAppearanceTime=Date[_0x40270a(0xf6)](),scanToButtonGreenDeltaSec=0x0,gateDecisionDeltaSec=0x0,scanToButtonClickDeltaSec=0x0,loopEnabledTime=0x0,bleEnabledTime=0x0,firstBleHitTime=0x0,bookingID='',refId='',uid='',differentiationDelta=0x0,hideOpenButton(),hideGateLayout(),showAwaiting(),hideOpenButtonPedestrian(),showAwaitingPedestrian();}catch(_0x383295){pushException(_0x40270a(0x1a9)+_0x383295[_0x40270a(0x1cd)]);}}function validateHardwareConfig(_0x230760){const _0x10012d=_0x25ab77;try{getBeaconListResponse=JSON[_0x10012d(0x16d)](_0x230760),getBeaconListResponse!=undefined?initHardwareConfig():getHardwareConfiguration();}catch(_0xc09f1d){getHardwareConfiguration(),pushException(_0x10012d(0x159)+_0xc09f1d[_0x10012d(0x1cd)]);}}function prefetchHardwareConfiguration(_0x26a581,_0x3f2e53){const _0x10284a=_0x25ab77;validatePinaConfig(_0x26a581),_0x3f2e53!=undefined?(getBeaconListResponse=JSON[_0x10284a(0x16d)](_0x3f2e53),initHardwareConfig(),J2N_printLog('~cachedHardWareConfigruation')):getHardwareConfiguration(![]);}function initSDKMethods(){const _0x285b84=_0x25ab77;if(getBeaconListResponse!=undefined&&pinaConfig[_0x285b84(0x16b)][_0x285b84(0xee)]==getBeaconListResponse[_0x285b84(0x1a0)][_0x285b84(0x1b9)]){let _0x394789={};_0x394789[_0x285b84(0xf3)]=_0x285b84(0xea),_0x394789['clientId']=_0x285b84(0x165),_0x394789['userName']=pinaConfig[_0x285b84(0xd8)]==_0x285b84(0x1c1)?_0x285b84(0x1b1):_0x285b84(0x1af),_0x394789[_0x285b84(0x10c)]=pinaConfig[_0x285b84(0xd8)]==_0x285b84(0x1c1)?_0x285b84(0xf1):_0x285b84(0x14f),_0x394789[_0x285b84(0x11a)]=getBeaconListResponse['data'][_0x285b84(0x16f)][_0x285b84(0x1b4)][_0x285b84(0x19a)],loopList=getBeaconListResponse[_0x285b84(0x1a0)]['loopData'][_0x285b84(0xe5)],rangeData=new Map();if(isiOS()){_0x394789['serverUri']=pinaConfig['environment']==_0x285b84(0x1c1)?_0x285b84(0xf5):'broker.mqttdashboard.com',J2N_startLoopScan(JSON[_0x285b84(0x115)](_0x394789)),debugLog(_0x285b84(0x1c7));let _0x1b485b=beaconData[_0x285b84(0x10f)]['ranges'],_0x509e47=beaconData[_0x285b84(0x10f)][_0x285b84(0x1a8)],_0x25bf0c={'arrayRangeCount':_0x1b485b,'estimoteCloudDetailsModel':_0x509e47};J2N_startBeaconScan(JSON[_0x285b84(0x115)](_0x25bf0c)),debugLog(_0x285b84(0x1a4));}(pinaConfigParams[_0x285b84(0x188)]!=undefined&&pinaConfigParams[_0x285b84(0x188)]||getBeaconListResponse[_0x285b84(0x1a0)][_0x285b84(0x186)]!=undefined&&getBeaconListResponse[_0x285b84(0x1a0)][_0x285b84(0x186)]['localeCompare']('1')===0x0)&&(initLoopData(),initBeaconData());}else getHardwareConfiguration(!![]);}function displayWebViewAndStartSDK(_0x52035b,_0xd3be95){const _0x53637b=_0x25ab77;try{if(_0x52035b!=undefined){let _0x5617fa=JSON[_0x53637b(0x16d)](_0x52035b);_0x5617fa['pinaConfigParams']['zid']!=pinaConfig[_0x53637b(0x16b)]['zid']&&(getBeaconListResponse=undefined),validatePinaConfig(_0x52035b);}getBeaconListResponse!=undefined&&_0xd3be95!=undefined&&(getBeaconListResponse=JSON[_0x53637b(0x16d)](_0xd3be95),initHardwareConfig());scanToButtonGreenDeltaSec=0x0,gateDecisionDeltaSec=0x0,scanToButtonClickDeltaSec=0x0,loopEnabledTime=0x0,bleEnabledTime=0x0,firstBleHitTime=0x0,debugLog(_0x53637b(0x122)),showSimulation(),showDevMode();if(pinaConfig[_0x53637b(0xd8)]=='PROD'&&pinaConfigParams['simulationMode']==!![]){alert(_0x53637b(0x130));return;}initSDKMethods();}catch(_0xfece6c){J2N_printLog(_0xfece6c[_0x53637b(0x1cd)]),pushException(_0x53637b(0x19d)+_0xfece6c[_0x53637b(0x1cd)]);}}function validatePinaConfig(_0x1b3a2f){const _0x27fb75=_0x25ab77;try{flushData(),pinaConfig=JSON[_0x27fb75(0x16d)](_0x1b3a2f);isiOS()?(pinaConfigParams=pinaConfig[_0x27fb75(0x16b)],pinaSdkParams=pinaConfig[_0x27fb75(0x1b5)],pinaClientParams=pinaConfig[_0x27fb75(0x15f)]):(pinaConfigParams=pinaConfig[_0x27fb75(0x16b)][_0x27fb75(0xfe)],pinaSdkParams=pinaConfig['pinaSdkParams'][_0x27fb75(0xfe)],pinaClientParams=pinaConfig[_0x27fb75(0x15f)][_0x27fb75(0xfe)],pinaMiscParams=pinaConfig[_0x27fb75(0x12c)][_0x27fb75(0xfe)]);document['getElementById'](_0x27fb75(0x15d))['innerHTML']=pinaSdkParams[_0x27fb75(0x18d)],document[_0x27fb75(0x107)](_0x27fb75(0xf4))['style']['color']=pinaSdkParams[_0x27fb75(0x16e)]||_0x27fb75(0x1bd);pinaConfigParams['gateType'][_0x27fb75(0x17b)]('IN')===0x0?document[_0x27fb75(0x107)](_0x27fb75(0xf4))['innerHTML']=_0x27fb75(0x14c):document[_0x27fb75(0x107)](_0x27fb75(0xf4))['innerHTML']='Move\x20closer\x20to\x20the\x20gate\x20to\x20exit';showDevMode();if(pinaSdkParams[_0x27fb75(0x16e)]!=undefined){var _0x1ba2b3=document[_0x27fb75(0x1b2)](_0x27fb75(0xfa)),_0x2c83e3=document[_0x27fb75(0x1b2)](_0x27fb75(0x10b)),_0x326698=document['getElementsByClassName'](_0x27fb75(0x15c)),_0x243f93=document[_0x27fb75(0x1b2)](_0x27fb75(0x182));for(var _0x3d3fd4=0x0;_0x3d3fd4<_0x1ba2b3[_0x27fb75(0x143)];_0x3d3fd4++){_0x1ba2b3[_0x3d3fd4][_0x27fb75(0x146)]['background']=pinaSdkParams[_0x27fb75(0x16e)];}for(var _0x3d3fd4=0x0;_0x3d3fd4<_0x2c83e3[_0x27fb75(0x143)];_0x3d3fd4++){_0x2c83e3[_0x3d3fd4][_0x27fb75(0x146)]['background']=pinaSdkParams['gateButtonBgColor'];}for(var _0x3d3fd4=0x0;_0x3d3fd4<_0x326698['length'];_0x3d3fd4++){_0x326698[_0x3d3fd4][_0x27fb75(0x146)][_0x27fb75(0x18e)]=pinaSdkParams[_0x27fb75(0x16e)];}for(var _0x3d3fd4=0x0;_0x3d3fd4<_0x243f93['length'];_0x3d3fd4++){_0x326698[_0x3d3fd4][_0x27fb75(0x146)][_0x27fb75(0x18e)]=pinaSdkParams['gateButtonBgColor'];}document[_0x27fb75(0x107)](_0x27fb75(0x14a))['style'][_0x27fb75(0x196)]=pinaSdkParams[_0x27fb75(0x16e)],document[_0x27fb75(0x107)](_0x27fb75(0xf4))[_0x27fb75(0x146)][_0x27fb75(0x196)]=pinaSdkParams['gateButtonBgColor'];}pinaSdkParams['appIconImage']!=undefined?document[_0x27fb75(0x107)](_0x27fb75(0x1cc))['src']=pinaSdkParams[_0x27fb75(0xe0)]:document['getElementById'](_0x27fb75(0x1cc))[_0x27fb75(0x16c)]='https://static.divrt.co/images/pinabox/spp/spplogo.png';}catch(_0x32e7f6){J2N_printLog(_0x32e7f6[_0x27fb75(0x1cd)]),pushException('validatePinaConfig\x20'+_0x32e7f6[_0x27fb75(0x1cd)]);}}function validateLoopData(_0x5c9fbb){const _0x5b30d2=_0x25ab77;try{const _0x7711b7=JSON['parse'](_0x5c9fbb);for(let _0x350c2e=0x0;_0x350c2e<getBeaconListResponse[_0x5b30d2(0x1a0)][_0x5b30d2(0x16f)][_0x5b30d2(0x1b4)][_0x5b30d2(0x19e)]['length'];_0x350c2e++){_0x7711b7[_0x5b30d2(0x155)][_0x5b30d2(0x17b)](getBeaconListResponse[_0x5b30d2(0x1a0)][_0x5b30d2(0x16f)][_0x5b30d2(0x1b4)]['laneMqttTopics'][_0x350c2e][_0x5b30d2(0x14d)])===0x0&&(gateloopData['set'](getBeaconListResponse['data'][_0x5b30d2(0x16f)][_0x5b30d2(0x1b4)][_0x5b30d2(0x19e)][_0x350c2e]['gateID'],_0x7711b7['value']),gateDatainitialised&&getBeaconListResponse['data']['loopData']['loopConfig'][_0x5b30d2(0x19e)][_0x350c2e][_0x5b30d2(0x1db)]['localeCompare'](entrance)===0x0&&(_0x7711b7['value']===0x1&&(loopDetected=!![],loopEnabledTime===0x0&&(loopEnabledTime=(Date[_0x5b30d2(0xf6)]()-screenAppearanceTime)/0x3e8)),presentButtonMode[_0x5b30d2(0x1ab)]()['localeCompare']('-1')===0x0&&!(getBeaconListResponse[_0x5b30d2(0x1a0)]['loopData'][_0x5b30d2(0x1b4)]['loopEnabled']['localeCompare']('0')===0x0)&&takeAction(undefined,undefined,undefined)),_0x7711b7[_0x5b30d2(0x168)]=returnDelta(),loopValues['push'](_0x7711b7));}}catch(_0x2a22e3){pushException('validateLoopData\x20'+_0x2a22e3[_0x5b30d2(0x1cd)]);}}function validateLatLong(_0x28e127){const _0x4e5b20=_0x25ab77;try{const _0x3f8581=JSON['parse'](_0x28e127);currentLocation['latitude']=_0x3f8581[_0x4e5b20(0x1d5)],currentLocation['longitude']=_0x3f8581[_0x4e5b20(0x198)],J2N_printLog('latLong.latitude'+_0x3f8581[_0x4e5b20(0x1d5)]),J2N_printLog('latLong.longitude'+_0x3f8581[_0x4e5b20(0x198)]);}catch(_0x5a66a){pushException(_0x4e5b20(0x1c2)+_0x5a66a[_0x4e5b20(0x1cd)]);}}function getDistanceFromLatLonInKm(_0x28ef95,_0x49d92d,_0x433c98,_0x2202f2){const _0x374699=_0x25ab77;try{let _0x26270e=0x18e3,_0x30a2cc=deg2rad(_0x433c98-_0x28ef95),_0x47ae0f=deg2rad(_0x2202f2-_0x49d92d),_0x3ad8a2=Math['sin'](_0x30a2cc/0x2)*Math[_0x374699(0x1b6)](_0x30a2cc/0x2)+Math[_0x374699(0x18f)](deg2rad(_0x28ef95))*Math[_0x374699(0x18f)](deg2rad(_0x433c98))*Math['sin'](_0x47ae0f/0x2)*Math['sin'](_0x47ae0f/0x2),_0x4730b9=0x2*Math[_0x374699(0x134)](Math['sqrt'](_0x3ad8a2),Math[_0x374699(0x12a)](0x1-_0x3ad8a2)),_0x17359a=_0x26270e*_0x4730b9;return _0x17359a;}catch(_0x4245f3){pushException(_0x374699(0x1da)+_0x4245f3[_0x374699(0x1cd)]);}}function deg2rad(_0xbf0f9a){const _0x70b6bd=_0x25ab77;try{return _0xbf0f9a*(Math['PI']/0xb4);}catch(_0x1240c1){pushException(_0x70b6bd(0x104)+_0x1240c1['message']);}}function validateNFC(_0x324307){const _0x3edea3=_0x25ab77;try{beaconId=_0x324307,techType=_0x3edea3(0x1ae),specificationType='2',openGate();}catch(_0x397391){J2N_printLog(_0x397391[_0x3edea3(0x1cd)]),J2N_postOnFailure('Wrong\x20NFC\x20scanned'),pushException(_0x3edea3(0x145)+_0x397391['message']);}}function validateQR(_0x4574cd){const _0x32d67e=_0x25ab77;try{if(prevQRMessage[_0x32d67e(0x17b)](_0x4574cd)===0x0){}else prevQRMessage=_0x4574cd,beaconId=prevQRMessage,techType='QR',specificationType='3',openGate();}catch(_0xa2f31d){J2N_printLog(_0xa2f31d[_0x32d67e(0x1cd)]),J2N_postOnFailure(_0x32d67e(0x118)),pushException('validateQR\x20'+_0xa2f31d[_0x32d67e(0x1cd)]);}}function takeAction(_0xd8ae01,_0x43d4be,_0x3fd634){const _0x2d8e1a=_0x25ab77;try{if(pinaConfigParams[_0x2d8e1a(0x188)]!=undefined&&pinaConfigParams[_0x2d8e1a(0x188)]||getBeaconListResponse[_0x2d8e1a(0x1a0)][_0x2d8e1a(0x186)]!=undefined&&getBeaconListResponse[_0x2d8e1a(0x1a0)][_0x2d8e1a(0x186)][_0x2d8e1a(0x17b)]('1')===0x0)debugLog(_0x2d8e1a(0xe9)),presentButtonMode[_0x2d8e1a(0x17b)]('-1')===0x0?(presentButtonMode='1',isiOS()?selectGateiOS():selectGateAndroid(),hideAwaiting(),showOpenButton(),hideGateLayout()):_0x3fd634!=undefined&&(beaconId=_0x43d4be,openGate());else{if(gateDatainitialised){if(getBeaconListResponse[_0x2d8e1a(0x1a0)][_0x2d8e1a(0x16f)]['loopConfig'][_0x2d8e1a(0x1c3)][_0x2d8e1a(0x17b)]('0')===0x0)presentButtonMode[_0x2d8e1a(0x17b)]('-1')===0x0?(isiOS()?selectGateiOS():selectGateAndroid(),hideAwaiting(),beaconData[_0x2d8e1a(0x10f)][_0x2d8e1a(0xf2)][_0x2d8e1a(0x164)]['length']>0x1?(showGateLayout(),hideOpenButton()):(showOpenButton(),hideGateLayout()),presentButtonMode='1'):_0xd8ae01!=undefined&&(beaconId=_0x43d4be,openGate());else try{beaconId=_0x43d4be,myLaneLoop='0',otherLaneLoop='0';if(presentButtonMode[_0x2d8e1a(0x17b)]('-1')===0x0&&(!loopDetected||!bleDetected))return;else{presentButtonMode[_0x2d8e1a(0x17b)]('-1')===0x0&&loopDetected&&bleDetected&&(isiOS()?selectGateiOS():selectGateAndroid());gateDecisionDeltaSec===0x0&&(gateDecisionDeltaSec=(Date[_0x2d8e1a(0xf6)]()-screenAppearanceTime)/0x3e8);let _0x15e220='-1',_0x591caa='-1',_0xf72928='-1',_0x1e5c0b=0x0;for(let [_0x50cc67,_0x1a7fa7]of gateloopData){if(_0x1e5c0b===0x0)_0x15e220=''+_0x1a7fa7,_0x1e5c0b++;else{if(_0x1e5c0b===0x1)_0x591caa=''+_0x1a7fa7,_0x1e5c0b++;else _0x1e5c0b===0x2&&(_0xf72928=''+_0x1a7fa7,_0x1e5c0b++);}}let _0x3999b1=_0xd8ae01!=undefined?_0xd8ae01:lane;switch(_0x3999b1){case 0x1:if(_0x15e220[_0x2d8e1a(0x17b)]('1')===0x0)myLaneLoop=0x1;if(_0x591caa[_0x2d8e1a(0x17b)]('1')===0x0||_0xf72928['localeCompare']('1')===0x0)otherLaneLoop=0x1;break;case 0x2:if(_0x591caa['localeCompare']('1')===0x0)myLaneLoop=0x1;if(_0x15e220[_0x2d8e1a(0x17b)]('1')===0x0||_0xf72928[_0x2d8e1a(0x17b)]('1')===0x0)otherLaneLoop=0x1;break;case 0x3:if(_0xf72928[_0x2d8e1a(0x17b)]('1')===0x0)myLaneLoop=0x1;if(_0x15e220[_0x2d8e1a(0x17b)]('1')===0x0||_0x591caa[_0x2d8e1a(0x17b)]('1')===0x0)otherLaneLoop=0x1;break;default:break;}let _0x3b2acb;if(loopList!=null&&loopList[_0x2d8e1a(0x143)]>0x0)for(let _0x25bc08=0x0;_0x25bc08<loopList[_0x2d8e1a(0x143)];_0x25bc08++){if((loopList[_0x25bc08][_0x2d8e1a(0x140)][_0x2d8e1a(0x17b)]('X')===0x0||loopList[_0x25bc08][_0x2d8e1a(0x140)]['localeCompare'](oneBeacon)===0x0)&&(loopList[_0x25bc08][_0x2d8e1a(0x141)]['localeCompare']('X')===0x0||loopList[_0x25bc08][_0x2d8e1a(0x141)][_0x2d8e1a(0x17b)](otherBeacon)===0x0)&&(loopList[_0x25bc08][_0x2d8e1a(0x184)]['localeCompare']('X')===0x0||loopList[_0x25bc08][_0x2d8e1a(0x184)][_0x2d8e1a(0x17b)](myLaneLoop)===0x0)&&(loopList[_0x25bc08][_0x2d8e1a(0x102)][_0x2d8e1a(0x17b)]('X')===0x0||loopList[_0x25bc08]['otherLaneLoop'][_0x2d8e1a(0x17b)](otherLaneLoop)===0x0)&&loopList[_0x25bc08][_0x2d8e1a(0x167)][_0x2d8e1a(0x17b)](presentButtonMode)===0x0){_0x3b2acb=loopList[_0x25bc08];if(outcome===''||_0x3fd634!=undefined){if(_0x3fd634!=undefined)outcome=outcome+_0x3b2acb[_0x2d8e1a(0x103)][_0x2d8e1a(0x124)]('#',_0x3fd634);else gate!=undefined&&(outcome=outcome+_0x3b2acb[_0x2d8e1a(0x103)][_0x2d8e1a(0x124)]('#',gate));}switch(_0x3b2acb['action']){case'-1':presentButtonMode=_0x3b2acb[_0x2d8e1a(0x114)];break;case'0':_0x3fd634!=undefined&&openGate();break;case'1':buttonMode=_0x2d8e1a(0x10a),hideAwaiting(),showOpenButton(),hideGateLayout(),presentButtonMode=_0x3b2acb[_0x2d8e1a(0x114)];break;case'2':buttonMode=_0x2d8e1a(0x13d),hideAwaiting(),showGateLayout(),hideOpenButton(),presentButtonMode=_0x3b2acb[_0x2d8e1a(0x114)];break;case'3':document['getElementById']('main_container')['classList'][_0x2d8e1a(0x1bf)](_0x2d8e1a(0x131)),document[_0x2d8e1a(0x107)](_0x2d8e1a(0xeb))[_0x2d8e1a(0x170)][_0x2d8e1a(0xed)]('hide');break;default:break;}return;}}}}catch(_0x3700ce){J2N_printLog(_0x3700ce[_0x2d8e1a(0x1cd)]),pushException('takeAction\x20inner\x20'+_0x3700ce[_0x2d8e1a(0x1cd)]);}}}}catch(_0x3d4764){pushException(_0x2d8e1a(0x1ac)+_0x3d4764[_0x2d8e1a(0x1cd)]);}}function showProgress(_0x50444b){const _0x59892e=_0x25ab77;try{var _0x155998=document[_0x59892e(0x107)](_0x59892e(0x182));_0x50444b?_0x155998[_0x59892e(0x170)][_0x59892e(0xed)](_0x59892e(0x131)):_0x155998[_0x59892e(0x170)]['add']('hide');}catch(_0x3f5e91){pushException(_0x59892e(0x150)+_0x3f5e91[_0x59892e(0x1cd)]);}}function getHardwareConfiguration(_0x3c1933){const _0x3f03e4=_0x25ab77;try{const _0x260500=url_base[_0x3f03e4(0x166)]+url_hardwareConfig;showProgress(!![]),debugLog(_0x3f03e4(0x11c));let _0x1c80ea=JSON[_0x3f03e4(0x115)]({'url':_0x260500,'data':{'pinaConfigParams':pinaConfigParams,'pinaJSParams':pinaConfig[_0x3f03e4(0x19f)]},'jsIntent':_0x3f03e4(0x1a5)});J2N_fetchRequest(_0x1c80ea),reloadHwAndDisplay=_0x3c1933;}catch(_0x3fa768){showProgress(![]),debugLog(_0x3f03e4(0x18c)+_0x3fa768[_0x3f03e4(0x1cd)]),pushException(_0x3f03e4(0x18c)+_0x3fa768[_0x3f03e4(0x1cd)]);}}function initHardwareConfig(){const _0x2805c6=_0x25ab77;try{beaconData=getBeaconListResponse['data'][_0x2805c6(0x18b)],nfcData=getBeaconListResponse['data'][_0x2805c6(0x1c4)],qrCode=getBeaconListResponse[_0x2805c6(0x1a0)][_0x2805c6(0x1a1)];getBeaconListResponse[_0x2805c6(0x1a0)][_0x2805c6(0x1c9)]!=null&&getBeaconListResponse[_0x2805c6(0x1a0)][_0x2805c6(0x1c9)][_0x2805c6(0x17b)]('1')===0x0?document[_0x2805c6(0x107)](_0x2805c6(0x1d3))['classList'][_0x2805c6(0xed)](_0x2805c6(0x1c6)):document[_0x2805c6(0x107)](_0x2805c6(0x1d3))['classList'][_0x2805c6(0x1bf)](_0x2805c6(0x1c6));if(isiOS()){let _0x168ffa=beaconData[_0x2805c6(0x10f)]['ranges'];for(let _0x505571=0x0;_0x505571<_0x168ffa[_0x2805c6(0x143)];_0x505571++){rangeWeightData[_0x2805c6(0x1cf)](_0x168ffa[_0x505571]['radius'],_0x168ffa[_0x505571]['weight']);}}autoSelectMode=beaconData['beaconConfig'][_0x2805c6(0x126)],autoSelectMode[_0x2805c6(0x1d2)]=beaconData['beaconConfig']['minimumBeaconThreshold'],autoSelectMode['minimumSingleButtonThreshold']=beaconData[_0x2805c6(0x10f)][_0x2805c6(0x1d2)],maxDistance=parseInt(qrCode[_0x2805c6(0x136)][_0x2805c6(0xfd)]),garageLocation[_0x2805c6(0x1a3)]='Point\x20B',garageLocation[_0x2805c6(0x1d5)]=parseFloat(getBeaconListResponse[_0x2805c6(0x1a0)][_0x2805c6(0x19b)]),garageLocation[_0x2805c6(0x198)]=parseFloat(getBeaconListResponse[_0x2805c6(0x1a0)][_0x2805c6(0x1ad)]),loopDetectors=getBeaconListResponse[_0x2805c6(0x1a0)]['loopData'][_0x2805c6(0x13a)];for(let _0x449121=0x0;_0x449121<beaconData['beaconConfig']['lanesBeaconsMap'][_0x2805c6(0x164)][_0x2805c6(0x143)];_0x449121++){gateloopData[_0x2805c6(0x1cf)](beaconData['beaconConfig'][_0x2805c6(0xf2)]['lanesToBeaconList'][_0x449121][_0x2805c6(0x154)],0x0);}let _0x3c5efc={};_0x3c5efc[_0x2805c6(0xf3)]=_0x2805c6(0xea),_0x3c5efc[_0x2805c6(0x127)]=_0x2805c6(0x165),_0x3c5efc[_0x2805c6(0x173)]=_0x2805c6(0x1b1),_0x3c5efc['password']=_0x2805c6(0xf1),_0x3c5efc['loopDetectorMqttTopic']=getBeaconListResponse[_0x2805c6(0x1a0)]['loopData']['loopConfig'][_0x2805c6(0x19a)],loopList=getBeaconListResponse[_0x2805c6(0x1a0)][_0x2805c6(0x16f)][_0x2805c6(0xe5)],showGateIssues();}catch(_0xe00c9a){J2N_printLog(_0xe00c9a[_0x2805c6(0x1cd)]),pushException(_0x2805c6(0x12d)+_0xe00c9a[_0x2805c6(0x1cd)]);}}function openGate(){const _0x2e18c5=_0x25ab77;if(pinaConfig[_0x2e18c5(0xd8)]=='PROD'&&pinaConfigParams[_0x2e18c5(0x188)]==!![]){alert(_0x2e18c5(0x130));return;}if(window[_0x2e18c5(0xdf)][_0x2e18c5(0x1d8)]==![]){alert(_0x2e18c5(0x12f));return;}try{J2N_suspendClick();const _0x1ffd81=url_base[_0x2e18c5(0x166)]+url_openGate;showProgress(!![]),debugLog(_0x2e18c5(0x11f));let _0x2ff53b=JSON[_0x2e18c5(0x115)]({'url':_0x1ffd81,'data':{'beaconId':beaconId,'specification_type':specificationType,'pinaConfigParams':pinaConfigParams,'pinaClientParams':pinaClientParams,'pinaJSParams':pinaConfig[_0x2e18c5(0x19f)]},'jsIntent':_0x2e18c5(0x193)});J2N_fetchRequest(_0x2ff53b);}catch(_0x52c2c7){showProgress(![]),debugLog('openGateExcep\x20'+_0x52c2c7[_0x2e18c5(0x1cd)]),J2N_postOnFailure(_0x2e18c5(0x1c0)),pushException(_0x2e18c5(0xe1)+_0x52c2c7[_0x2e18c5(0x1cd)]);}}function _0x41ff(){const _0x46fe01=['POST','oneBeacon','otherBeacon','AndroidSpecific.js','length','24468LksRTV','validateNFC\x20','style','simulation_mode','firstDistance','divrt://5350504C-5553-434F-5250-4F524154494F/30003/111','move_closer_text_pedestrian','LOGGER','Move\x20closer\x20to\x20the\x20gate\x20to\x20enter','loop0Topic','bleEnabledTime','parking1234','showProgress\x20','https://meghak2.divrt.co/','refno','nList','gateID','topic','uniqueID','secret_key','\x20-\x20','validateHardwareConfig\x20','57389zysfcU','container','back_btn','welcome_text','delete','pinaClientParams','https://pinaboxapi.divrt.co/','simulation','45520CVnhFC','orderId','lanesToBeaconList','phpMQTT-subscriber','getURL','presentButtonMode','time','6JdhHUY','Open\x20Gate\x20failure','pinaConfigParams','src','parse','gateButtonBgColor','loopData','classList','hardwarfalse=','ostype','userName','beaconList','iOSSpecific.js','dateDecisionDelta','onClickQRButton\x20','opeopenGatePedExcepnGate\x20','then','https://pinaboxapi-dev.divrt.co/','localeCompare','onClickGate1\x20','openGatePedExcep','Hide\x20Awaiting','JSInteractionWrapper.js','Thank\x20you\x20for\x20visiting\x20ABC\x20Garage','Gate\x20open\x20failure','loader','techType','myLaneLoop','openedGate','demoGarage','right_btn','simulationMode','onClickMoveForward\x20','zid','beaconData','gethwExcep\x20','helpText','background','cos','https://pinaboxapi-uat.divrt.co/','main_container','OPENGATEPEDESTRIAN','OPENGATE','middle_btn','Thank\x20you\x20for\x20using\x20pedestrian\x20access','color','email','longitude','#FFFFFF','mqtt_topic','garageLatitude','api/v2/openGate','displayWebViewAndStartSDK\x20','laneMqttTopics','pinaJSParams','data','qrData','1896265pmymHL','name','J2N_startBeaconScan','GETHARDWARECONFIG','bookingID','sequenceLogs','estimoteCloudDetails','flushData\x20','button_ble','toString','takeAction\x20','garageLongitude','NFC','anveshtokala','62276','divrt-mqtt-dev','getElementsByClassName','openGatefail\x20','loopConfig','pinaSdkParams','sin','container_main','refId','type','Timer\x20Ended','onClickPedestrian\x20','scanToButtonClickDelta','#F2555C','version','add','Failed\x20to\x20open\x20gate.\x20Please\x20try\x20again','PROD','validateLatLong\x20','loopEnabled','nfcData','https://loggerapi-dev.divrt.co/log','invisible','J2N_startLoopScan','proximitydata','isPedestrian','Failed\x20to\x20open\x20door.\x20Please\x20try\x20again','uid','logo','message','multi_gate','set','minDistance','hideOpenButton\x20','minimumBeaconThreshold','pedestrian_flow','status','latitude','onClickBLEButton\x20','attachment_minor_ids','onLine','gethwfailure','getDistanceFromLatLonInKm\x20','entrance_id','environment','application/json','jsversion','beaconId','onClickGateIssues\x20','Android','4f3765a60e61facd73cf757d1610e8f37be26c97323290971793feaf06b06982','navigator','appIconImage','openGateExcep\x20','213165OAaJKL','3500808kPYppP','item','loopsList','container_gate_issues','innerHTML','left_btn','simulationMode=true','tcp://mqtts.divrt.co:1883','alert','UAT','remove','gateType','container_pedestrian','differentiationDelta','parking','lanesBeaconsMap','serverUri','move_closer_text','mqtts.divrt.co','now','values','split','decision_time','proceed_btn','onClickBackPedestrian\x20','osversion','maxDistance','nameValuePairs','button_enable','button_enable_pedestrian','showOpenButtonPedestrian\x20','otherLaneLoop','outcome','deg2rad\x20','showOpenButton\x20','openGatePedExcep\x20','getElementById','get','PinaTest','single','multi_gate_btn','password','1336vKNTkV','button_nfc','beaconConfig','openGatePedfail\x20','693xMavWw','buttonMode','osTypeVer','action','stringify','1407XhWjmR','defer','Wrong\x20code\x20scanned,\x20please\x20try\x20again','firstTime','loopDetectorMqttTopic','openGateExcep','getHardwareConfiguration','oneList','bearerToken','openGate','hideAwaitingPedestrian\x20','BLE','popupappear','showGateLayout\x20','replace','loopEnabledTime','autoSelectMode','clientId','9955tBQjKH','openGatePedestrian','sqrt','push','pinaMiscParams','initHardwareConfig\x20','createElement','No\x20network\x20available.\x20Please\x20check\x20your\x20connection\x20and\x20try\x20again','Simulation\x20mode\x20is\x20restricted\x20in\x20Production.\x20Please\x20change\x20DIVRT\x20environment\x20to\x20DEV','hide','api/v2/getHardwareConfigByZcode','onClickGate2\x20','atan2','divrt://5350504C-5553-434F-5250-4F524154494F/12/121','qrConfig','dev','https://loggerapi.divrt.co/log','hideAwaiting\x20','loopList','showAwaiting\x20','Start\x20time\x20','multi','140zAXhuZ'];_0x41ff=function(){return _0x46fe01;};return _0x41ff();}function pushLogs(){const _0x284e02=_0x25ab77;try{let _0x2db708=[];for(let [_0x3a8fde,_0x2f7a66]of minorId){let _0x11fc22={};_0x11fc22['minorID']=_0x3a8fde,_0x11fc22['lastDistance']=lastDistance[_0x284e02(0x108)](_0x3a8fde),_0x11fc22[_0x284e02(0x1d0)]=minDistance[_0x284e02(0x108)](_0x3a8fde),_0x11fc22[_0x284e02(0x148)]=firstDistance['get'](_0x3a8fde),_0x11fc22[_0x284e02(0x119)]=firstTime['get'](_0x3a8fde),_0x2db708[_0x284e02(0x12b)](_0x11fc22);}isiOS()?decisionData[_0x284e02(0x18b)]=Object['values'](weightDataDict):decisionData['beaconData']=_0x2db708;decisionData[_0x284e02(0x16f)]=loopValues,decisionData['openedGate']=beaconId,decisionData[_0x284e02(0xf0)]=differentiationDelta,decisionData['scanToButtonGreenDelta']=scanToButtonGreenDeltaSec,decisionData[_0x284e02(0x1bc)]=scanToButtonClickDeltaSec,decisionData[_0x284e02(0x176)]=gateDecisionDeltaSec,decisionData[_0x284e02(0x147)]=pinaConfigParams[_0x284e02(0x188)],decisionData['buttonMode']=buttonMode,decisionData['sequenceLogs']=logArray,(decisionData[_0x284e02(0x1c8)]=proximityDataArray,decisionData[_0x284e02(0x103)]=outcome),decisionData[_0x284e02(0x1a6)]=bookingID,decisionData['refId']=refId,decisionData[_0x284e02(0x1cb)]=uid,decisionData[_0x284e02(0xee)]=pinaConfigParams[_0x284e02(0xee)],decisionData[_0x284e02(0x172)]=pinaConfigParams[_0x284e02(0x172)],decisionData[_0x284e02(0x18a)]=pinaConfigParams['zid'],decisionData[_0x284e02(0x156)]=pinaConfigParams['uniqueID'],decisionData['email']=parseJwt(pinaClientParams[_0x284e02(0x11e)]),decisionData['techType']=techType,decisionData['firstBleHitTime']=firstBleHitTime,decisionData[_0x284e02(0x14e)]=bleEnabledTime,decisionData['loopEnabledTime']=loopEnabledTime,decisionData[_0x284e02(0xda)]=pinaConfig[_0x284e02(0x19f)][_0x284e02(0x1be)],decisionData['osversion']=pinaConfigParams[_0x284e02(0xfc)];const _0x104b70=url_base[_0x284e02(0x166)]+url_decisionInfo;logger(),fetch(_0x104b70,{'method':_0x284e02(0x13f),'body':JSON['stringify'](decisionData),'headers':{'Accept':'application/json','Content-Type':_0x284e02(0xd9)}})[_0x284e02(0x179)](_0x71ff68=>{})['catch'](_0x3357c3=>{pushException('pushLogs\x20response\x20'+_0x3357c3['message']);});}catch(_0x44a14b){pushException('pushLogs\x20'+_0x44a14b[_0x284e02(0x1cd)]);}}function startCountDownTimer(_0x34bf13){const _0x116827=_0x25ab77;try{_0x34bf13?setTimeout(function(){const _0x10a03a=_0x36d8;bleEnabledTime===0x0&&(bleEnabledTime=(Date[_0x10a03a(0xf6)]()-screenAppearanceTime)/0x3e8),bleDetected=!![],thresholdTimerExecuted=!![],takeAction(undefined,undefined,undefined),debugLog(_0x10a03a(0x1ba));},parseFloat(autoSelectMode[_0x116827(0xf9)])*0x3e8||0xbb8):thresholdTimerExecuted&&takeAction(undefined,undefined,undefined);}catch(_0xf3fee5){pushException('startCountDownTimer\x20'+_0xf3fee5[_0x116827(0x1cd)]);}}function pushException(_0x419f59){const _0x262dea=_0x25ab77;debugLog('Exception'+_0x419f59);let _0x574c2c=JSON[_0x262dea(0x115)]({'url':loggerURL['getURL'],'data':{'exception':_0x419f59,'prjId':0x1,'srcId':0x4,'refId':refId,'email':parseJwt(pinaClientParams[_0x262dea(0x11e)]),'uid':parseInt(pinaConfig['pinaConfigParams'][_0x262dea(0x1cb)])||-0x1},'jsIntent':_0x262dea(0x14b)});J2N_fetchRequest(_0x574c2c);}function logger(){const _0x1a00e2=_0x25ab77;let _0x5e1706=JSON[_0x1a00e2(0x115)]({'url':loggerURL['getURL'],'data':{'decisionData':decisionData,'prjId':0x1,'srcId':0x4,'refId':refId,'email':parseJwt(pinaClientParams['bearerToken']),'uid':parseInt(pinaConfig[_0x1a00e2(0x16b)][_0x1a00e2(0x1cb)])||-0x1},'jsIntent':_0x1a00e2(0x14b)});J2N_fetchRequest(_0x5e1706);}function initPinaModel(){const _0x197def=_0x25ab77;try{pinaConfigParams={},pinaConfigParams[_0x197def(0x18a)]=_0x197def(0x1b0),pinaConfigParams[_0x197def(0xee)]='IN',pinaConfigParams[_0x197def(0x157)]=_0x197def(0xde),pinaConfigParams[_0x197def(0x172)]=_0x197def(0xdd),pinaConfigParams['uniqueID']=_0x197def(0x109),pinaSdkParams={},pinaSdkParams[_0x197def(0x18d)]=_0x197def(0x180),pinaClientParams={},pinaMiscParams={},decisionData[_0x197def(0x1a6)]=pinaConfigParams[_0x197def(0x163)],decisionData[_0x197def(0x1b8)]=pinaConfigParams[_0x197def(0x163)],decisionData['gateType']=pinaConfigParams['gateType'],decisionData[_0x197def(0x113)]=pinaConfigParams[_0x197def(0x172)],decisionData['simulation']=pinaConfigParams[_0x197def(0x188)],decisionData['zid']=pinaConfigParams['zid'],decisionData[_0x197def(0x1cb)]=pinaConfigParams[_0x197def(0x156)],document['getElementById'](_0x197def(0x15d))['innerHTML']=pinaSdkParams[_0x197def(0x18d)],scanToButtonGreenDelta=Date[_0x197def(0xf6)](),scanToButtonClickDelta=Date['now'](),gateDecisionDelta=Date[_0x197def(0xf6)](),getHardwareConfig(undefined);}catch(_0x566972){J2N_printLog(_0x566972[_0x197def(0x1cd)]);}}function initBeaconData(){const _0x50be01=_0x25ab77;try{setTimeout(function(){const _0x4dac51=_0x36d8;hideAwaiting(),showOpenButton(),hideGateLayout(),presentButtonMode='1',gate=beaconData[_0x4dac51(0x10f)][_0x4dac51(0xf2)][_0x4dac51(0x164)][0x0][_0x4dac51(0x154)];for(let _0x19869b=0x0;_0x19869b<beaconData['beaconList']['length'];_0x19869b++){gateForBeacon[_0x4dac51(0x1cf)](beaconData[_0x4dac51(0x174)][_0x19869b]['gateID'],beaconData[_0x4dac51(0x174)][_0x19869b][_0x4dac51(0xdb)]);}},0xbb8);}catch(_0x25af0c){J2N_printLog(_0x25af0c[_0x50be01(0x1cd)]);}}function initLoopData(){}function initNFC(){const _0x110154=_0x25ab77;try{validateNFC(_0x110154(0x135));}catch(_0x99f192){J2N_printLog(_0x99f192[_0x110154(0x1cd)]);}}function initQR(){const _0x2cc06d=_0x25ab77;try{validateQR(_0x2cc06d(0x149));}catch(_0x47bd6c){J2N_printLog(_0x47bd6c[_0x2cc06d(0x1cd)]);}}function baseParametersProximity(){const _0x50eeac=_0x25ab77;return decisionData[_0x50eeac(0x18b)]=Object[_0x50eeac(0xf7)](weightDataDict),decisionData[_0x50eeac(0x16f)]=loopValues,decisionData[_0x50eeac(0x185)]=beaconId,decisionData['differentiationDelta']=differentiationDelta,decisionData['scanToButtonGreenDelta']=scanToButtonGreenDeltaSec,decisionData[_0x50eeac(0x1bc)]=scanToButtonClickDeltaSec,decisionData[_0x50eeac(0x176)]=gateDecisionDeltaSec,decisionData[_0x50eeac(0x147)]=pinaConfigParams[_0x50eeac(0x188)],decisionData[_0x50eeac(0x112)]=buttonMode,decisionData[_0x50eeac(0x1a7)]=logArray,(decisionData['proximitydata']=proximityDataArray,decisionData[_0x50eeac(0x103)]=outcome),decisionData[_0x50eeac(0x1a6)]=bookingID,decisionData[_0x50eeac(0x1b8)]=refId,decisionData[_0x50eeac(0x1cb)]=uid,decisionData[_0x50eeac(0xee)]=pinaConfigParams[_0x50eeac(0xee)],decisionData[_0x50eeac(0x172)]=pinaConfigParams['ostype'],decisionData[_0x50eeac(0x18a)]=pinaConfigParams[_0x50eeac(0x18a)],decisionData['uniqueID']=pinaConfigParams['uniqueID'],decisionData[_0x50eeac(0x197)]=parseJwt(pinaClientParams[_0x50eeac(0x11e)]),decisionData[_0x50eeac(0x183)]=techType,decisionData['firstBleHitTime']=firstBleHitTime,decisionData[_0x50eeac(0x14e)]=bleEnabledTime,decisionData[_0x50eeac(0x125)]=loopEnabledTime,decisionData[_0x50eeac(0xda)]=pinaConfig[_0x50eeac(0x19f)]['version'],decisionData[_0x50eeac(0xfc)]=pinaConfigParams['osversion'],decisionData;}function debugLog(_0x4053a0,_0x1fbe0a){const _0x3cf3eb=_0x25ab77;debugCount+=0x1;let _0x31fc0c=Date[_0x3cf3eb(0xf6)]()/0x3e8;if(debugCount==0x1){logStartTime=_0x31fc0c;const _0x3ff33d=_0x3cf3eb(0x13c)+new Date()['toUTCString']();logArray[_0x3cf3eb(0x12b)](_0x3ff33d);}const _0x5caead=debugCount+_0x3cf3eb(0x158)+_0x4053a0+_0x3cf3eb(0x158)+parseInt(_0x31fc0c-logStartTime);logArray['push'](_0x5caead);}function returnDelta(){const _0x2c476f=_0x25ab77;let _0x53412a=Date[_0x2c476f(0xf6)]()/0x3e8;logStartTime==0x0&&(logStartTime=_0x53412a);let _0x54ff10=parseInt(_0x53412a-logStartTime);return _0x54ff10;}function parseJwt(_0x1370c1){const _0x664ac7=_0x25ab77;try{return JSON['parse'](atob(_0x1370c1[_0x664ac7(0xf8)]('.')[0x1]))[_0x664ac7(0x197)];}catch(_0x1d359a){return'na';}};function initGateData(_0x253062){const _0x453e94=_0x25ab77;try{entrance=_0x253062;let _0x5bfd19=0x0,_0x3218b6=[];for(let _0x543d7a=0x0;_0x543d7a<beaconData[_0x453e94(0x10f)][_0x453e94(0xf2)][_0x453e94(0x164)][_0x453e94(0x143)];_0x543d7a++){beaconData[_0x453e94(0x10f)][_0x453e94(0xf2)][_0x453e94(0x164)][_0x543d7a][_0x453e94(0x1db)][_0x453e94(0x17b)](_0x253062)===0x0?(_0x3218b6[_0x5bfd19]=beaconData['beaconConfig'][_0x453e94(0xf2)][_0x453e94(0x164)][_0x543d7a],_0x5bfd19++):gateloopData[_0x453e94(0x15e)](beaconData['beaconConfig'][_0x453e94(0xf2)][_0x453e94(0x164)][_0x543d7a]['gateID']);}beaconData[_0x453e94(0x10f)][_0x453e94(0xf2)]['lanesToBeaconList']=_0x3218b6;beaconData[_0x453e94(0x10f)][_0x453e94(0xf2)][_0x453e94(0x164)][_0x453e94(0x143)]==0x1?loopList=getBeaconListResponse[_0x453e94(0x1a0)]['loopData'][_0x453e94(0x11d)]:loopList=getBeaconListResponse[_0x453e94(0x1a0)][_0x453e94(0x16f)][_0x453e94(0x153)];for(let _0x37130e=0x0;_0x37130e<beaconData[_0x453e94(0x10f)]['lanesBeaconsMap'][_0x453e94(0x164)][_0x453e94(0x143)];_0x37130e++){var _0xe34bb='';for(var _0x4dd762=0x0;_0x4dd762<beaconData[_0x453e94(0x10f)][_0x453e94(0xf2)]['lanesToBeaconList'][_0x37130e][_0x453e94(0x1d7)][_0x453e94(0x143)];_0x4dd762++){_0xe34bb=_0xe34bb+'*'+beaconData[_0x453e94(0x10f)]['lanesBeaconsMap']['lanesToBeaconList'][_0x37130e][_0x453e94(0x1d7)][_0x4dd762];}minGateData[_0x453e94(0x1cf)](_0xe34bb,[beaconData[_0x453e94(0x10f)][_0x453e94(0xf2)][_0x453e94(0x164)][_0x37130e]['gateID'],0xa]),maxGateData['set'](_0xe34bb,[beaconData[_0x453e94(0x10f)][_0x453e94(0xf2)][_0x453e94(0x164)][_0x37130e][_0x453e94(0x154)],0x0]);}document[_0x453e94(0x107)](_0x453e94(0xe8))[_0x453e94(0xe7)]=beaconData[_0x453e94(0x10f)]['lanesBeaconsMap'][_0x453e94(0x164)][0x0][_0x453e94(0x1a3)];beaconData[_0x453e94(0x10f)]['lanesBeaconsMap'][_0x453e94(0x164)]['length']>0x1&&(document[_0x453e94(0x107)](_0x453e94(0x187))['innerHTML']=beaconData[_0x453e94(0x10f)][_0x453e94(0xf2)]['lanesToBeaconList'][0x1][_0x453e94(0x1a3)]);beaconData['beaconConfig'][_0x453e94(0xf2)][_0x453e94(0x164)][_0x453e94(0x143)]>0x2?document[_0x453e94(0x107)](_0x453e94(0x194))['innerHTML']=beaconData[_0x453e94(0x10f)]['lanesBeaconsMap']['lanesToBeaconList'][0x2][_0x453e94(0x1a3)]:document[_0x453e94(0x107)](_0x453e94(0x194))[_0x453e94(0xe7)]='';gateDatainitialised=!![];for(let [_0x446c59,_0x4d8649]of gateloopData){_0x4d8649===0x1&&(loopDetected=!![],loopEnabledTime===0x0&&(loopEnabledTime=(Date[_0x453e94(0xf6)]()-screenAppearanceTime)/0x3e8));}}catch(_0x1d76ce){pushException(_0x453e94(0xdc)+_0x1d76ce['message']);}}function validateFetchSuccessResponse(_0x4aeb21,_0x43f50a){const _0x3969fd=_0x25ab77;let _0x2958a6=JSON[_0x3969fd(0x16d)](_0x4aeb21);switch(_0x43f50a){case _0x3969fd(0x193):showProgress(![]);try{_0x2958a6[_0x3969fd(0x1d4)]?(showAwaiting(),hideGateLayout(),hideOpenButton(),document[_0x3969fd(0x107)](_0x3969fd(0x15d))[_0x3969fd(0xe7)]='',document[_0x3969fd(0x107)](_0x3969fd(0xf4))[_0x3969fd(0xe7)]=_0x3969fd(0x14c),document[_0x3969fd(0x107)](_0x3969fd(0x15b))[_0x3969fd(0x170)][_0x3969fd(0x1bf)](_0x3969fd(0x131)),document[_0x3969fd(0x107)](_0x3969fd(0x182))[_0x3969fd(0x170)][_0x3969fd(0xed)](_0x3969fd(0x131)),bookingID=_0x2958a6['refno'],refId=_0x2958a6[_0x3969fd(0x152)],uid=_0x2958a6[_0x3969fd(0x1cb)],pushLogs(),J2N_postOnSuccess(JSON['stringify'](_0x2958a6))):(J2N_printLog(JSON[_0x3969fd(0x115)](_0x2958a6)),J2N_postOnFailure(JSON[_0x3969fd(0x115)](_0x2958a6)),pushLogs());}catch(_0x50631f){debugLog(_0x3969fd(0xe1)+_0x50631f[_0x3969fd(0x1cd)]),J2N_printLog(_0x3969fd(0x16a)+_0x50631f[_0x3969fd(0x1cd)]),J2N_postOnFailure('Gate\x20open\x20failure'),pushException(_0x3969fd(0x11b)+_0x50631f[_0x3969fd(0x1cd)]),pushLogs();}break;case _0x3969fd(0x192):showProgress(![]);try{_0x2958a6[_0x3969fd(0x1d4)]?(showAwaiting(),hideGateLayout(),hideOpenButton(),onClickBackPedestrian(),onClickBackGateIssues(),document[_0x3969fd(0x107)](_0x3969fd(0x15d))[_0x3969fd(0xe7)]='',document[_0x3969fd(0x107)](_0x3969fd(0xf4))[_0x3969fd(0xe7)]='Move\x20closer\x20to\x20the\x20gate\x20to\x20enter',J2N_postOnInfo(_0x3969fd(0x195)),pushLogs()):(J2N_printLog(JSON['stringify'](_0x2958a6)),J2N_postOnFailure(JSON[_0x3969fd(0x115)](_0x2958a6)),pushLogs());}catch(_0x2bf796){debugLog(_0x3969fd(0x106)+_0x2bf796[_0x3969fd(0x1cd)]),J2N_printLog('Open\x20Gate\x20failure'+_0x2bf796['message']),J2N_postOnFailure(_0x3969fd(0x181)),pushException(_0x3969fd(0x17d)+_0x2bf796[_0x3969fd(0x1cd)]),pushLogs();}break;case _0x3969fd(0x1a5):showProgress(![]);let _0x109e2e=!!_0x2958a6[_0x3969fd(0x1d4)]||![],_0x795b79=_0x2958a6[_0x3969fd(0x1cd)]||'';_0x109e2e==!![]?(getBeaconListResponse=_0x2958a6,J2N_forceJSupdate(JSON[_0x3969fd(0x115)](_0x2958a6)),initHardwareConfig(),reloadHwAndDisplay?displayWebViewAndStartSDK():J2N_printLog('~latestHardWareConfigruation')):debugLog(_0x3969fd(0x171),_0x795b79);break;}}function validateFetchFailureResponse(_0xb99ff5,_0x3953bd){const _0x3f3bbc=_0x25ab77;showProgress(![]);switch(_0x3953bd){case _0x3f3bbc(0x193):debugLog('openGatefail\x20'+_0xb99ff5),J2N_postOnFailure(_0x3f3bbc(0x1c0)),pushException(_0x3f3bbc(0x1b3)+_0xb99ff5);break;case _0x3f3bbc(0x192):debugLog('openGatePedfail\x20'+e[_0x3f3bbc(0x1cd)]),J2N_postOnFailure(_0x3f3bbc(0x1ca)),pushException(_0x3f3bbc(0x110)+e['message']);break;case _0x3f3bbc(0x1a5):debugLog(_0x3f3bbc(0x1d9)+e[_0x3f3bbc(0x1cd)]),pushException('gethwfailure'+e[_0x3f3bbc(0x1cd)]);break;}}
+window.androidObj = function AndroidClass() {
+};
+
+function include(file) {
+
+    var script = document.createElement('script');
+    script.src = file;
+    script.type = 'text/javascript';
+    script.defer = true;
+
+    document.getElementsByTagName('head').item(0).appendChild(script);
+
+}
+
+include('JSInteractionWrapper.js');
+include('AndroidSpecific.js');
+include('iOSSpecific.js');
+
+/*
+* Variable Declarations
+* */
+//const url_base = 'https://meghak2.divrt.co/';
+const url_hardwareConfig = 'api/v2/getHardwareConfigByZcode';
+const url_openGate = 'api/v2/openGate';
+const url_decisionInfo = 'api/v2/decisionInfo';
+
+
+let url_base = {
+    get getURL() {
+        // getter, the code executed on getting obj.propName
+        if (pinaConfig.environment == "PROD") {
+            return "https://pinaboxapi.divrt.co/";
+        } else if (pinaConfig.environment == "TEST") {
+            return "https://meghak2.divrt.co/"
+        } else if (pinaConfig.environment == "UAT") {
+            return "https://pinaboxapi-uat2.parking.dev/"
+        } else {
+            return "https://pinaboxapi-dev.divrt.co/"
+        }
+    }
+};
+
+let loggerURL = {
+    get getURL() {
+        // getter, the code executed on getting obj.propName
+        if (pinaConfig.environment == "PROD") {
+            return "https://loggerapi.divrt.co/log";
+        } else if (pinaConfig.environment == "UAT") {
+            return "https://loggerapi-uat2.parking.dev/log"
+        } else {
+            return "https://loggerapi-dev.divrt.co/log";
+        }
+    }
+};
+
+let pinaConfig, pinaConfigParams, pinaSdkParams, pinaClientParams, pinaMiscParams;
+let getBeaconListResponse, beaconData, nfcData, qrCode, autoSelectMode, garageLocation = {}, loopData = {},
+    loopDetectorMqttTopic, loopDetected = false, bleDetected = false, collectDecisionData = true, beaconHits = 0,
+    beaconDistanceGreaterThanRequired = true, gateDecisionDeltaSec, cancelled = false, gate,
+    scanToButtonGreenDeltaSec, atleastOneBeaconLessThanOneMtr = false, thresholdTimerExecuted = false,
+    gateSelected = false,
+    loopDetectors = [], minGateData = new Map(), maxGateData = new Map(), gateloopData = new Map(), maxDistance,
+    beaconsMap = new Map(),
+    altBeaconsMap = new Map(), beaconId, delta, differentiationDelta, loopDetectorSimulation = 0, commandId,
+    scanToButtonClickDeltaSec,
+    outcome = "", gateForBeacon = new Map(), decisionData = {}, buttonMode, presentButtonMode = '-1',
+    minorId = new Map(), minorIdDebug = new Map(), minDistance = new Map(), lastDistance = new Map(),
+    rangeWeightData = new Map(),
+    rangeData = new Map(), deciTime = new Map(), deciDistance = new Map(), firstDistance = new Map(),
+    firstTime = new Map(), loopValues = [],
+    loopList = [],
+    oneBeacon = 'X', otherBeacon = 'X', myLaneLoop = 'X', otherLaneLoop = 'X', lane = -1, currentLocation = {},
+    prevQRMessage = '', batteryDataDictionaryArray = [], screenAppearanceTime, proximityDataArray = [],
+    weightDataDict = {}, logArray = [], debugCount = 0, logStartTime = 0.0, beaconIdPedestrian,loopEnabledTime,bleEnabledTime,
+    firstBleHitTime,techType = 'BLE',bookingID,uid,gateDatainitialised = false, entrance = "", specificationType = '',refId, reloadHwAndDisplay = false;
+
+/*
+* Methods to support Pedestrian
+* */
+
+function onClickGateIssues() {
+    try {
+        document.getElementById("container_main").classList.add('hide');
+        document.getElementById("container_gate_issues").classList.remove('hide');
+    } catch (e) {
+        pushException("onClickGateIssues " + e.message)
+    }
+}
+
+function onClickBackGateIssues() {
+    try {
+        document.getElementById("container_main").classList.remove('hide');
+        document.getElementById("container_gate_issues").classList.add('hide');
+    } catch (e) {
+        pushException("onClickBackGateIssues " + e.message)
+    }
+}
+
+
+function onClickPedestrian() {
+    try {
+        document.getElementById("main_container").classList.add('hide');
+        document.getElementById("container_pedestrian").classList.remove('hide');
+        if (beaconData != null && beaconData.beaconList != null && beaconData.beaconList.length > 0) {
+            for (let i = 0; i < beaconData.beaconList.length; i++) {
+                if (beaconData.beaconList[i].isPedestrian != null && beaconData.beaconList[i].isPedestrian.localeCompare("1") === 0) {
+                    storeBeaconIdPedestrian(beaconData.beaconList[i].beaconId);
+                    showOpenButtonPedestrian();
+                    hideAwaitingPedestrian();
+
+                }
+            }
+        }
+    } catch (e) {
+        pushException("onClickPedestrian " + e.message)
+    }
+}
+
+function onClickBackPedestrian() {
+    try {
+        document.getElementById("main_container").classList.remove('hide');
+        document.getElementById("container_pedestrian").classList.add('hide');
+    } catch (e) {
+        pushException("onClickBackPedestrian " + e.message)
+    }
+}
+
+
+function showOpenButtonPedestrian() {
+    try {
+        document.getElementById("move_closer_text_pedestrian").style.color = "#FFFFFF";
+        document.getElementById("button_enable_pedestrian").classList.remove('hide');
+    } catch (e) {
+        pushException("showOpenButtonPedestrian " + e.message)
+    }
+}
+
+function hideAwaitingPedestrian() {
+    try {
+        document.getElementById("button_ble_pedestrian").classList.add('hide');
+    } catch (e) {
+        pushException("hideAwaitingPedestrian " + e.message)
+    }
+}
+
+
+function hideOpenButtonPedestrian() {
+    try {
+        document.getElementById("button_enable_pedestrian").classList.add('hide');
+    } catch (e) {
+        pushException("showOpenButtonPedestrian " + e.message)
+    }
+}
+
+function showAwaitingPedestrian() {
+    try {
+        document.getElementById("button_ble_pedestrian").classList.remove('hide');
+    } catch (e) {
+        pushException("hideAwaitingPedestrian " + e.message)
+    }
+}
+
+function storeBeaconIdPedestrian(beaconId) {
+    beaconIdPedestrian = beaconId;
+}
+
+function onClickBLEButtonPedestrian() {
+    try {
+        openGatePedestrian()
+    } catch (e) {
+        pushException("onClickBLEButton " + e.message)
+    }
+}
+
+function openGatePedestrian() {
+    if (window.navigator.onLine == false) {
+        alert("No network available. Please check your connection and try again")
+        return
+    }
+    try {
+        J2N_suspendClick();
+        const url = url_base.getURL + url_openGate;
+        showProgress(true);
+        debugLog("openGatePedestrian");
+        //native call
+        let dataObject = JSON.stringify({
+            "url": url,
+            "data": {
+                "beaconId": beaconIdPedestrian,
+                "specification_type": specificationType,
+                "pinaConfigParams": pinaConfigParams,
+                "pinaClientParams": pinaClientParams,
+                "pinaJSParams": pinaConfig.pinaJSParams
+            },
+            "jsIntent":"OPENGATEPEDESTRIAN"
+        })
+        J2N_fetchRequest(dataObject)
+        //native call
+    } catch (e) {
+        showProgress(false);
+        debugLog("openGatePedExcep " + e.message)
+        J2N_postOnFailure("Failed to open door. Please try again");
+        pushException("opeopenGatePedExcepnGate " + e.message)
+    }
+}
+
+function onClickBLEButton() {
+    try {
+        scanToButtonClickDeltaSec = (Date.now() - scanToButtonClickDelta) / 1000.0;
+        if (gate.localeCompare(beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[0].gateID) === 0) {
+            takeAction(1, gateForBeacon.get(gate), gate);
+        } else if (beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length >= 2 && gate.localeCompare(beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[1].gateID) === 0) {
+            takeAction(2, gateForBeacon.get(gate), gate);
+        } else if (beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length >= 3 && gate.localeCompare(beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[2].gateID) === 0) {
+            takeAction(3, gateForBeacon.get(gate), gate);
+        }
+    } catch (e) {
+        pushException("onClickBLEButton " + e.message)
+    }
+}
+
+function onClickGate1() {
+    try {
+        takeAction(1, gateForBeacon.get(beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[0].gateID), beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[0].gateID);
+        scanToButtonClickDeltaSec = (Date.now() - scanToButtonClickDelta) / 1000.0;
+    } catch (e) {
+        pushException("onClickGate1 " + e.message)
+    }
+}
+
+function onClickGate2() {
+    try {
+        takeAction(2, gateForBeacon.get(beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[1].gateID), beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[0].gateID);
+        scanToButtonClickDeltaSec = (Date.now() - scanToButtonClickDelta) / 1000.0;
+    } catch (e) {
+        pushException("onClickGate2 " + e.message)
+    }
+}
+
+function onClickGate3() {
+    try {
+        takeAction(3, gateForBeacon.get(beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[2].gateID), beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[0].gateID);
+        scanToButtonClickDeltaSec = (Date.now() - scanToButtonClickDelta) / 1000.0;
+    } catch (e) {
+        pushException("onClickGate3 " + e.message)
+    }
+}
+
+function onClickMoveForward() {
+    try {
+        document.getElementById("main_container").classList.remove('hide');
+        document.getElementById("alert").classList.add('hide');
+    } catch (e) {
+        pushException("onClickMoveForward " + e.message)
+    }
+}
+
+function onClickNFCButton() {
+    J2N_startNFCScan();
+}
+
+function onClickStart() {
+
+}
+
+function onClickSimulate() {
+}
+
+function onClickQRButton() {
+    try {
+        /*
+            if(currentLocation != undefined && currentLocation.lattitude != undefined){
+                if(getDistanceFromLatLonInKm(garageLocation.latitude,garageLocation.longitude,currentLocation.lattitude,currentLocation.longitude) <= (qrCode.qrConfig.maxDistance/1000)){*/
+        J2N_startQRScan()
+        /* }else{
+             showToast(qrCode.qrConfig.farAwayScan)
+         }
+
+     }else{
+         showToast('Fetching location, please try again')
+     }*/
+    } catch (e) {
+        pushException("onClickQRButton " + e.message)
+    }
+}
+
+
+/*
+* Methods to interact to html
+* */
+
+function showGateLayout() {
+    try {
+        document.getElementById("move_closer_text").style.color = "#FFFFFF";
+        document.getElementById("multi_gate").classList.remove('hide');
+        document.getElementById("left_btn").classList.remove('hide');
+        document.getElementById("right_btn").classList.remove('hide');
+
+        if (beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length > 2) {
+            document.getElementById("middle_btn").classList.remove('hide');
+        } else {
+            document.getElementById("middle_btn").classList.add('hide');
+        }
+
+        if (getBeaconListResponse.data.isPedestrian != null && getBeaconListResponse.data.isPedestrian.localeCompare("1") === 0) {
+            document.getElementById("left_btn").classList.add('hide');
+        }
+    } catch (e) {
+        pushException("showGateLayout " + e.message)
+    }
+}
+
+function hideOpenButton() {
+    try {
+        document.getElementById("button_enable").classList.add('hide');
+    } catch (e) {
+        pushException("hideOpenButton " + e.message)
+    }
+}
+
+function hideGateLayout() {
+    try {
+        document.getElementById("multi_gate").classList.add('hide');
+
+        document.getElementById("left_btn").classList.innerHTML = "";
+        document.getElementById("middle_btn").classList.innerHTML = "";
+        document.getElementById("right_btn").classList.innerHTML = "";
+    } catch (e) {
+        pushException("hideGateLayout " + e.message)
+    }
+}
+
+function showOpenButton() {
+    try {
+        document.getElementById("move_closer_text").style.color = "#FFFFFF";
+        document.getElementById("button_enable").classList.remove('hide');
+    } catch (e) {
+        pushException("showOpenButton " + e.message)
+    }
+}
+
+function hideAwaiting() {
+    try {
+        if (scanToButtonGreenDeltaSec === 0.0) {
+            debugLog("Hide Awaiting")
+            scanToButtonGreenDeltaSec = (Date.now() - screenAppearanceTime) / 1000.0
+        }
+
+        document.getElementById("button_ble").classList.add('hide');
+    } catch (e) {
+        pushException("hideAwaiting " + e.message)
+    }
+}
+
+function showAwaiting() {
+    try {
+        document.getElementById("button_ble").classList.remove('hide');
+    } catch (e) {
+        pushException("showAwaiting " + e.message)
+    }
+}
+
+function showSimulation() {
+    if ((pinaConfigParams.simulationMode != undefined && pinaConfigParams.simulationMode)) {
+        document.getElementById("simulation").classList.remove('hide');
+    } else {
+        document.getElementById("simulation").classList.add('hide');
+    }
+}
+
+function showDevMode() {
+    if (pinaConfig.environment != undefined && pinaConfig.environment.localeCompare("PROD")) {
+        document.getElementById("dev").classList.remove('hide');
+    }else{
+        document.getElementById("dev").classList.add('hide');
+    }
+}
+
+function showGateIssues() {
+    if(nfcData.status == 0 && qrCode.status == 0){
+        document.getElementById("gate_issues").classList.add('hide');
+    }
+    
+    if(nfcData.status == 0){
+        document.getElementById("button_nfc").classList.add('hide');
+    }
+    if(qrCode.status == 0){
+        document.getElementById("button_qr").classList.add('hide');
+    }
+    
+    document.getElementById("loader").classList.add('hide');
+    document.getElementById("container").classList.remove('hide');
+    //pedestrianback
+    document.getElementById("main_container").classList.remove('hide');
+    document.getElementById("container_pedestrian").classList.add('hide');
+    //gateissuesback
+    document.getElementById("container_main").classList.remove('hide');
+    document.getElementById("container_gate_issues").classList.add('hide');
+//    //unhide awaiting door
+//    document.getElementById("button_enable_pedestrian").classList.add('hide');
+//    document.getElementById("button_ble_pedestrian").classList.remove('hide');
+}
+
+function flushData() {
+    try {
+        garageLocation = {}
+        loopData = {}
+        loopDetected = false
+        bleDetected = false;
+        presentButtonMode = '-1';
+        collectDecisionData = true
+        beaconHits = 0
+        beaconDistanceGreaterThanRequired = true
+        cancelled = false
+        gate = ''
+        atleastOneBeaconLessThanOneMtr = false
+        thresholdTimerExecuted = false
+        gateSelected = false
+        loopDetectors = []
+        minGateData = new Map()
+        maxGateData = new Map()
+        gateDatainitialised = false
+        gateloopData = new Map()
+        beaconsMap = new Map()
+        altBeaconsMap = new Map()
+        loopDetectorSimulation = 0
+        outcome = ""
+        gateForBeacon = new Map()
+        decisionData = {}
+        minorId = new Map()
+        minDistance = new Map()
+        lastDistance = new Map()
+        prevQRMessage = ''
+        specificationType = ''
+
+        scanToButtonGreenDelta = Date.now();
+        scanToButtonClickDelta = Date.now();
+        gateDecisionDelta = Date.now();
+        screenAppearanceTime = Date.now()
+        scanToButtonGreenDeltaSec = 0.0
+        gateDecisionDeltaSec = 0.0
+        scanToButtonClickDeltaSec = 0.0
+        loopEnabledTime = 0.0
+        bleEnabledTime = 0.0
+        firstBleHitTime = 0.0
+        bookingID = ''
+        refId = ''
+        uid = ''
+        differentiationDelta = 0.0
+
+        hideOpenButton()
+        hideGateLayout()
+        showAwaiting()
+        hideOpenButtonPedestrian()
+        showAwaitingPedestrian()
+    } catch (e) {
+        pushException("flushData " + e.message)
+    }
+}
+
+function validateHardwareConfig(jsonEncoded) {
+    try {
+        getBeaconListResponse = JSON.parse(jsonEncoded);
+
+        if (getBeaconListResponse != undefined) {
+            initHardwareConfig()
+        } else {
+            getHardwareConfiguration()
+        }
+    } catch (e) {
+        getHardwareConfiguration()
+        pushException("validateHardwareConfig " + e.message)
+    }
+}
+
+
+function prefetchHardwareConfiguration(pinaConfigJson, hardwareConfigJson) {
+    validatePinaConfig(pinaConfigJson)
+    if (hardwareConfigJson != undefined) {
+        getBeaconListResponse = JSON.parse(hardwareConfigJson)
+        initHardwareConfig();
+        J2N_printLog(`~cachedHardWareConfigruation`);
+    } else {
+        //false --> do not load the dispalywebview after hwconfig response
+        getHardwareConfiguration(false);
+    }
+
+}
+
+function initSDKMethods() {
+
+    if (getBeaconListResponse != undefined && pinaConfig.pinaConfigParams.gateType == getBeaconListResponse.data.type) {
+        let loopData = {};
+        loopData.serverUri = "tcp://mqtts.divrt.co:1883";
+        loopData.clientId = "phpMQTT-subscriber";
+        loopData.userName = pinaConfig.environment == "PROD" ? "divrt-mqtt-dev":"anveshtokala";
+        loopData.password = pinaConfig.environment == "PROD" ? "parking":"parking1234";
+        loopData.loopDetectorMqttTopic = getBeaconListResponse.data.loopData.loopConfig.mqtt_topic;
+        loopList = getBeaconListResponse.data.loopData.loopsList;
+        rangeData = new Map()
+        
+        if (isiOS()) {
+            loopData.serverUri = pinaConfig.environment == "PROD" ? "mqtts.divrt.co":"broker.mqttdashboard.com";
+            J2N_startLoopScan(JSON.stringify(loopData));
+            debugLog("J2N_startLoopScan")
+            let arrayRangesData = beaconData.beaconConfig.ranges
+            let estimoteCloudDetailsModel = beaconData.beaconConfig.estimoteCloudDetails
+            let data = { "arrayRangeCount": arrayRangesData, "estimoteCloudDetailsModel": estimoteCloudDetailsModel }
+            J2N_startBeaconScan(JSON.stringify(data))
+            debugLog("J2N_startBeaconScan")
+        }
+        if ((pinaConfigParams.simulationMode != undefined && pinaConfigParams.simulationMode) || (getBeaconListResponse.data.demoGarage != undefined && getBeaconListResponse.data.demoGarage.localeCompare("1") === 0)) {
+            initLoopData();
+            initBeaconData();
+        }
+    } else {
+        //true --> do load the dispalywebview after hwconfig response
+        getHardwareConfiguration(true);
+    }
+}
+
+function displayWebViewAndStartSDK(pinaConfigJson, hardwareConfigJson) {
+    try {
+//        debugLog("This is prebundle JS")
+        if (pinaConfigJson != undefined) {
+            let newPinaConfig = JSON.parse(pinaConfigJson)
+            if (newPinaConfig.pinaConfigParams.zid != pinaConfig.pinaConfigParams.zid) {
+                getBeaconListResponse = undefined
+            }
+            validatePinaConfig(pinaConfigJson)
+        }
+        if (getBeaconListResponse != undefined && hardwareConfigJson != undefined) {
+            getBeaconListResponse = JSON.parse(hardwareConfigJson)
+            initHardwareConfig()
+        }
+        if (getBeaconListResponse != undefined && getBeaconListResponse.garageConfiguredServices.beacon == false) {
+            document.getElementById("main_container").classList.add('hide');
+            showProgress(true);
+            J2N_startQRScan()
+        }
+        scanToButtonGreenDeltaSec = 0.0
+        gateDecisionDeltaSec = 0.0
+        scanToButtonClickDeltaSec = 0.0
+        loopEnabledTime = 0.0
+        bleEnabledTime = 0.0
+        firstBleHitTime = 0.0
+        debugLog("popupappear")
+        showSimulation();
+        showDevMode();
+        if (pinaConfig.environment == "PROD" && pinaConfigParams.simulationMode == true) {
+            alert("Simulation mode is restricted in Production. Please change DIVRT environment to DEV")
+            return
+        }
+        
+        initSDKMethods()
+//        setTimeout(function () {
+//            if (bleDetected == false && proximityDataArray.length == 0) {
+//                J2N_printLog("bleDetected" + bleDetected)
+//                debugLog("bleDetected" + bleDetected)
+//                debugLog("reinitSDKMethods Timer")
+//                initSDKMethods()
+//            }
+//        }, parseFloat(getBeaconListResponse.hardwareConfigInfo.reScanTimeout) * 1000 || 5000);
+
+    } catch (e) {
+        J2N_printLog(e.message)
+        pushException("displayWebViewAndStartSDK " + e.message)
+    }
+}
+
+function validatePinaConfig(pinaConfigJson) {
+    try {
+        flushData()
+
+        pinaConfig = JSON.parse(pinaConfigJson)
+        if (isiOS()) {
+            pinaConfigParams = pinaConfig.pinaConfigParams
+            pinaSdkParams = pinaConfig.pinaSdkParams
+            pinaClientParams = pinaConfig.pinaClientParams;
+            /*pinaMiscParams = pinaConfig.pinaMiscParams.nameValuePairs;*/
+        } else {
+            pinaConfigParams = pinaConfig.pinaConfigParams.nameValuePairs;
+            pinaSdkParams = pinaConfig.pinaSdkParams.nameValuePairs;
+            pinaClientParams = pinaConfig.pinaClientParams.nameValuePairs;
+            pinaMiscParams = pinaConfig.pinaMiscParams.nameValuePairs;
+        }
+
+        document.getElementById("welcome_text").innerHTML = pinaSdkParams.helpText;
+        document.getElementById("move_closer_text").style.color = pinaSdkParams.gateButtonBgColor || "#F2555C";
+        if (pinaConfigParams.gateType.localeCompare("IN") === 0) {
+            document.getElementById("move_closer_text").innerHTML = "Move closer to the gate to enter";
+        } else {
+            document.getElementById("move_closer_text").innerHTML = "Move closer to the gate to exit";
+        }
+        //getHardwareConfiguration(); //ToDo Anvesh Do you need it here?
+
+        showDevMode();
+
+        if (pinaSdkParams.gateButtonBgColor != undefined) {
+            var elements = document.getElementsByClassName("proceed_btn")
+            var elements1 = document.getElementsByClassName("multi_gate_btn")
+            var back_btn = document.getElementsByClassName("back_btn")
+            var loader = document.getElementsByClassName("loader")
+            for (var i = 0; i < elements.length; i++) {
+                elements[i].style.background = pinaSdkParams.gateButtonBgColor;
+            }
+            for (var i = 0; i < elements1.length; i++) {
+                elements1[i].style.background = pinaSdkParams.gateButtonBgColor;
+            }
+            for (var i = 0; i < back_btn.length; i++) {
+                back_btn[i].style.background = pinaSdkParams.gateButtonBgColor;
+            }
+            for (var i = 0; i < loader.length; i++) {
+                back_btn[i].style.background = pinaSdkParams.gateButtonBgColor;
+            }
+
+            document.getElementById("move_closer_text_pedestrian").style.color = pinaSdkParams.gateButtonBgColor;
+            document.getElementById("move_closer_text").style.color = pinaSdkParams.gateButtonBgColor;
+        }
+
+        if (pinaSdkParams.appIconImage != undefined) {
+            document.getElementById("logo").src = pinaSdkParams.appIconImage;
+        } else {
+            document.getElementById("logo").src = "https://static.divrt.co/images/pinabox/spp/spplogo.png";
+        }
+
+    } catch (e) {
+        J2N_printLog(e.message)
+        pushException("validatePinaConfig " + e.message)
+    }
+}
+
+
+function validateLoopData(jsonEncoded) {
+    try {
+        const loop = JSON.parse(jsonEncoded)
+        for (let i = 0; i < getBeaconListResponse.data.loopData.loopConfig.laneMqttTopics.length; i++) {
+            if (loop.topic.localeCompare(getBeaconListResponse.data.loopData.loopConfig.laneMqttTopics[i].loop0Topic) === 0) {
+                gateloopData.set(getBeaconListResponse.data.loopData.loopConfig.laneMqttTopics[i].gateID, loop.value)//111->1, 112->2
+
+                if (gateDatainitialised && getBeaconListResponse.data.loopData.loopConfig.laneMqttTopics[i].entrance_id.localeCompare(entrance) === 0) {// && getBeaconListResponse.data.loopData.loopConfig.laneMqttTopics[i].entrance_id.localeCompare(entrance) === 0
+                    if (loop.value === 1) {
+                        loopDetected = true;
+                        if (loopEnabledTime === 0.0) {
+                            loopEnabledTime = (Date.now() - screenAppearanceTime) / 1000.0
+                        }
+                    }
+                    if (presentButtonMode.toString().localeCompare('-1') === 0 && !(getBeaconListResponse.data.loopData.loopConfig.loopEnabled.localeCompare('0') === 0)) {
+                        takeAction(undefined, undefined, undefined)
+                    }
+                }
+                loop.time = returnDelta();
+                loopValues.push(loop);
+
+            }
+        }
+    } catch (e) {
+        pushException("validateLoopData " + e.message)
+    }
+}
+
+function validateLatLong(jsonEncoded) {
+    try {
+        const latLong = JSON.parse(jsonEncoded)
+        currentLocation.latitude = latLong.latitude;
+        currentLocation.longitude = latLong.longitude;
+        J2N_printLog("latLong.latitude" + latLong.latitude)
+        J2N_printLog("latLong.longitude" + latLong.longitude)
+    } catch (e) {
+        pushException("validateLatLong " + e.message)
+    }
+}
+
+function getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {
+    try {
+        let R = 6371;
+        let dLat = deg2rad(lat2 - lat1);
+        let dLon = deg2rad(lon2 - lon1);
+        let a =
+            Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+            Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+            Math.sin(dLon / 2) * Math.sin(dLon / 2);
+        let c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+        let d = R * c; // Distance in KM
+        return d;
+    } catch (e) {
+        pushException("getDistanceFromLatLonInKm " + e.message)
+    }
+}
+
+function deg2rad(deg) {
+    try {
+        return deg * (Math.PI / 180)
+    } catch (e) {
+        pushException("deg2rad " + e.message)
+    }
+}
+
+
+function validateNFC(message) {
+    try {
+        beaconId = message;
+        techType = 'NFC';
+        specificationType = '2'
+        openGate()
+        /*message = message.replace("en", "")
+        let array = message.split("/");
+
+        let beaconsMap = new Map();
+        beaconsMap.set("" + array[2].toLowerCase() + "*" + array[3] + "*" + array[4], "" + new Date().getTime());
+
+        let found = false;
+        if (nfcData != null && nfcData.nfcList.length > 0) {
+            for (let i = 0; i < nfcData.nfcList.length; i++) {
+                if (beaconsMap.has(beaconData.mmid.toLowerCase() + "*" + nfcData.nfcList[i].majorid + "*" + nfcData.nfcList[i].minorid)) {
+                    if (!found) {
+                        found = true;
+                        beaconId = nfcData.nfcList[i].beaconId;
+                        techType = 'NFC';
+                        openGate()
+                        return;
+                    }
+                }
+            }
+        }
+
+        if (!found) {
+            J2N_postOnFailure("Wrong NFC scanned")
+        }*/
+    } catch (e) {
+        J2N_printLog(e.message);
+        J2N_postOnFailure("Wrong NFC scanned")
+        pushException("validateNFC " + e.message)
+    }
+
+}
+
+
+function validateQR(message) {
+    try {
+        if (prevQRMessage.localeCompare(message) === 0) {
+
+        } else {
+            prevQRMessage = message;
+            beaconId = prevQRMessage;
+            techType = 'QR';
+            specificationType = '3';
+            openGate()
+            
+            /*let array = message.split("/");
+
+            let beaconsMap = new Map();
+            beaconsMap.set("" + array[2].toLowerCase() + "*" + array[3] + "*" + array[4], "" + new Date().getTime());
+
+
+            let found = false;
+            if (qrCode != null && qrCode.qrList.length > 0) {
+                for (let i = 0; i < qrCode.qrList.length; i++) {
+                    if (beaconsMap.has(beaconData.mmid.toLowerCase() + "*" + qrCode.qrList[i].majorid + "*" + qrCode.qrList[i].minorid)) {
+                        if (!found) {
+                            found = true;
+                            beaconId = qrCode.qrList[i].beaconId;
+                            techType = 'QR';
+                            openGate()
+                            return;
+                        }
+                    }
+                }
+            }
+
+            if (!found) {
+                J2N_postOnFailure("Wrong code scanned, please try again")
+            }*/
+        }
+    } catch (e) {
+        J2N_printLog(e.message);
+        J2N_postOnFailure("Wrong code scanned, please try again")
+        pushException("validateQR " + e.message)
+    }
+
+}
+
+
+/*
+*
+* '''''1'''''2'''''3[loopdetect]
+*                   Single/multi + take action
+*
+* '''''1''''2''''''''3[loopNotdetect]''''''4'''''5''[loopDetect+3sec logic done]
+*                                                   Single/multi + take action
+* */
+
+function takeAction(laneClicked, beaconIdTemp, gateId) {
+    try {
+        if ((pinaConfigParams.simulationMode != undefined && pinaConfigParams.simulationMode) || (getBeaconListResponse.data.demoGarage != undefined && getBeaconListResponse.data.demoGarage.localeCompare("1") === 0)) {
+            debugLog("simulationMode=true")
+            if (presentButtonMode.localeCompare('-1') === 0) {
+                presentButtonMode = '1';
+                isiOS() ? selectGateiOS() : selectGateAndroid();
+                hideAwaiting()
+                showOpenButton()
+                hideGateLayout()
+            } else {
+                if (gateId != undefined) {
+                    beaconId = beaconIdTemp;
+                    openGate()
+                }
+            }
+        } else if (gateDatainitialised) {
+            if (getBeaconListResponse.data.loopData.loopConfig.loopEnabled.localeCompare('0') === 0) {
+                if (presentButtonMode.localeCompare('-1') === 0) {
+                    isiOS() ? selectGateiOS() : selectGateAndroid();
+                    hideAwaiting()
+                    // showOpenButton()
+                    if (beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length > 1) {
+                        showGateLayout()
+                        hideOpenButton()
+                    } else {
+                        showOpenButton()
+                        hideGateLayout()
+                    }
+                    presentButtonMode = '1';
+                } else {
+                    if (laneClicked != undefined) {
+                        beaconId = beaconIdTemp;
+                        openGate();
+                    }
+                }
+            } else {
+                try { //-1->Disabled 0->oepnGate 1->single 2->multi 3-> moveForward
+                    beaconId = beaconIdTemp;
+                    myLaneLoop = '0';
+                    otherLaneLoop = '0';
+
+                    if (presentButtonMode.localeCompare('-1') === 0 && (!loopDetected || !bleDetected)) {
+                        return;
+                    } else {
+                        if (presentButtonMode.localeCompare('-1') === 0 && loopDetected && bleDetected) {
+                            isiOS() ? selectGateiOS() : selectGateAndroid();
+                        }
+
+                        if (gateDecisionDeltaSec === 0.0) {
+                            gateDecisionDeltaSec = (Date.now() - screenAppearanceTime) / 1000.0
+                        }
+
+                        let lane1LoopState = "-1";
+                        let lane2LoopState = "-1";
+                        let lane3LoopState = "-1";
+
+                        let k = 0;
+                        for (let [entry, value] of gateloopData) {
+                            if (k === 0) {
+                                lane1LoopState = "" + value;
+                                k++;
+                            } else if (k === 1) {
+                                lane2LoopState = "" + value;
+                                k++;
+                            } else if (k === 2) {
+                                lane3LoopState = "" + value;
+                                k++;
+                            }
+                        }
+
+                        let laneTemp = laneClicked != undefined ? laneClicked : lane;
+
+                        switch (laneTemp) {
+                            case 1:
+                                if (lane1LoopState.localeCompare('1') === 0)
+                                    myLaneLoop = 1;
+                                if (lane2LoopState.localeCompare('1') === 0 || lane3LoopState.localeCompare('1') === 0)
+                                    otherLaneLoop = 1
+                                break;
+                            case 2:
+                                if (lane2LoopState.localeCompare('1') === 0)
+                                    myLaneLoop = 1;
+                                if (lane1LoopState.localeCompare('1') === 0 || lane3LoopState.localeCompare('1') === 0)
+                                    otherLaneLoop = 1
+                                break;
+                            case 3:
+                                if (lane3LoopState.localeCompare('1') === 0)
+                                    myLaneLoop = 1;
+                                if (lane1LoopState.localeCompare('1') === 0 || lane2LoopState.localeCompare('1') === 0)
+                                    otherLaneLoop = 1
+                                break;
+                            default:
+                                break;
+                        }
+
+                        let loopListData;
+
+                        if (loopList != null && loopList.length > 0) {
+                            for (let i = 0; i < loopList.length; i++) {
+                                if ((loopList[i].oneBeacon.localeCompare('X') === 0 || loopList[i].oneBeacon.localeCompare(oneBeacon) === 0)
+                                    && (loopList[i].otherBeacon.localeCompare('X') === 0 || loopList[i].otherBeacon.localeCompare(otherBeacon) === 0)
+                                    && (loopList[i].myLaneLoop.localeCompare('X') === 0 || loopList[i].myLaneLoop.localeCompare(myLaneLoop) === 0)
+                                    && (loopList[i].otherLaneLoop.localeCompare('X') === 0 || loopList[i].otherLaneLoop.localeCompare(otherLaneLoop) === 0)
+                                    && (loopList[i].presentButtonMode.localeCompare(presentButtonMode) === 0)) {
+
+                                    loopListData = loopList[i];
+
+                                    if (outcome === "" || gateId != undefined) {
+                                        if (gateId != undefined) {
+                                            outcome = outcome + loopListData.outcome.replace('#', gateId);
+                                        } else if (gate != undefined) {
+                                            outcome = outcome + loopListData.outcome.replace('#', gate);
+                                        }
+                                    }
+
+                                    switch (loopListData.action) {
+                                        case '-1':
+                                            presentButtonMode = loopListData.action;
+                                            break;
+                                        case '0':
+                                            if (gateId != undefined) {
+                                                openGate();
+                                            }
+                                            break;
+                                        case '1':
+                                            buttonMode = 'single'
+                                            hideAwaiting()
+                                            showOpenButton()
+                                            hideGateLayout()
+                                            presentButtonMode = loopListData.action;
+                                            break;
+                                        case '2':
+                                            buttonMode = 'multi'
+                                            hideAwaiting()
+                                            showGateLayout()
+                                            hideOpenButton()
+                                            presentButtonMode = loopListData.action;
+                                            break;
+                                        case '3':
+                                            document.getElementById("main_container").classList.add('hide');
+                                            document.getElementById("alert").classList.remove('hide');
+                                            break;
+                                        default:
+                                            break;
+                                    }
+
+
+                                    return;
+
+                                }
+                            }
+                        }
+                    }
+
+
+                } catch (e) {
+                    J2N_printLog(e.message)
+                    pushException("takeAction inner " + e.message)
+                }
+            }
+        }
+    } catch (e) {
+        pushException("takeAction " + e.message)
+    }
+}
+
+/*
+* API Calls
+* */
+
+function showProgress(flag) {
+    try {
+        var element = document.getElementById('loader')
+        if (flag) {
+            element.classList.remove('hide')
+        } else {
+            element.classList.add('hide')
+        }
+    } catch (e) {
+        pushException("showProgress " + e.message)
+    }
+}
+
+function getHardwareConfiguration(refreshHwConfig) {
+    
+    try {
+        const url = url_base.getURL + url_hardwareConfig;
+        showProgress(true);
+        debugLog("getHardwareConfiguration")
+        //native call
+        let dataObject = JSON.stringify({
+            "url": url,
+            "data": {
+                "pinaConfigParams": pinaConfigParams,
+                "pinaJSParams": pinaConfig.pinaJSParams
+            },
+            "jsIntent":"GETHARDWARECONFIG"
+        })
+        J2N_fetchRequest(dataObject)
+        reloadHwAndDisplay = refreshHwConfig
+        //native call
+    } catch (e) {
+        showProgress(false);
+        debugLog("gethwExcep " + e.message)
+        pushException("gethwExcep " + e.message)
+    }
+}
+
+function initHardwareConfig() {
+    try {
+        beaconData = getBeaconListResponse.data.beaconData;
+        nfcData = getBeaconListResponse.data.nfcData;
+        qrCode = getBeaconListResponse.data.qrData;
+
+
+        /*
+        * Pedestrian code
+        * */
+
+        if (getBeaconListResponse.data.isPedestrian != null && getBeaconListResponse.data.isPedestrian.localeCompare("1") === 0) {
+            document.getElementById("pedestrian_flow").classList.remove('invisible');
+        } else {
+            document.getElementById("pedestrian_flow").classList.add('invisible');
+        }
+
+        /*
+        * */
+
+        if (isiOS()) {
+            let arrayRangesData = beaconData.beaconConfig.ranges
+            for (let i = 0; i < arrayRangesData.length; i++) {
+                rangeWeightData.set(arrayRangesData[i].radius, arrayRangesData[i].weight)
+            }
+        }
+
+        autoSelectMode = beaconData.beaconConfig.autoSelectMode;
+        autoSelectMode.minimumBeaconThreshold = beaconData.beaconConfig.minimumBeaconThreshold;
+        autoSelectMode.minimumSingleButtonThreshold = beaconData.beaconConfig.minimumBeaconThreshold;
+
+        maxDistance = parseInt(qrCode.qrConfig.maxDistance);
+
+        garageLocation.name = "Point B";
+        garageLocation.latitude = parseFloat(getBeaconListResponse.data.garageLatitude);
+        garageLocation.longitude = parseFloat(getBeaconListResponse.data.garageLongitude);
+
+
+        //loopDetectorMqttTopic = getBeaconListResponse.data.loopData.laneMqttTopics[0].loop0Topic;
+        loopDetectors = getBeaconListResponse.data.loopData.loopList;
+
+
+        /*if (getBeaconListResponse.data.loopData.loopConfig.loopEnabled.localeCompare('0')) {
+            let loopData = {};
+            loopData.topic = getBeaconListResponse.data.loopData.loopConfig.laneMqttTopics[0].loop0Topic;
+            loopData.value = 1
+            getLoopData(JSON.stringify(loopData))
+        }*/
+
+        for (let i = 0; i < beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length; i++) {
+            gateloopData.set(beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[i].gateID, 0);
+        }
+
+
+        let loopData = {};
+        loopData.serverUri = "tcp://mqtts.divrt.co:1883";
+        loopData.clientId = "phpMQTT-subscriber";
+        loopData.userName = "divrt-mqtt-dev";
+        loopData.password = "parking";
+        loopData.loopDetectorMqttTopic = getBeaconListResponse.data.loopData.loopConfig.mqtt_topic;
+        loopList = getBeaconListResponse.data.loopData.loopsList;
+        
+        showGateIssues()
+    } catch (e) {
+        J2N_printLog(e.message)
+        pushException("initHardwareConfig " + e.message)
+    }
+}
+
+function openGate() {
+    if (pinaConfig.environment == "PROD" && pinaConfigParams.simulationMode == true) {
+        alert("Simulation mode is restricted in Production. Please change DIVRT environment to DEV")
+        return
+    }
+    if (window.navigator.onLine == false) {
+        alert("No network available. Please check your connection and try again")
+        return
+    }
+    try {
+        J2N_suspendClick();
+        const url = url_base.getURL + url_openGate;
+        showProgress(true);
+        debugLog("openGate")
+        //native call
+        let dataObject = JSON.stringify({
+            "url": url,
+            "data": {
+                "beaconId": beaconId,
+                "specification_type": specificationType,
+                "pinaConfigParams": pinaConfigParams,
+                "pinaClientParams": pinaClientParams,
+                "pinaJSParams": pinaConfig.pinaJSParams
+            },
+            "jsIntent":"OPENGATE"
+        })
+        J2N_fetchRequest(dataObject)
+        //native call
+    } catch (e) {
+        showProgress(false);
+        debugLog("openGateExcep " + e.message)
+        J2N_postOnFailure("Failed to open gate. Please try again");
+        pushException("openGateExcep " + e.message)
+    }
+}
+
+
+/*
+* Post logs
+* */
+function pushLogs() {
+    try {
+        let list = [];
+
+        for (let [entry, value] of minorId) {
+            let decisionBeacons = {};
+            decisionBeacons.minorID = entry;
+            decisionBeacons.lastDistance = lastDistance.get(entry);
+            decisionBeacons.minDistance = minDistance.get(entry);
+            decisionBeacons.firstDistance = firstDistance.get(entry);
+            decisionBeacons.firstTime = firstTime.get(entry);
+            list.push(decisionBeacons);
+        }
+
+        if (isiOS()) {
+            decisionData.beaconData = Object.values(weightDataDict);
+        } else {
+            decisionData.beaconData = list;
+        }
+        decisionData.loopData = loopValues;
+        decisionData.openedGate = beaconId;
+        decisionData.differentiationDelta = differentiationDelta;
+        decisionData.scanToButtonGreenDelta = scanToButtonGreenDeltaSec;
+        decisionData.scanToButtonClickDelta = scanToButtonClickDeltaSec;
+        decisionData.dateDecisionDelta = gateDecisionDeltaSec;
+        decisionData.simulation_mode= pinaConfigParams.simulationMode;
+
+        decisionData.buttonMode = buttonMode;
+        decisionData.sequenceLogs = logArray;
+        decisionData.proximitydata = proximityDataArray,
+        decisionData.outcome = outcome;
+
+        decisionData.bookingID = bookingID;
+        decisionData.refId = refId;
+        decisionData.uid = uid;
+        decisionData.gateType = pinaConfigParams.gateType;
+        decisionData.ostype = pinaConfigParams.ostype;
+        decisionData.zid = pinaConfigParams.zid;
+        decisionData.uniqueID = pinaConfigParams.uniqueID;
+        decisionData.email = parseJwt(pinaClientParams.bearerToken);
+        decisionData.techType = techType;
+        decisionData.firstBleHitTime = firstBleHitTime;
+        decisionData.bleEnabledTime = bleEnabledTime;
+        decisionData.loopEnabledTime = loopEnabledTime
+        decisionData.jsversion = pinaConfig.pinaJSParams.version
+        decisionData.osversion =  pinaConfigParams.osversion
+
+
+        const url = url_base.getURL + url_decisionInfo
+
+        logger()
+
+        fetch(url, {
+            method: "POST",
+            body: JSON.stringify(decisionData), headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            }
+        }).then(response => {
+        }).catch(e => {
+            pushException("pushLogs response " + e.message)
+        });
+    } catch (e) {
+        pushException("pushLogs " + e.message)
+    }
+}
+
+function startCountDownTimer(start) {
+    try {
+        if (start) {
+            setTimeout(function () {
+                if (bleEnabledTime === 0.0) {
+                    bleEnabledTime = (Date.now() - screenAppearanceTime) / 1000.0
+                }
+                bleDetected = true;
+                thresholdTimerExecuted = true;
+                takeAction(undefined, undefined, undefined);
+                debugLog("Timer Ended")
+            }, parseFloat(autoSelectMode.decision_time) * 1000 || 3000);
+        } else {
+            if (thresholdTimerExecuted) {
+                takeAction(undefined, undefined, undefined);
+            }
+        }
+    } catch (e) {
+        pushException("startCountDownTimer " + e.message)
+    }
+}
+
+function pushException(message) {
+    debugLog("Exception"+message);
+    //native call
+    let dataObject = JSON.stringify({
+        "url": loggerURL.getURL,
+        "data": {
+            "exception": message,
+            "prjId": 1,
+            "srcId": 4,
+            "refId": refId,
+            "email": parseJwt(pinaClientParams.bearerToken),
+            "uid": parseInt(pinaConfig.pinaConfigParams.uid) || -1
+        },
+        "jsIntent":"LOGGER"
+    })
+    J2N_fetchRequest(dataObject)
+    //native call
+}
+
+function logger() {
+    //native call
+    let dataObject = JSON.stringify({
+        "url": loggerURL.getURL,
+        "data": {
+            "decisionData": decisionData,
+            "prjId": 1,
+            "srcId": 4,
+            "refId": refId,
+            "email": parseJwt(pinaClientParams.bearerToken),
+            "uid": parseInt(pinaConfig.pinaConfigParams.uid) || -1
+        },
+        "jsIntent":"LOGGER"
+    })
+    J2N_fetchRequest(dataObject)
+    //native call
+}
+
+/*
+* Initialise Pinaconfig & call getPinaconfig, ideally Pinaconfig will be called by HAL
+* */
+function initPinaModel() {
+    try {
+        pinaConfigParams = {}
+        pinaConfigParams.zid = "62276";
+        pinaConfigParams.gateType = "IN"
+        pinaConfigParams.secret_key = "4f3765a60e61facd73cf757d1610e8f37be26c97323290971793feaf06b06982";
+        pinaConfigParams.ostype = "Android";
+        pinaConfigParams.uniqueID = "PinaTest";
+        //pinaConfigParams.simulationMode = true;
+        pinaSdkParams = {}
+        pinaSdkParams.helpText = "Thank you for visiting ABC Garage"
+        pinaClientParams = {}
+        pinaMiscParams = {}
+        decisionData.bookingID = pinaConfigParams.orderId;
+        decisionData.refId = pinaConfigParams.orderId;
+        decisionData.gateType = pinaConfigParams.gateType;
+        decisionData.osTypeVer = pinaConfigParams.ostype;
+        decisionData.simulation = pinaConfigParams.simulationMode;
+        decisionData.zid = pinaConfigParams.zid;
+        decisionData.uid = pinaConfigParams.uniqueID;
+        document.getElementById("welcome_text").innerHTML = pinaSdkParams.helpText;
+        scanToButtonGreenDelta = Date.now();
+        scanToButtonClickDelta = Date.now();
+        gateDecisionDelta = Date.now();
+        getHardwareConfig(undefined);
+    } catch (error) {
+        J2N_printLog(error.message)
+    }
+}
+
+function initBeaconData() {
+    try {
+        setTimeout(function () {
+            hideAwaiting();
+            showOpenButton();
+            hideGateLayout();
+            presentButtonMode = '1';
+            gate = beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[0].gateID;
+            for (let i = 0; i < beaconData.beaconList.length; i++) {
+                gateForBeacon.set(beaconData.beaconList[i].gateID, beaconData.beaconList[i].beaconId)
+            }
+        }, 3000);
+    } catch (error) {
+        J2N_printLog(error.message)
+    }
+}
+
+function initLoopData() {
+    /*loopData.topic = getBeaconListResponse.data.loopData.loopConfig.laneMqttTopics[0].loop0Topic;
+    loopData.value = 1
+    validateLoopData(JSON.stringify(loopData))*/
+}
+
+function initNFC() {
+    try {
+        validateNFC("divrt://5350504C-5553-434F-5250-4F524154494F/12/121")
+    } catch (error) {
+        J2N_printLog(error.message)
+    }
+}
+
+function initQR() {
+    try {
+        validateQR("divrt://5350504C-5553-434F-5250-4F524154494F/30003/111")
+    } catch (error) {
+        J2N_printLog(error.message)
+    }
+}
+
+
+function baseParametersProximity() {
+
+           
+            decisionData.beaconData = Object.values(weightDataDict);
+            decisionData.loopData = loopValues;
+            decisionData.openedGate = beaconId;
+            decisionData.differentiationDelta = differentiationDelta;
+            decisionData.scanToButtonGreenDelta = scanToButtonGreenDeltaSec;
+            decisionData.scanToButtonClickDelta = scanToButtonClickDeltaSec;
+            decisionData.dateDecisionDelta = gateDecisionDeltaSec;
+            decisionData.simulation_mode= pinaConfigParams.simulationMode;
+
+            decisionData.buttonMode = buttonMode;
+            decisionData.sequenceLogs = logArray;
+            decisionData.proximitydata = proximityDataArray,
+            decisionData.outcome = outcome;
+
+            decisionData.bookingID = bookingID;
+            decisionData.refId = refId;
+            decisionData.uid = uid;
+            decisionData.gateType = pinaConfigParams.gateType;
+            decisionData.ostype = pinaConfigParams.ostype;
+            decisionData.zid = pinaConfigParams.zid;
+            decisionData.uniqueID = pinaConfigParams.uniqueID;
+            decisionData.email = parseJwt(pinaClientParams.bearerToken);
+            decisionData.techType = techType;
+            decisionData.firstBleHitTime = firstBleHitTime;
+            decisionData.bleEnabledTime = bleEnabledTime;
+            decisionData.loopEnabledTime = loopEnabledTime
+            decisionData.jsversion = pinaConfig.pinaJSParams.version
+            decisionData.osversion =  pinaConfigParams.osversion
+
+    return decisionData
+}
+
+function debugLog(key, curentEvent) {
+    debugCount += 1
+
+    let currentDateTime = Date.now() / 1000
+
+    if (debugCount == 1) {
+        logStartTime = currentDateTime;
+
+        const log = "Start time "+new Date().toUTCString();
+        logArray.push(log);
+
+    }
+
+    const log = debugCount+ " - "+ key + " - " + parseInt(currentDateTime - logStartTime);
+    logArray.push(log);
+
+}
+
+function returnDelta() {
+    let currentDateTime = Date.now() / 1000
+    if (logStartTime == 0.0) {
+        logStartTime = currentDateTime;
+    }
+    let logtime = parseInt(currentDateTime - logStartTime)
+    return logtime;
+}
+
+function parseJwt(token) {
+    try {
+        return JSON.parse(atob(token.split('.')[1])).email;
+    } catch (e) {
+        return "na";
+    }
+};
+
+function initGateData(entranceId) {
+    try {
+    entrance = entranceId;
+    let gateCount = 0;
+    let gateMap = [];
+    for (let i = 0; i < beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length; i++) {
+        if (beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[i].entrance_id.localeCompare(entranceId) === 0) {
+            gateMap[gateCount] = beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[i];
+            gateCount++;
+        } else {
+            gateloopData.delete(beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[i].gateID)
+        }
+    }
+    beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList = gateMap;
+
+    if (beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length == 1) {
+        loopList = getBeaconListResponse.data.loopData.oneList
+    } else {
+        loopList = getBeaconListResponse.data.loopData.nList
+    }
+
+
+    for (let i = 0; i < beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length; i++) {
+
+        var key = "";
+        for (var j = 0; j < beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[i].attachment_minor_ids.length; j++) {
+            key = key + "*" + beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[i].attachment_minor_ids[j];
+        }
+
+        minGateData.set(key, [beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[i].gateID, 10.0]);
+        maxGateData.set(key, [beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[i].gateID, 0.0]);
+    }
+
+    document.getElementById("left_btn").innerHTML = beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[0].name;
+
+    if (beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length > 1) {
+        document.getElementById("right_btn").innerHTML = beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[1].name;
+    }
+
+    if (beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList.length > 2) {
+        document.getElementById("middle_btn").innerHTML = beaconData.beaconConfig.lanesBeaconsMap.lanesToBeaconList[2].name;
+    } else {
+        document.getElementById("middle_btn").innerHTML = '';
+    }
+
+    gateDatainitialised = true;
+
+    for (let [entry, value] of gateloopData) {
+        if (value === 1) {
+            loopDetected = true;
+            if (loopEnabledTime === 0.0) {
+                loopEnabledTime = (Date.now() - screenAppearanceTime) / 1000.0
+            }
+        }
+    }
+        } catch (e) {
+        pushException("onClickGateIssues " + e.message)
+    }
+}
+
+function validateFetchSuccessResponse(data, jsIntent) {
+    let obj = JSON.parse(data)
+    switch (jsIntent) {
+        case "OPENGATE":
+            showProgress(false);
+            try {
+                if (obj.status) {
+                    showAwaiting()
+                    hideGateLayout()
+                    hideOpenButton()
+                    document.getElementById("welcome_text").innerHTML = "";
+                    document.getElementById("move_closer_text").innerHTML = "Move closer to the gate to enter";
+                    document.getElementById("container").classList.add('hide');
+                    document.getElementById("loader").classList.remove('hide');
+                    
+                    bookingID = obj.refno
+                    refId = obj.refno
+                    uid = obj.uid
+                    pushLogs();
+                    J2N_postOnSuccess(JSON.stringify(obj))
+                } else {
+                    J2N_printLog(JSON.stringify(obj))
+                    J2N_postOnFailure(JSON.stringify(obj))
+                    pushLogs();
+                }
+            } catch (e) {
+                debugLog("openGateExcep " + e.message)
+                J2N_printLog("Open Gate failure" + e.message)
+                J2N_postOnFailure("Gate open failure");
+                pushException("openGateExcep" + e.message)
+                pushLogs();
+            }
+            break;
+            
+        case "OPENGATEPEDESTRIAN":
+            showProgress(false);
+            try {
+                if (obj.status) {
+                    showAwaiting()
+                    hideGateLayout()
+                    hideOpenButton()
+                    
+                    onClickBackPedestrian();
+                    onClickBackGateIssues();
+                    document.getElementById("welcome_text").innerHTML = "";
+                    document.getElementById("move_closer_text").innerHTML = "Move closer to the gate to enter";
+                    
+                    J2N_postOnInfo("Thank you for using pedestrian access")
+                    pushLogs();
+                } else {
+                    J2N_printLog(JSON.stringify(obj))
+                    J2N_postOnFailure(JSON.stringify(obj))
+                    pushLogs();
+                }
+            } catch (e) {
+                debugLog("openGatePedExcep " + e.message)
+                J2N_printLog("Open Gate failure" + e.message)
+                J2N_postOnFailure("Gate open failure");
+                pushException("openGatePedExcep" + e.message)
+                pushLogs();
+            }
+            break;
+            
+        case "GETHARDWARECONFIG":
+            showProgress(false);
+            let status = !!obj.status || false
+            let message = obj.message || ""
+            if (status == true) {
+                getBeaconListResponse = obj;
+                J2N_forceJSupdate(JSON.stringify(obj))
+                initHardwareConfig();
+                if (reloadHwAndDisplay) {
+                    displayWebViewAndStartSDK();
+                } else {
+                    J2N_printLog(`~latestHardWareConfigruation`);
+                }
+            } else {
+                //alert(message)
+                debugLog("hardwarfalse=", message)
+            }
+            break;
+    }
+}
+
+function validateFetchFailureResponse(data, jsIntent) {
+    showProgress(false);
+    switch (jsIntent) {
+        case "OPENGATE":
+            debugLog("openGatefail " + data)
+            J2N_postOnFailure("Failed to open gate. Please try again");
+            pushException("openGatefail " + data)
+            break;
+        case "OPENGATEPEDESTRIAN":
+            debugLog("openGatePedfail " + e.message)
+            J2N_postOnFailure("Failed to open door. Please try again");
+            pushException("openGatePedfail " + e.message)
+            break;
+        case "GETHARDWARECONFIG":
+            debugLog("gethwfailure" + e.message)
+            pushException("gethwfailure" + e.message)
+            break;
+    }
+}
