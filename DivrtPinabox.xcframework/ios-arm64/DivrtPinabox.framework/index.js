@@ -33,7 +33,7 @@ let url_base = {
         } else if (pinaConfig.environment == "TEST") {
             return "https://meghak2.divrt.co/"
         } else if (pinaConfig.environment == "UAT") {
-            return "https://pinaboxapi-uat2.parking.dev/"
+            return "https://pinaboxapi-uat.divrt.co/"
         } else {
             return "https://pinaboxapi-dev.divrt.co/"
         }
@@ -46,7 +46,7 @@ let loggerURL = {
         if (pinaConfig.environment == "PROD") {
             return "https://loggerapi.divrt.co/log";
         } else if (pinaConfig.environment == "UAT") {
-            return "https://loggerapi-uat2.parking.dev/log"
+            return "https://loggerapi-uat.divrt.co/log"
         } else {
             return "https://loggerapi-dev.divrt.co/log";
         }

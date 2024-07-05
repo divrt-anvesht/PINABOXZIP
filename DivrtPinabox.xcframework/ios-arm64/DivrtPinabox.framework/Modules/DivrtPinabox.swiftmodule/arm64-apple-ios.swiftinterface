@@ -1,12 +1,10 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.9 effective-4.2 (swiftlang-5.9.0.128.108 clang-1500.0.40.1)
-// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -module-name DivrtPinabox
-// swift-module-flags-ignorable: -enable-bare-slash-regex
+// swift-compiler-version: Apple Swift version 5.10 effective-4.2 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 4.2 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name DivrtPinabox
 import AVFoundation
 import CocoaMQTT
 import CoreBluetooth
 import CoreLocation
-import CoreNFC
 import EstimoteBluetoothScanning
 import EstimoteProximitySDK
 import Foundation
@@ -16,6 +14,7 @@ import Swift
 import UIKit
 import WebKit
 import _Concurrency
+import _CoreNFC_UIKit
 import _StringProcessing
 import _SwiftConcurrencyShims
 extension UIKit.UIViewController : CoreBluetooth.CBPeripheralManagerDelegate {
